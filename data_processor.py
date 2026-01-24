@@ -5,7 +5,11 @@ Processes raw flight data and calculates airline reliability metrics
 import json
 import pandas as pd
 from datetime import datetime
+<<<<<<< Updated upstream
 from typing import List, Dict
+=======
+from typing import List, Dict, Optional
+>>>>>>> Stashed changes
 import config
 
 
@@ -52,6 +56,16 @@ class FlightDataProcessor:
         if not scheduled_dt or not actual_dt:
             return None
         
+<<<<<<< Updated upstream
+=======
+        # Handle timezone mismatch: if one is naive and the other is aware,
+        # make the naive one aware using the timezone from the aware one
+        if scheduled_dt.tzinfo is None and actual_dt.tzinfo is not None:
+            scheduled_dt = scheduled_dt.replace(tzinfo=actual_dt.tzinfo)
+        elif actual_dt.tzinfo is None and scheduled_dt.tzinfo is not None:
+            actual_dt = actual_dt.replace(tzinfo=scheduled_dt.tzinfo)
+        
+>>>>>>> Stashed changes
         delay = (actual_dt - scheduled_dt).total_seconds() / 60
         return delay
     
@@ -77,12 +91,26 @@ class FlightDataProcessor:
                 airline_code = flight['airlineCode']
             
             # Get schedule and actual times
+<<<<<<< Updated upstream
+=======
+            schedule_date = flight.get('scheduleDate')
+>>>>>>> Stashed changes
             schedule_time = flight.get('scheduleTime')
             actual_time = flight.get('actualLandingTime') or flight.get('actualOffBlockTime')
             estimated_time = flight.get('estimatedLandingTime') or flight.get('expectedTimeOnBelt')
             
+<<<<<<< Updated upstream
             # Calculate delay
             delay_minutes = self.calculate_delay_minutes(schedule_time, actual_time)
+=======
+            # Combine schedule_date and schedule_time for proper datetime comparison
+            schedule_datetime = None
+            if schedule_date and schedule_time:
+                schedule_datetime = f"{schedule_date}T{schedule_time}"
+            
+            # Calculate delay
+            delay_minutes = self.calculate_delay_minutes(schedule_datetime, actual_time)
+>>>>>>> Stashed changes
             
             # Determine if flight is on time
             on_time = None

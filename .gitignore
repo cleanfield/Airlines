@@ -1,5 +1,9 @@
 # Environment variables
 .env
+<<<<<<< Updated upstream
+=======
+.env.backup
+>>>>>>> Stashed changes
 
 # Python
 __pycache__/
@@ -7,6 +11,13 @@ __pycache__/
 *$py.class
 *.so
 .Python
+<<<<<<< Updated upstream
+=======
+*.env
+.env
+id_ed25519
+id_ed25519.pub
+>>>>>>> Stashed changes
 env/
 venv/
 ENV/

@@ -1,9 +1,50 @@
 # Airline Reliability Tracker
 
 A Python application that collects flight arrival and departure data from airport APIs and ranks airlines based on their reliability by comparing scheduled vs actual times.
+<<<<<<< Updated upstream
 
 ## Features
 
+=======
+Users can use this application to track the reliability of airlines and make informed decisions about their travel plans.
+
+## Features
+
+**Timezone Handling** - Handles timezone mismatches between scheduled and actual times
+
+**Reliability Scoring** - Calculates reliability metrics including:
+
+- On-time performance percentage
+- Average delays
+- Reliability scores
+- Delay distributions
+
+**Data Collection** - Collects flight data from airport APIs with date range support
+
+**Data Processing** - Processes flight data with date range support
+
+**Use mariadb to store flight data**
+Use tables so data has to be retrieved only once.
+
+**Use ssh to connect to remote Maria db server**
+Details in .env file:
+Server name : MARIA_SERVER
+SSH user : MARIA_SSH_USER
+Private key : MARIA_ID_ED25519
+Public key : MARIA_ID_ED25519_PUB
+Key passphrase :  MARIA_ID_ED25519_PASSPHRASE
+
+Database name : MARIA_DB
+Database user : MARIA_DB_USER
+Database password : MARIA_DB_PASSWORD
+
+**Data Visualization** - Visualizes flight data with date range support
+
+**Data Analysis** - Analyzes flight data with date range support
+
+**Data Reporting** - Reports flight data with date range support
+
+>>>>>>> Stashed changes
 ✈️ **Multi-Airport Support** - Currently supports Schiphol Airport API (v4), designed to easily add more airports
 
 📊 **Comprehensive Analysis** - Calculates reliability metrics including:
@@ -26,7 +67,11 @@ A Python application that collects flight arrival and departure data from airpor
 
 ## Project Structure
 
+<<<<<<< Updated upstream
 ```
+=======
+``` text
+>>>>>>> Stashed changes
 Airlines/
 ├── main.py                 # Main application with CLI
 ├── schiphol_api.py        # Schiphol Airport API client
@@ -138,7 +183,11 @@ python main.py analyze --days-back 7
 
 **Reliability Score Formula:**
 
+<<<<<<< Updated upstream
 ```
+=======
+``` python
+>>>>>>> Stashed changes
 reliability_score = on_time_percentage - (avg_delay_minutes / 10)
 ```
 
@@ -201,7 +250,11 @@ COLLECTION_SETTINGS = {
 
 ### Required Headers
 
+<<<<<<< Updated upstream
 ```
+=======
+``` text
+>>>>>>> Stashed changes
 Accept: application/json
 app_id: <your_app_id>
 app_key: <your_app_key>
