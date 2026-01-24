@@ -1,0 +1,234 @@
+
+$.fn.serializeObject = function(){
+
+    var self = this,
+        json = {},
+        push_counters = {},
+        patterns = {
+            "validate": /^[_a-zA-Z][a-zA-Z0-9_]*(?:\[(?:\d*|[a-zA-Z0-9_]+)\])*$/,
+            "key":      /[a-zA-Z0-9_]+|(?=\[\])/g,
+            "push":     /^$/,
+            "fixed":    /^\d+$/,
+            "named":    /^[a-zA-Z0-9_]+$/
+        };
+
+
+    this.build = function(base, key, value){
+        base[key] = value;
+        return base;
+    };
+
+    this.push_counter = function(key){
+        if(push_counters[key] === undefined){
+            push_counters[key] = 0;
+        }
+        return push_counters[key]++;
+    };
+
+    $.each($(this).serializeArray(), function(){
+
+        // skip invalid keys
+        if(!patterns.validate.test(this.name)){
+        	console.log("Skipping " + this.name);
+            return;
+        }
+
+        var k,
+            keys = this.name.match(patterns.key),
+            merge = this.value,
+            reverse_key = this.name;
+
+        while((k = keys.pop()) !== undefined){
+
+            // adjust reverse_key
+            reverse_key = reverse_key.replace(new RegExp("\\[" + k + "\\]$"), '');
+
+            // push
+            if(k.match(patterns.push)){
+                merge = self.build([], self.push_counter(reverse_key), merge);
+            }
+
+            // fixed
+            else if(k.match(patterns.fixed)){
+                merge = self.build([], k, merge);
+            }
+
+            // named
+            else if(k.match(patterns.named)){
+                merge = self.build({}, k, merge);
+            }
+        }
+
+        json = $.extend(true, json, merge);
+    });
+
+    return json;
+};
+
+$.ajaxSetup({
+    xhrFields: {
+        withCredentials: true
+    }
+})
+
+$.fn.ajaxify = function (url, data, options) {
+    var selector = this;
+    console.log('ajaxified load url ' + url);
+
+    var subselector = ' ' + (options&&options.selector||'main');
+
+    options = options || {}
+    
+    if (url && data) {
+        return ajaxLoad.call(selector, url, subselector, data, onReady)
+    } else if (url) {
+        return ajaxLoad.call(selector, url, subselector, onReady)
+    } else {
+        $(selector).each(onReady);
+    }
+
+    function ajaxLoad(url, selector, params, callback) {
+        // Default to a GET request
+        var type = "GET";
+
+        // If the second parameter was provided
+        if (params) {
+            // If it's a function
+            if ($.isFunction(params)) {
+                // We assume that it's the callback
+                callback = params;
+                params = undefined;
+
+                // Otherwise, build a param string
+            } else if (typeof params === "object") {
+                params = $.param(params, jQuery.ajaxSettings.traditional);
+                type = "POST";
+            }
+        }
+
+        var self = this;
+        var rscript = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+        // Request the remote document
+        $.ajax({
+            url: url,
+            type: type,
+            dataType: "html",
+            data: params,
+            // Complete callback (responseText is used internally)
+            complete: function (jqXHR, status, responseText) {
+                // Store the response as specified by the jqXHR object
+                responseText = jqXHR.responseText;
+                // If successful, inject the HTML into all the matched elements
+                if (jqXHR.state() == "resolved") {
+                    // #4825: Get the actual response in case
+                    // a dataFilter is present in ajaxSettings
+                    jqXHR.done(function (r) {
+                        responseText = r;
+                    });
+
+                    if (selector) {
+                       $('body').append($('<div />').append(responseText.replace(rscript, "")).find('.flash'))
+                    }
+                    // See if a selector was specified
+                    // Create a dummy div to hold the results
+                    // inject the contents of the document in, removing the scripts
+                    // to avoid any 'Permission Denied' errors in IE
+                    // Locate the specified elements
+                    // If not, just inject the full result
+                    self.html(selector ? $("<div>").append(responseText.replace(rscript, "")).find(selector) : responseText);
+                }
+
+                if (callback) {
+                    self.each(callback, [responseText, status, jqXHR]);
+                }
+            }
+        });
+
+        return this;
+    }
+
+    function onReady() {
+        $(this).unbind('click.ajaxify').bind('click.ajaxify', handleClicks)
+        $('form', this).bind('submit.ajaxify', handleSubmits);
+
+        function handleClicks(event) {
+            if ($(event.target).is('a, a *')) {
+                var target = $(event.target).closest('a');
+                
+
+                var href = target.attr('href');
+                if (!href || href.substr(0, 1) === '#' || href.indexOf('javascript:') === 0) {
+                    // let the browser handle this
+                    return;
+                }
+
+                event.preventDefault();
+
+                href = toRelativeUrl(href);
+
+                $(selector).ajaxify(href, null, options);
+
+                if (options.updateLocation) {
+                    options.updateLocation(href);
+                }
+
+                return false;
+            }
+            if ($(event.target).is('input[type=submit]')) {
+                event.target.checked = true;
+            }
+        }
+
+        function handleSubmits(event) {
+            var form = event.target;
+
+            var action = toRelativeUrl(form.action);
+            var data = $(form).serializeObject();
+
+            if (options.submit) {
+                options.submit(event, action, data)
+            } else {
+                event.preventDefault();
+                $(selector).ajaxify(action, data, options);                    
+                return false;               
+
+            }
+        }
+
+        if (options && options.onload) {
+            options.onload.call(this); // this being the element on which ajaxify has been called.
+        }
+    }
+
+    function toRelativeUrl(url) {
+        if (url.indexOf('schiphol.nl') !== -1) {
+            return '/' + url.split('schiphol.nl/')[1]
+        } else {
+            return url;
+        }
+    }
+}
+
+
+document.addEventListener('click', function (event) {
+  if ($(event.target).is('.legal-terms-trigger')) {
+    var terms = $(event.target).parent().parent().find('.legal-terms');
+
+    if ($(terms).is(':visible')) {
+      $(terms).hide();
+      $(event.target).text("show");
+    } else {
+      $(terms).show();
+      $(event.target).text("hide");
+    }
+  }
+})
+
+$(document).ready(function () {
+    $('a').each(function () {
+        if ((this.href||'').match(/\/\/(www\/.)?schiphol.nl/)) {
+            console.log(this.href, 'blanking');
+            $(this).attr('target', '_blank');
+        }
+    })
+});

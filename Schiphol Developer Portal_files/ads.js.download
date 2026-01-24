@@ -1,0 +1,4 @@
+const e = document.createElement('div');
+e.id = 'qBMyJGsOuzmD';
+e.style.display = 'none';
+document.body.appendChild(e);
