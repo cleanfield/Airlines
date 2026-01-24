@@ -1,124 +1,363 @@
 # Airline Reliability Tracker
 
-A Python application that collects flight arrival and departure data from airport APIs and ranks airlines based on their reliability by comparing scheduled vs actual times.
-<<<<<<< Updated upstream
+A Python application that collects flight arrival and departure data from airport APIs, stores it in a MariaDB database, and provides real-time airline reliability rankings through a modern web interface.
 
-## Features
+## 🌟 Features
 
-=======
-Users can use this application to track the reliability of airlines and make informed decisions about their travel plans.
+### ✈️ Multi-Airport Support
 
-## Features
+- Currently supports Schiphol Airport API (v4)
+- Designed to easily add more airports
+- Historical and future flight data collection
 
-**Timezone Handling** - Handles timezone mismatches between scheduled and actual times
-
-**Reliability Scoring** - Calculates reliability metrics including:
+### 📊 Comprehensive Analysis
 
 - On-time performance percentage
-- Average delays
+- Average delays calculation
 - Reliability scores
 - Delay distributions
+- Trend analysis (comparison with previous periods)
 
-**Data Collection** - Collects flight data from airport APIs with date range support
+### 🌐 Real-Time Web Interface
 
-**Data Processing** - Processes flight data with date range support
+- **Live Rankings** - Real-time airline reliability rankings
+- **Auto-Refresh** - Data updates every 5 minutes automatically
+- **Interactive Filters** - Filter by flight type, date range, and minimum flights
+- **Responsive Design** - Works on desktop, tablet, and mobile
+- **Premium UI** - Modern, professional interface with animations
+- **Live Statistics** - Best airline, averages, and trends
 
-**Use mariadb to store flight data**
-Use tables so data has to be retrieved only once.
+### 💾 Database Storage
 
-**Use ssh to connect to remote Maria db server**
-Details in .env file:
-Server name : MARIA_SERVER
-SSH user : MARIA_SSH_USER
-Private key : MARIA_ID_ED25519
-Public key : MARIA_ID_ED25519_PUB
-Key passphrase :  MARIA_ID_ED25519_PASSPHRASE
+- MariaDB for persistent data storage
+- SSH tunnel support for secure remote connections
+- Efficient data retrieval (data collected only once)
+- Comprehensive logging system
 
-Database name : MARIA_DB
-Database user : MARIA_DB_USER
-Database password : MARIA_DB_PASSWORD
+### 📈 Rich Visualizations
 
-**Data Visualization** - Visualizes flight data with date range support
-
-**Data Analysis** - Analyzes flight data with date range support
-
-**Data Reporting** - Reports flight data with date range support
-
->>>>>>> Stashed changes
-✈️ **Multi-Airport Support** - Currently supports Schiphol Airport API (v4), designed to easily add more airports
-
-📊 **Comprehensive Analysis** - Calculates reliability metrics including:
-
-- On-time performance percentage
-- Average delays
-- Reliability scores
-- Delay distributions
-
-📈 **Rich Visualizations** - Generates professional charts:
-
-- Airline reliability rankings
+- Airline reliability rankings charts
 - On-time performance scatter plots
 - Delay distribution histograms
 - Daily performance trends
 
-🔄 **Automated Data Collection** - Collect historical and future flight data with date range support
+### 🔄 Automated Data Collection
 
-📝 **Detailed Reports** - Text-based reports with complete airline statistics
+- Scheduled daily collection (configurable)
+- Date range support
+- Automatic processing and analysis
+- Systemd service integration
 
-## Project Structure
+## 🚀 Quick Start
 
-<<<<<<< Updated upstream
-```
-=======
-``` text
->>>>>>> Stashed changes
-Airlines/
-├── main.py                 # Main application with CLI
-├── schiphol_api.py        # Schiphol Airport API client
-├── data_processor.py      # Data processing and reliability calculations
-├── visualizer.py          # Chart and graph generation
-├── config.py              # Configuration settings
-├── requirements.txt       # Python dependencies
-├── .env                   # API credentials (not in git)
-├── .env.example          # Template for credentials
-├── README.md             # This file
-├── USAGE.md              # Detailed usage guide
-└── data/                 # Data storage
-    ├── raw/              # Raw JSON from APIs
-    ├── processed/        # Processed CSV files
-    └── reports/          # Reports and visualizations
-```
+### Local Development
 
-## Quick Start
-
-### 1. Installation
+#### 1. Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/cleanfield/Airlines.git
+cd Airlines
+
 # Install dependencies
 pip install -r requirements.txt
 ```
 
-### 2. Configuration
+#### 2. Configuration
 
-The Schiphol API credentials are already configured in `.env`. If you need to update them or add other airports, edit the `.env` file.
+Copy `.env.example` to `.env` and configure:
 
-### 3. Run Analysis
+```env
+# Schiphol API
+SCHIPHOL_APP_ID=your_app_id_here
+SCHIPHOL_APP_KEY=your_app_key_here
 
-Collect and analyze today's flight data:
+# MariaDB Connection
+MARIA_SERVER=your_server_ip
+MARIA_SSH_USER=your_ssh_user
+MARIA_SSH_PORT=22
+MARIA_ID_ED25519=path/to/id_ed25519
+MARIA_ID_ED25519_PUB=path/to/id_ed25519.pub
+MARIA_ID_ED25519_PASSPHRASE=your_passphrase
 
-```bash
-python main.py analyze
+# Database
+MARIA_DB=flights
+MARIA_DB_USER=your_db_user
+MARIA_DB_PASSWORD=your_db_password
+MARIA_DB_PORT=3306
+
+# Web Server (optional)
+WEB_PORT=5000
+FLASK_DEBUG=True
 ```
 
-Analyze the past week:
+#### 3. Run Analysis
 
 ```bash
+# Collect and analyze today's flight data
+python main.py analyze
+
+# Analyze the past week
 python main.py analyze --days-back 7
 ```
 
-## Usage Examples
+#### 4. Start Web Interface
 
-### Collect Flight Data
+```bash
+# Start the web server
+python web_api.py
+
+# Or use the start script
+.\start_web.ps1  # PowerShell
+.\start_web.bat  # CMD
+```
+
+Access the web interface at: **<http://localhost:5000>**
+
+## 🌐 Digital Ocean Deployment
+
+Deploy your Airlines Reliability Tracker to Digital Ocean for 24/7 operation and public web access.
+
+### Prerequisites
+
+- Digital Ocean account
+- Ubuntu 22.04 LTS droplet (minimum 1GB RAM, 1 vCPU)
+- SSH access to your droplet
+- Domain name (optional, for SSL/HTTPS)
+
+### Quick Deployment
+
+#### Option 1: Automated Deployment (Recommended)
+
+From your local machine (Windows PowerShell):
+
+```powershell
+# Deploy to Digital Ocean
+.\deploy_to_do.ps1 -DropletIP YOUR_DROPLET_IP
+```
+
+This will:
+
+1. Package your application
+2. Upload to your droplet
+3. Run the deployment script automatically
+
+#### Option 2: Manual Deployment
+
+```bash
+# 1. Connect to your droplet
+ssh root@YOUR_DROPLET_IP
+
+# 2. Upload files (from local machine)
+scp -r c:\Projects\Airlines\* root@YOUR_DROPLET_IP:/opt/airlines/
+
+# 3. On the droplet, run deployment
+cd /opt/airlines
+chmod +x deploy.sh
+sudo ./deploy.sh
+```
+
+### Deploy Web Interface (Public Access)
+
+Make your website publicly accessible:
+
+```bash
+# On your droplet
+cd /opt/airlines
+chmod +x deploy_web.sh
+sudo ./deploy_web.sh
+```
+
+Or with a custom domain:
+
+```bash
+sudo ./deploy_web.sh your-domain.com
+```
+
+This installs:
+
+- **Nginx** - Web server / reverse proxy
+- **Gunicorn** - Production WSGI server (4 workers)
+- **Systemd service** - Auto-start and monitoring
+- **UFW Firewall** - Security configuration
+
+### Access Your Website
+
+**Without domain:**
+
+```
+http://YOUR_DROPLET_IP
+```
+
+**With domain:**
+
+```
+http://your-domain.com
+```
+
+### Add SSL/HTTPS (Free with Let's Encrypt)
+
+```bash
+# Install Certbot
+sudo apt-get install certbot python3-certbot-nginx
+
+# Get SSL certificate
+sudo certbot --nginx -d your-domain.com
+
+# Auto-renewal is configured automatically
+```
+
+After SSL setup:
+
+```
+https://your-domain.com  ✅ Secure!
+```
+
+### Digital Ocean Configuration in .env
+
+Add these variables to your `.env` file on the droplet:
+
+```env
+# Digital Ocean Droplet Info (for reference)
+DROPLET_IP=your_droplet_ip
+DROPLET_NAME=airlines-tracker
+DOMAIN=your-domain.com  # Optional
+
+# Web Server
+WEB_PORT=5000
+FLASK_DEBUG=False  # Set to False for production
+```
+
+### Service Management
+
+```bash
+# Data Collection Service
+sudo systemctl status airlines-collector.timer
+sudo systemctl start airlines-collector.service  # Manual run
+sudo journalctl -u airlines-collector.service -f  # View logs
+
+# Web Interface Service
+sudo systemctl status airlines-web.service
+sudo systemctl restart airlines-web.service
+sudo journalctl -u airlines-web.service -f
+
+# Nginx
+sudo systemctl status nginx
+sudo systemctl restart nginx
+sudo tail -f /var/log/nginx/airlines-access.log
+```
+
+### Monitoring
+
+```bash
+# Check website health
+curl http://localhost:5000/api/health
+
+# View all services
+systemctl list-units | grep airlines
+
+# Check firewall
+sudo ufw status
+```
+
+### Deployment Documentation
+
+For detailed deployment instructions, see:
+
+- **`DEPLOYMENT_STAPPENPLAN.md`** - Step-by-step deployment checklist
+- **`WEB_DEPLOYMENT_GUIDE.md`** - Complete web deployment guide
+- **`WEB_DEPLOYMENT_QUICK_REFERENCE.md`** - Quick command reference
+- **`DEPLOYMENT.md`** - General deployment documentation
+
+## 📁 Project Structure
+
+```
+Airlines/
+├── main.py                     # Main application with CLI
+├── web_api.py                  # Flask web API backend
+├── schiphol_api.py            # Schiphol Airport API client
+├── data_processor.py          # Data processing and calculations
+├── visualizer.py              # Chart and graph generation
+├── database.py                # Database connection and queries
+├── config.py                  # Configuration settings
+├── requirements.txt           # Python dependencies
+├── .env                       # Credentials (not in git)
+├── .env.example              # Template for credentials
+│
+├── web/                       # Web interface
+│   ├── index.html            # Main web page
+│   ├── styles.css            # Styling
+│   └── app.js                # JavaScript application
+│
+├── deploy.sh                  # Main deployment script
+├── deploy_web.sh             # Web deployment script
+├── deploy_to_do.ps1          # Windows deployment helper
+├── start_web.ps1             # Start web server (Windows)
+│
+├── data/                      # Data storage
+│   ├── raw/                  # Raw JSON from APIs
+│   ├── processed/            # Processed CSV files
+│   └── reports/              # Reports and visualizations
+│
+└── docs/                      # Documentation
+    ├── README.md             # This file
+    ├── USAGE.md              # Detailed usage guide
+    ├── WEB_README.md         # Web interface documentation
+    ├── DEPLOYMENT_STAPPENPLAN.md  # Deployment checklist
+    └── WEB_DEPLOYMENT_GUIDE.md    # Web deployment guide
+```
+
+## 🔧 Configuration
+
+### Environment Variables (.env)
+
+```env
+# Schiphol API
+SCHIPHOL_APP_ID=your_app_id
+SCHIPHOL_APP_KEY=your_app_key
+
+# MariaDB Connection
+MARIA_SERVER=your_server_ip
+MARIA_SSH_USER=your_ssh_user
+MARIA_SSH_PORT=22
+MARIA_ID_ED25519=/path/to/id_ed25519
+MARIA_ID_ED25519_PUB=/path/to/id_ed25519.pub
+MARIA_ID_ED25519_PASSPHRASE=your_passphrase
+
+# Database
+MARIA_DB=flights
+MARIA_DB_USER=your_db_user
+MARIA_DB_PASSWORD=your_db_password
+MARIA_DB_PORT=3306
+
+# Web Server
+WEB_PORT=5000
+FLASK_DEBUG=True  # False for production
+
+# Digital Ocean (optional, for reference)
+DROPLET_IP=your_droplet_ip
+DOMAIN=your-domain.com
+```
+
+### Application Settings (config.py)
+
+```python
+# Reliability calculation settings
+RELIABILITY_SETTINGS = {
+    'on_time_threshold_minutes': 15,
+    'minimum_flights_for_ranking': 10,
+}
+
+# Data collection settings
+COLLECTION_SETTINGS = {
+    'max_pages': 10,
+    'delay_between_requests': 1,
+}
+```
+
+## 📊 Usage Examples
+
+### Data Collection
 
 ```bash
 # Collect today's flights
@@ -131,7 +370,7 @@ python main.py collect --days-back 7
 python main.py collect --days-forward 3
 ```
 
-### Process Data
+### Data Processing
 
 ```bash
 # Process departures
@@ -155,205 +394,178 @@ python main.py visualize departures 2024-01-22_to_2024-01-22
 python main.py analyze --days-back 7
 ```
 
-## How It Works
+### Web Interface
 
-### 1. Data Collection (`schiphol_api.py`)
+```bash
+# Start web server
+python web_api.py
 
-- Connects to Schiphol Flight API v4
-- Fetches flight data with pagination support
-- Retrieves scheduled and actual times
-- Saves raw data as JSON files
-
-### 2. Data Processing (`data_processor.py`)
-
-- Parses flight records
-- Calculates delay in minutes (actual - scheduled)
-- Determines on-time status (within ±15 minutes)
-- Aggregates statistics by airline
-- Computes reliability scores
-
-### 3. Visualization (`visualizer.py`)
-
-- Creates bar charts of airline rankings
-- Generates scatter plots of performance metrics
-- Produces delay distribution histograms
-- Shows daily performance trends
-
-### 4. Reliability Scoring
-
-**Reliability Score Formula:**
-
-<<<<<<< Updated upstream
+# Access at http://localhost:5000
 ```
-=======
-``` python
->>>>>>> Stashed changes
-reliability_score = on_time_percentage - (avg_delay_minutes / 10)
+
+## 🌐 API Endpoints
+
+### GET /api/rankings
+
+Get airline reliability rankings.
+
+**Parameters:**
+
+- `days` - Number of days to look back (default: 30)
+- `flight_type` - 'departures', 'arrivals', or 'all' (default: 'all')
+- `min_flights` - Minimum number of flights (default: 10)
+
+**Example:**
+
+```
+GET /api/rankings?days=30&flight_type=all&min_flights=10
+```
+
+### GET /api/stats
+
+Get overall statistics.
+
+### GET /api/health
+
+Health check endpoint.
+
+## 🎯 Reliability Scoring
+
+**Formula:**
+
+```
+Reliability Score = On-time % - (Average Delay / 10)
 ```
 
 **On-Time Definition:**
 
-- Flight is on-time if actual time is within ±15 minutes of scheduled time
+- Flight is on-time if within ±15 minutes of scheduled time
 - Configurable in `config.py`
 
 **Minimum Flights:**
 
-- Airlines need at least 10 flights to be included in rankings
+- Airlines need at least 10 flights for ranking
 - Prevents unreliable statistics from small samples
 
-## Output Files
+## 📈 Output Files
 
 ### Reports Directory (`data/reports/`)
 
-- **reliability_report_*.txt** - Text report with airline rankings and statistics
-- **airline_rankings_*.png** - Bar chart of top 20 airlines by reliability score
-- **on_time_performance_*.png** - Scatter plot showing on-time % vs average delay
-- **delay_distribution_*.png** - Histogram of flight delays
-- **daily_performance_*.png** - Line chart of daily trends
+- `reliability_report_*.txt` - Text reports with rankings
+- `airline_rankings_*.png` - Bar chart of top 20 airlines
+- `on_time_performance_*.png` - Scatter plot
+- `delay_distribution_*.png` - Histogram
+- `daily_performance_*.png` - Line chart
 
 ### Processed Data (`data/processed/`)
 
-- **processed_departures_*.csv** - Individual flight records with calculated delays
-- **airline_stats_*.csv** - Aggregated airline statistics
+- `processed_departures_*.csv` - Individual flight records
+- `airline_stats_*.csv` - Aggregated airline statistics
 
 ### Raw Data (`data/raw/`)
 
-- **departures_*.json** - Raw departure data from API
-- **arrivals_*.json** - Raw arrival data from API
+- `departures_*.json` - Raw departure data from API
+- `arrivals_*.json` - Raw arrival data from API
 
-## Configuration
+## 🔒 Security
 
-Edit `config.py` to customize:
+### Production Deployment
 
-```python
-# Reliability calculation settings
-RELIABILITY_SETTINGS = {
-    'on_time_threshold_minutes': 15,  # On-time window
-    'minimum_flights_for_ranking': 10,  # Min flights for ranking
-}
+- Firewall (UFW) configured
+- Only essential ports open (22, 80, 443)
+- SSL/HTTPS with Let's Encrypt
+- Non-root user for application
+- Secure file permissions (`.env` = 600)
+- Environment variables for sensitive data
 
-# Data collection settings
-COLLECTION_SETTINGS = {
-    'max_pages': 10,  # Max pages per request
-    'delay_between_requests': 1,  # Seconds between API calls
-}
-```
+### Best Practices
 
-## API Information
+- Keep system updated: `sudo apt-get update && sudo apt-get upgrade`
+- Use strong passwords
+- Enable automatic security updates
+- Monitor logs regularly
+- Use SSH keys (not passwords)
 
-### Schiphol Airport API
+## 🐛 Troubleshooting
 
-- **Base URL:** `https://api.schiphol.nl/public-flights`
-- **Version:** v4
-- **Documentation:** Included in `Schiphol Developer Portal.html`
-- **Rate Limits:** Adjust `delay_between_requests` if needed
+### Local Development
 
-### Required Headers
-
-<<<<<<< Updated upstream
-```
-=======
-``` text
->>>>>>> Stashed changes
-Accept: application/json
-app_id: <your_app_id>
-app_key: <your_app_key>
-ResourceVersion: v4
-```
-
-## Adding More Airports
-
-To support additional airports:
-
-1. Create a new API client (e.g., `heathrow_api.py`)
-2. Implement the same interface as `SchipholAPIClient`
-3. Add credentials to `.env`
-4. Update `main.py` to support the new airport
-
-Example structure:
-
-```python
-class HeathrowAPIClient:
-    def get_flights(self, ...):
-        # Implementation
-        pass
-    
-    def get_all_flights(self, ...):
-        # Implementation
-        pass
-```
-
-## Requirements
-
-- Python 3.7+
-- requests
-- pandas
-- matplotlib
-- seaborn
-- python-dotenv
-- schedule
-
-Install all with:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Troubleshooting
-
-### No Data Collected
+**No Data Collected:**
 
 - Check internet connection
 - Verify API credentials in `.env`
 - Check API rate limits
-- Try reducing `--max-pages`
 
-### Processing Errors
+**Database Connection Error:**
 
-- Ensure data collection completed successfully
-- Check that JSON files exist in `data/raw/`
-- Verify date range format: `YYYY-MM-DD_to_YYYY-MM-DD`
+- Verify database credentials
+- Check SSH tunnel connection
+- Ensure database service is running
 
-### Visualization Errors
+### Digital Ocean Deployment
 
-- Ensure data processing completed successfully
-- Check that CSV files exist in `data/processed/`
-- Verify matplotlib and seaborn are installed
+**Website Not Accessible:**
 
-## Future Enhancements
+```bash
+sudo systemctl status airlines-web.service
+sudo systemctl status nginx
+sudo ufw status
+```
+
+**502 Bad Gateway:**
+
+```bash
+sudo systemctl restart airlines-web.service
+sudo journalctl -u airlines-web.service -f
+```
+
+**SSL Certificate Issues:**
+
+```bash
+sudo certbot renew
+sudo systemctl restart nginx
+```
+
+## 📚 Documentation
+
+- **README.md** - This file (overview and quick start)
+- **USAGE.md** - Detailed usage instructions
+- **WEB_README.md** - Web interface documentation
+- **DEPLOYMENT_STAPPENPLAN.md** - Step-by-step deployment checklist
+- **WEB_DEPLOYMENT_GUIDE.md** - Complete web deployment guide
+- **WEB_DEPLOYMENT_QUICK_REFERENCE.md** - Quick command reference
+- **DEPLOYMENT.md** - General deployment documentation
+- **DEPLOYMENT_QUICK_REFERENCE.md** - Deployment commands
+
+## 🚀 Future Enhancements
 
 - [ ] Add more airport APIs (Heathrow, JFK, etc.)
-- [ ] Web dashboard for real-time monitoring
 - [ ] Email alerts for significant delays
 - [ ] Historical trend analysis
 - [ ] Machine learning predictions
-- [ ] API for programmatic access
-- [ ] Database storage (SQLite/PostgreSQL)
-- [ ] Scheduled automatic data collection
+- [ ] Mobile app
+- [ ] Multi-language support
+- [ ] Advanced filtering options
+- [ ] Export to PDF/Excel
 
-## Contributing
-
-To contribute:
-
-1. Add support for new airport APIs
-2. Improve reliability calculations
-3. Create additional visualizations
-4. Enhance documentation
-5. Report bugs or suggest features
-
-## License
+## 📄 License
 
 This project is for educational and research purposes. Please respect the terms of service of the airport APIs you use.
 
-## Contact
-
-For Schiphol API support: <api-support@schiphol.nl>
-
-## Acknowledgments
+## 🙏 Acknowledgments
 
 - Schiphol Airport for providing the Flight API
+- Digital Ocean for cloud hosting
 - Airport operators worldwide for making flight data accessible
 
 ---
 
-**Note:** This application is designed to help analyze airline reliability. Always verify critical flight information through official airline and airport channels.
+**Live Demo:** http://YOUR_DROPLET_IP (after deployment)
+
+**Repository:** <https://github.com/cleanfield/Airlines>
+
+**Contact:** For Schiphol API support: <api-support@schiphol.nl>
+
+---
+
+Made with ✈️ by cleanfield
