@@ -152,7 +152,7 @@ class DatabaseManager:
                         self.ssh_key_path, 
                         password=ssh_passphrase
                     )
-                    print("✓ Loaded Ed25519 key")
+                    print("Loaded Ed25519 key")
                 except Exception as e1:
                     try:
                         # Try RSA key
@@ -160,7 +160,7 @@ class DatabaseManager:
                             self.ssh_key_path,
                             password=ssh_passphrase
                         )
-                        print("✓ Loaded RSA key")
+                        print("Loaded RSA key")
                     except Exception as e2:
                         try:
                             # Try ECDSA key
@@ -168,12 +168,12 @@ class DatabaseManager:
                                 self.ssh_key_path,
                                 password=ssh_passphrase
                             )
-                            print("✓ Loaded ECDSA key")
+                            print("Loaded ECDSA key")
                         except Exception as e3:
                             print(f"Failed to load SSH key:")
-                            print(f"  Ed25519: {e1}")
-                            print(f"  RSA: {e2}")
-                            print(f"  ECDSA: {e3}")
+                            print(f"  Ed25519: {repr(e1)}")
+                            print(f"  RSA: {repr(e2)}")
+                            print(f"  ECDSA: {repr(e3)}")
                             raise Exception(f"Could not load SSH key from {self.ssh_key_path}")
             
             # Create SSH tunnel with disabled DSS support

@@ -7,7 +7,7 @@ echo "Sanitizing credentials from documentation files..."
 find . -name "*.md" -type f -exec sed -i 's/178\.128\.241\.64/<server_ip>/g' {} \;
 
 # Replace password
-find . -name "*.md" -type f -exec sed -i 's/nog3willy3/<password>/g' {} \;
+find . -name "*.md" -type f -exec sed -i 's/OLD_PASSWORD/<password>/g' {} \; # Please manually update OLD_PASSWORD if needed
 
 # Replace username in SSH commands
 find . -name "*.md" -type f -exec sed -i 's/flights@<server_ip>/<ssh_user>@<server_ip>/g' {} \;

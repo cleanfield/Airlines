@@ -167,7 +167,7 @@ function renderFlightTable(flights) {
         tr.innerHTML = `
             <td><strong>${flight.flightNumber}</strong></td>
             <td>${flight.date}</td>
-            <td>${flight.schedTime.substring(0, 5)}</td>
+            <td>${(flight.schedTime && flight.schedTime.length >= 5) ? flight.schedTime.substring(0, 5) : (flight.schedTime || '-')}</td>
             <td>${flight.actualTime || '-'}</td>
             <td><span class="status-badge ${statusClass}">${delayText}</span></td>
             <td>${flight.destination || '-'}</td>

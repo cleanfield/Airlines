@@ -59,7 +59,7 @@ To verify no credentials are in documentation:
 grep -r "178.128.241.64" *.md
 
 # Check for password
-grep -r "nog3willy3" *.md
+grep -r "<password>" *.md
 
 # Should return no results if properly sanitized
 ```

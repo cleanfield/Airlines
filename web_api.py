@@ -430,11 +430,22 @@ def get_airline_flights(airline_code):
                         except Exception:
                             dest_name = str(dest_code) # Fallback
 
+                    # Handle actual_time safely
+                    actual_time_str = None
+                    if row.get('actual_time'):
+                        at = row['actual_time']
+                        if hasattr(at, 'strftime'):
+                             actual_time_str = at.strftime('%H:%M')
+                        elif hasattr(at, 'seconds'): # timedelta
+                             actual_time_str = (datetime.min + at).time().strftime('%H:%M')
+                        else:
+                             actual_time_str = str(at)
+
                     flights.append({
                         'flightNumber': row['flight_number'],
                         'date': row['schedule_date'].strftime('%Y-%m-%d') if row['schedule_date'] else None,
-                        'schedTime': sched_dt.strftime('%H:%M') if sched_dt else None,
-                        'actualTime': row['actual_time'].strftime('%H:%M') if row['actual_time'] else None,
+                        'schedTime': sched_dt.strftime('%H:%M') if sched_dt else "",
+                        'actualTime': actual_time_str,
                         'delay': float(row['delay_minutes']) if row['delay_minutes'] is not None else 0,
                         'status': row['flight_status'],
                         'destination': dest_name,
@@ -444,6 +455,8 @@ def get_airline_flights(airline_code):
                         'onTime': bool(row['on_time'])
                     })
                 except Exception as row_e:
+                    with open('api_error.log', 'a') as f:
+                        f.write(f"Error processing row {row.get('flight_number')}: {row_e}\n")
                     print(f"Error processing row {row.get('flight_number')}: {row_e}")
                     continue
                 
@@ -456,6 +469,9 @@ def get_airline_flights(airline_code):
             })
             
     except Exception as e:
+        with open('api_error.log', 'w') as f:
+            f.write(f"Top Level API Error: {str(e)}\n")
+            traceback.print_exc(file=f)
         traceback.print_exc()
         return jsonify({
             'error': str(e),
