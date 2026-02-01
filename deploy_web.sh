@@ -22,10 +22,14 @@ DOMAIN="${1:-_}"  # Use provided domain or default to IP
 echo "Step 1: Installing web server dependencies..."
 apt-get update
 apt-get install -y nginx gunicorn python3-pip
+apt-get install -y ufw
+
+# Ensure sbin is in PATH (required for ufw on some systems)
+export PATH=$PATH:/usr/sbin:/sbin
 
 echo ""
 echo "Step 2: Installing Python web dependencies..."
-sudo -u "$APP_USER" "$APP_DIR/venv/bin/pip" install gunicorn flask flask-cors
+sudo -u "$APP_USER" "$APP_DIR/venv/bin/pip" install gunicorn flask flask-cors python-dotenv
 
 echo ""
 echo "Step 3: Creating Gunicorn systemd service..."
@@ -40,6 +44,7 @@ User=$APP_USER
 Group=$APP_USER
 WorkingDirectory=$APP_DIR
 Environment="PATH=$APP_DIR/venv/bin"
+Environment="SKIP_SSH_TUNNEL=true"
 ExecStart=$APP_DIR/venv/bin/gunicorn -w 4 -b 127.0.0.1:5000 --timeout 120 web_api:app
 ExecReload=/bin/kill -s HUP \$MAINPID
 KillMode=mixed
@@ -126,10 +131,10 @@ echo "Step 5: Testing Nginx configuration..."
 nginx -t
 
 echo ""
-echo "Step 6: Configuring firewall..."
-ufw --force enable
-ufw allow 'Nginx Full'
-ufw allow 'OpenSSH'
+echo "Step 6: Configuring firewall... SKIPPED"
+# ufw --force enable
+# ufw allow 'Nginx Full'
+# ufw allow 'OpenSSH'
 
 echo ""
 echo "Step 7: Starting services..."

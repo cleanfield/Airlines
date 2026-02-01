@@ -54,3 +54,13 @@ data/reports/*.png
 # OS
 .DS_Store
 Thumbs.db
+
+# Temporary Scripts & Logs
+deploy_*.py
+debug_*.py
+check_*.py
+inspect_*.py
+test_*.py
+verify_*.py
+run_*.py
+*.txt

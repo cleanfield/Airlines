@@ -22,7 +22,6 @@ CORS(app)  # Enable CORS for development
 # Database manager
 db = DatabaseManager()
 
-
 # Load airline mapping
 AIRLINE_MAPPING = {}
 try:
@@ -35,19 +34,6 @@ try:
         print(f"Warning: Airline mapping file not found at {mapping_path}")
 except Exception as e:
     print(f"Error loading airline mapping: {e}")
-
-# Load destination mapping
-DESTINATION_MAPPING = {}
-try:
-    dest_mapping_path = os.path.join(os.path.dirname(__file__), 'destination_mapping.json')
-    if os.path.exists(dest_mapping_path):
-        with open(dest_mapping_path, 'r', encoding='utf-8') as f:
-            DESTINATION_MAPPING = json.load(f)
-        print(f"Loaded {len(DESTINATION_MAPPING)} destinations from mapping file")
-    else:
-        print(f"Warning: Destination mapping file not found at {dest_mapping_path}")
-except Exception as e:
-    print(f"Error loading destination mapping: {e}")
 
 @app.route('/')
 def index():
@@ -352,6 +338,12 @@ def get_collection_logs():
             'message': 'Failed to fetch collection logs'
         }), 500
 
+if __name__ == '__main__':
+    port = int(os.getenv('WEB_PORT', 5000))
+    debug = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
+    print(f"Starting Airlines Reliability Web Server on port {port}")
+    app.run(host='0.0.0.0', port=port, debug=debug)
+
 @app.route('/api/airlines/<airline_code>/flights')
 def get_airline_flights(airline_code):
     """
@@ -402,50 +394,22 @@ def get_airline_flights(airline_code):
             
             flights = []
             for row in results:
-                try:
-                    # Format times
-                    sched_dt = None
-                    if row['schedule_date'] and row['schedule_time']:
-                        # Handle potential timedelta vs time type difference
-                        t = row['schedule_time']
-                        if hasattr(t, 'seconds'): # timedelta
-                             # Convert timedelta to time
-                             seconds = t.total_seconds()
-                             hours = int(seconds // 3600)
-                             minutes = int((seconds % 3600) // 60)
-                             timestamp = (datetime.min + t).time()
-                             sched_dt = datetime.combine(row['schedule_date'], timestamp)
-                        else: # time object
-                             sched_dt = datetime.combine(row['schedule_date'], t)
-
-                    # Lookup destination name
-                    dest_code = row['destinations']
-                    dest_name = dest_code
-                    if dest_code:
-                        try:
-                            # Split by comma if multiple destinations
-                            codes = [c.strip() for c in str(dest_code).split(',')]
-                            names = [DESTINATION_MAPPING.get(c, c) for c in codes]
-                            dest_name = ", ".join(names)
-                        except Exception:
-                            dest_name = str(dest_code) # Fallback
-
-                    flights.append({
-                        'flightNumber': row['flight_number'],
-                        'date': row['schedule_date'].strftime('%Y-%m-%d') if row['schedule_date'] else None,
-                        'schedTime': sched_dt.strftime('%H:%M') if sched_dt else None,
-                        'actualTime': row['actual_time'].strftime('%H:%M') if row['actual_time'] else None,
-                        'delay': float(row['delay_minutes']) if row['delay_minutes'] is not None else 0,
-                        'status': row['flight_status'],
-                        'destination': dest_name,
-                        'direction': row['flight_direction'],
-                        'terminal': row['terminal'],
-                        'gate': row['gate'],
-                        'onTime': bool(row['on_time'])
-                    })
-                except Exception as row_e:
-                    print(f"Error processing row {row.get('flight_number')}: {row_e}")
-                    continue
+                # Format times
+                sched_dt = datetime.combine(row['schedule_date'], (datetime.min + row['schedule_time']).time()) if row['schedule_date'] and row['schedule_time'] else None
+                
+                flights.append({
+                    'flightNumber': row['flight_number'],
+                    'date': row['schedule_date'].strftime('%Y-%m-%d') if row['schedule_date'] else None,
+                    'schedTime': str(row['schedule_time']) if row['schedule_time'] else None,
+                    'actualTime': row['actual_time'].strftime('%H:%M') if row['actual_time'] else None,
+                    'delay': float(row['delay_minutes']) if row['delay_minutes'] is not None else 0,
+                    'status': row['flight_status'],
+                    'destination': row['destinations'],
+                    'direction': row['flight_direction'],
+                    'terminal': row['terminal'],
+                    'gate': row['gate'],
+                    'onTime': bool(row['on_time'])
+                })
                 
             airline_name = AIRLINE_MAPPING.get(airline_code, airline_code)
             
@@ -461,9 +425,3 @@ def get_airline_flights(airline_code):
             'error': str(e),
             'message': 'Failed to fetch flight details'
         }), 500
-
-if __name__ == '__main__':
-    port = int(os.getenv('WEB_PORT', 5000))
-    debug = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
-    print(f"Starting Airlines Reliability Web Server on port {port}")
-    app.run(host='0.0.0.0', port=port, debug=debug)

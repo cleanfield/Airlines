@@ -116,9 +116,73 @@ function displayRankings(airlines) {
     document.getElementById('rankingsContainer').style.display = 'block';
 }
 
+// Modal Logic
+const modal = document.getElementById('flightDetailsModal');
+const closeBtn = document.getElementsByClassName('close')[0];
+
+closeBtn.onclick = function () {
+    modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+async function showFlightDetails(airlineCode) {
+    modal.style.display = "block";
+    document.getElementById('modalLoading').style.display = 'block';
+    document.getElementById('modalFlightTableContainer').style.display = 'none';
+    document.getElementById('modalAirlineName').textContent = 'Loading...';
+
+    try {
+        const response = await fetch(`/api/airlines/${airlineCode}/flights?days=${filters.dateRange}&flight_type=${filters.flightType}`);
+        if (!response.ok) throw new Error('Failed to fetch details');
+        const data = await response.json();
+
+        document.getElementById('modalAirlineName').textContent = data.airline.name;
+        renderFlightTable(data.flights);
+
+        document.getElementById('modalLoading').style.display = 'none';
+        document.getElementById('modalFlightTableContainer').style.display = 'block';
+
+    } catch (error) {
+        document.getElementById('modalAirlineName').textContent = 'Error loading flights';
+        document.getElementById('modalLoading').style.display = 'none';
+        console.error(error);
+    }
+}
+
+function renderFlightTable(flights) {
+    const tbody = document.getElementById('modalFlightsBody');
+    tbody.innerHTML = '';
+
+    flights.forEach(flight => {
+        const tr = document.createElement('tr');
+
+        const statusClass = flight.onTime ? 'ontime' : 'delayed';
+        const delayText = flight.delay > 0 ? `+${flight.delay.toFixed(0)}m` : 'On Time';
+
+        tr.innerHTML = `
+            <td><strong>${flight.flightNumber}</strong></td>
+            <td>${flight.date}</td>
+            <td>${flight.schedTime.substring(0, 5)}</td>
+            <td>${flight.actualTime || '-'}</td>
+            <td><span class="status-badge ${statusClass}">${delayText}</span></td>
+            <td>${flight.destination || '-'}</td>
+            <td>${flight.gate || '-'}</td>
+            <td>${flight.status || '-'}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+}
+
 // Create Airline Row
 function createAirlineRow(airline, rank) {
     const tr = document.createElement('tr');
+    tr.className = 'clickable-row';
+    tr.onclick = () => showFlightDetails(airline.code);
 
     // Rank
     const rankClass = rank === 1 ? 'top-1' : rank === 2 ? 'top-2' : rank === 3 ? 'top-3' : 'other';
@@ -141,7 +205,6 @@ function createAirlineRow(airline, rank) {
         </td>
         <td>
             <div class="airline-info">
-                <div class="airline-code">${airline.code}</div>
                 <div class="airline-name">${airline.name}</div>
             </div>
         </td>

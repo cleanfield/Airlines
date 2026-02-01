@@ -116,7 +116,8 @@ def check_collection_history():
             print("=" * 80)
             
             if result and result[0]:
-                from datetime import datetime, timedelta
+                # from datetime import datetime, timedelta (removed to fix shadowing)
+                from datetime import timedelta
                 latest_date = datetime.strptime(str(latest), '%Y-%m-%d')
                 today = datetime.now()
                 days_behind = (today - latest_date).days

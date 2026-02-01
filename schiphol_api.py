@@ -166,9 +166,9 @@ class SchipholAPIClient:
         """Get list of destinations"""
         return self._make_request('/destinations')
     
-    def get_airlines(self) -> Dict:
+    def get_airlines(self, page: int = 0) -> Dict:
         """Get list of airlines"""
-        return self._make_request('/airlines')
+        return self._make_request('/airlines', params={'page': page})
     
     def get_aircraft_types(self) -> Dict:
         """Get list of aircraft types"""

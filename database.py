@@ -3,6 +3,7 @@ Database Module - MariaDB Integration with SSH Tunneling
 Handles database connections and flight data storage
 """
 import os
+import socket
 
 # Workaround for paramiko DSS key deprecation issue in sshtunnel 0.4.0
 # Must be done before importing sshtunnel
@@ -52,10 +53,35 @@ class DatabaseManager:
         self.db_password = os.getenv('MARIA_DB_PASSWORD')
         self.ssh_key_path = os.getenv('MARIA_ID_ED25519', '').strip('"')
         
-        self.tunnel = None
         self.connection = None
+        self.tunnel = None
         self.local_bind_port = None
         
+    def get_connection(self):
+        """
+        Get the database connection.
+        Ensures connection is established and alive.
+        Returns the connection object which can be used as a context manager.
+        """
+        if not self.connection:
+            self.connect()
+        else:
+            try:
+                # Ping to check/keep alive
+                self.connection.ping(reconnect=True)
+            except Exception:
+                # If ping fails (e.g. tunnel broken), full reconnect
+                print("Connection lost, reconnecting...")
+                if self.tunnel:
+                    try:
+                        self.tunnel.stop()
+                    except:
+                        pass
+                    self.tunnel = None
+                self.connect()
+                
+        return self.connection
+
     def __enter__(self):
         """Context manager entry - establish connection"""
         self.connect()
@@ -68,6 +94,40 @@ class DatabaseManager:
     def connect(self):
         """Establish SSH tunnel and database connection"""
         try:
+            # Check if running on the droplet or requested to skip SSH
+            skip_ssh = False
+            
+            # Check environment variable
+            if os.getenv('SKIP_SSH_TUNNEL', '').lower() == 'true':
+                skip_ssh = True
+                print("Skipping SSH tunnel (SKIP_SSH_TUNNEL=true)")
+            
+            # Check if running on the target server
+            if not skip_ssh and self.ssh_host:
+                try:
+                    # Get all local IPs
+                    hostname = socket.gethostname()
+                    local_ips = socket.gethostbyname_ex(hostname)[2]
+                    if self.ssh_host in local_ips:
+                        skip_ssh = True
+                        print(f"Skipping SSH tunnel (Running on target server {self.ssh_host})")
+                except Exception as e:
+                    print(f"Warning: Could not check local IPs: {e}")
+
+            if skip_ssh:
+                print(f"Connecting directly to MariaDB database '{self.db_name}'...")
+                self.connection = pymysql.connect(
+                    host='127.0.0.1',
+                    port=3306,
+                    user=self.db_user,
+                    password=self.db_password,
+                    database=self.db_name,
+                    charset='utf8mb4',
+                    cursorclass=pymysql.cursors.DictCursor
+                )
+                print("Database connection established successfully!")
+                return
+
             print(f"Establishing SSH tunnel to {self.ssh_host}...")
             
             # Load SSH private key explicitly to avoid DSSKey deprecation issue

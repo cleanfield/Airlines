@@ -60,7 +60,7 @@ Volg de stappen hieronder voor meer controle.
 
 ```bash
 sudo apt-get update
-sudo apt-get install -y nginx
+sudo apt-get install -y nginx ufw
 ```
 
 ### Stap 2: Installeer Gunicorn

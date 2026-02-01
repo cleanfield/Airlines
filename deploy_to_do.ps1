@@ -51,6 +51,21 @@ try {
             Copy-Item $_.FullName -Destination $TempDir
         }
     }
+
+    # Copy web directory for frontend
+    if (Test-Path "$AppDir\web") {
+        Write-Host "  Copying web directory..." -ForegroundColor White
+        Copy-Item -Path "$AppDir\web" -Destination "$TempDir\web" -Recurse
+    }
+
+    # Copy .env if it exists
+    if (Test-Path "$AppDir\.env") {
+        Write-Host "  Copying .env configuration..." -ForegroundColor White
+        Copy-Item -Path "$AppDir\.env" -Destination "$TempDir\.env"
+    }
+    else {
+        Write-Host "  Warning: .env file not found. Using .env.example." -ForegroundColor Yellow
+    }
     
     # Create data directory structure
     New-Item -ItemType Directory -Path "$TempDir\data\raw" -Force | Out-Null
@@ -87,8 +102,9 @@ try {
         "mkdir -p /opt/airlines",
         "cd /opt/airlines",
         "tar -xzf /tmp/airlines.tar.gz",
-        "chmod +x deploy.sh",
-        "./deploy.sh"
+        "chmod +x deploy.sh deploy_web.sh",
+        "./deploy.sh",
+        "./deploy_web.sh"
     )
     
     $deployScript = $deployCommands -join " && "

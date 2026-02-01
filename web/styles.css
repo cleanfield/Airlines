@@ -3,16 +3,16 @@
     --primary: hsl(220, 90%, 56%);
     --primary-dark: hsl(220, 90%, 46%);
     --primary-light: hsl(220, 90%, 96%);
-    
+
     --success: hsl(142, 71%, 45%);
     --success-light: hsl(142, 71%, 95%);
-    
+
     --warning: hsl(38, 92%, 50%);
     --warning-light: hsl(38, 92%, 95%);
-    
+
     --danger: hsl(0, 84%, 60%);
     --danger-light: hsl(0, 84%, 95%);
-    
+
     --neutral-50: hsl(220, 20%, 98%);
     --neutral-100: hsl(220, 18%, 95%);
     --neutral-200: hsl(220, 16%, 90%);
@@ -23,7 +23,7 @@
     --neutral-700: hsl(220, 14%, 30%);
     --neutral-800: hsl(220, 16%, 20%);
     --neutral-900: hsl(220, 18%, 12%);
-    
+
     /* Spacing */
     --spacing-xs: 0.5rem;
     --spacing-sm: 0.75rem;
@@ -32,20 +32,20 @@
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
     --spacing-3xl: 4rem;
-    
+
     /* Border Radius */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
     --radius-full: 9999px;
-    
+
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    
+
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -255,7 +255,9 @@ body {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .loading-state p {
@@ -342,10 +344,21 @@ body {
     border-radius: var(--radius-sm);
 }
 
-.legend-color.excellent { background: var(--success); }
-.legend-color.good { background: hsl(142, 71%, 65%); }
-.legend-color.average { background: var(--warning); }
-.legend-color.poor { background: var(--danger); }
+.legend-color.excellent {
+    background: var(--success);
+}
+
+.legend-color.good {
+    background: hsl(142, 71%, 65%);
+}
+
+.legend-color.average {
+    background: var(--warning);
+}
+
+.legend-color.poor {
+    background: var(--danger);
+}
 
 /* Table */
 .table-container {
@@ -375,12 +388,26 @@ body {
     letter-spacing: 0.05em;
 }
 
-.rankings-table th.rank-col { width: 80px; text-align: center; }
+.rankings-table th.rank-col {
+    width: 80px;
+    text-align: center;
+}
+
 .rankings-table th.score-col,
 .rankings-table th.ontime-col,
-.rankings-table th.delay-col { text-align: center; }
-.rankings-table th.flights-col { text-align: center; width: 100px; }
-.rankings-table th.trend-col { text-align: center; width: 100px; }
+.rankings-table th.delay-col {
+    text-align: center;
+}
+
+.rankings-table th.flights-col {
+    text-align: center;
+    width: 100px;
+}
+
+.rankings-table th.trend-col {
+    text-align: center;
+    width: 100px;
+}
 
 .rankings-table tbody tr {
     border-bottom: 1px solid var(--neutral-100);
@@ -642,40 +669,40 @@ body {
     .hero-title {
         font-size: 1.75rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .header-stats {
         width: 100%;
         justify-content: space-between;
     }
-    
+
     .filters .container {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .filter-group {
         min-width: 100%;
     }
-    
+
     .rankings-table {
         font-size: 0.875rem;
     }
-    
+
     .rankings-table th,
     .rankings-table td {
         padding: var(--spacing-sm);
     }
-    
+
     .airline-code {
         width: 40px;
         height: 40px;
         font-size: 0.75rem;
     }
-    
+
     .legend {
         flex-direction: column;
         gap: var(--spacing-sm);
@@ -688,6 +715,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -698,8 +726,145 @@ body {
     animation: fadeIn 0.3s ease forwards;
 }
 
-.rankings-table tbody tr:nth-child(1) { animation-delay: 0.05s; }
-.rankings-table tbody tr:nth-child(2) { animation-delay: 0.1s; }
-.rankings-table tbody tr:nth-child(3) { animation-delay: 0.15s; }
-.rankings-table tbody tr:nth-child(4) { animation-delay: 0.2s; }
-.rankings-table tbody tr:nth-child(5) { animation-delay: 0.25s; }
+.rankings-table tbody tr:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.rankings-table tbody tr:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.rankings-table tbody tr:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.rankings-table tbody tr:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.rankings-table tbody tr:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-2xl);
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-header {
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: var(--radius-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close:hover,
+.close:focus {
+    color: #ddd;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.flights-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.flights-table th {
+    text-align: left;
+    padding: var(--spacing-sm);
+    background: var(--neutral-100);
+    position: sticky;
+    top: 0;
+    font-size: 0.85rem;
+    color: var(--neutral-600);
+}
+
+.flights-table td {
+    padding: var(--spacing-sm);
+    border-bottom: 1px solid var(--neutral-100);
+    font-size: 0.9rem;
+}
+
+.status-badge {
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.status-badge.ontime {
+    background: var(--success-light);
+    color: var(--success);
+}
+
+.status-badge.delayed {
+    background: var(--warning-light);
+    color: hsl(38, 92%, 35%);
+}
+
+.status-badge.cancelled {
+    background: var(--danger-light);
+    color: var(--danger);
+}
+
+.clickable-row {
+    cursor: pointer;
+}

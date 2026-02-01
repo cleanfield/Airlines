@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection Log | Airlines Betrouwbaarheid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        .log-container {
+            font-family: 'JetBrains Mono', monospace;
+            background-color: #1e293b;
+            color: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        .log-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        .log-table th {
+            text-align: left;
+            padding: 12px 16px;
+            border-bottom: 2px solid #334155;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .log-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #334155;
+            vertical-align: top;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-success {
+            background-color: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .status-failed {
+            background-color: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+
+        .status-partial {
+            background-color: rgba(234, 179, 8, 0.2);
+            color: #facc15;
+        }
+
+        .refresh-btn {
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .refresh-btn:hover {
+            background-color: #2563eb;
+        }
+
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-link {
+            color: #3b82f6;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: #f87171;
+            font-size: 0.85rem;
+            margin-top: 4px;
+        }
+
+        .meta-info {
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>System Logs</h1>
+                </div>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Server Time</span>
+                        <span class="stat-value" id="serverTime">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <a href="/" class="nav-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Back to Dashboard
+            </a>
+
+            <div class="log-header">
+                <h2>Data Collection History</h2>
+                <button onclick="loadLogs()" class="refresh-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 4v6h-6M1 20v-6h6" />
+                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
+                    </svg>
+                    Refresh Logs
+                </button>
+            </div>
+
+            <div class="log-container">
+                <table class="log-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Operation</th>
+                            <th>Range</th>
+                            <th>Records</th>
+                            <th>Status</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody id="logTableBody">
+                        <tr>
+                            <td colspan="6" style="text-align: center; padding: 40px;">Loading logs...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        async function loadLogs() {
+            const tbody = document.getElementById('logTableBody');
+            tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px;">Loading logs...</td></tr>';
+
+            try {
+                const response = await fetch('/api/logs/collection?limit=50');
+                const data = await response.json();
+
+                if (data.logs && data.logs.length > 0) {
+                    tbody.innerHTML = data.logs.map(log => {
+                        const date = new Date(log.date).toLocaleString('nl-NL');
+                        const statusClass = `status-${log.status.toLowerCase()}`;
+                        const error = log.error ? `<div class="error-message">${log.error}</div>` : '';
+                        const notes = log.notes ? `<div class="meta-info">${log.notes}</div>` : '';
+
+                        return `
+                            <tr>
+                                <td>${date}</td>
+                                <td>
+                                    <strong>${log.operation}</strong>
+                                    <div class="meta-info">${log.direction === 'D' ? 'Departures' : 'Arrivals'}</div>
+                                </td>
+                                <td>${log.dateRange}</td>
+                                <td>
+                                    <div>Collected: ${log.collected}</div>
+                                    <div class="meta-info">Processed: ${log.processed}</div>
+                                </td>
+                                <td>
+                                    <span class="status-badge ${statusClass}">${log.status}</span>
+                                </td>
+                                <td>
+                                    <div>Duration: ${log.executionTime.toFixed(2)}s</div>
+                                    ${error}
+                                    ${notes}
+                                </td>
+                            </tr>
+                        `;
+                    }).join('');
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 40px;">No logs found</td></tr>';
+                }
+
+                document.getElementById('serverTime').textContent = new Date().toLocaleTimeString('nl-NL');
+
+            } catch (error) {
+                console.error('Error loading logs:', error);
+                tbody.innerHTML = `<tr><td colspan="6" style="text-align: center; padding: 40px; color: #f87171;">Error loading logs: ${error.message}</td></tr>`;
+            }
+        }
+
+        // Initial load
+        document.addEventListener('DOMContentLoaded', loadLogs);
+
+        // Auto refresh every 30 seconds
+        setInterval(loadLogs, 30000);
+    </script>
+</body>
+
+</html>

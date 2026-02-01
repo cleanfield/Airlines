@@ -114,6 +114,25 @@ WantedBy=timers.target
 EOF
 
 echo ""
+echo "Step 9b: Configuring SSH keys..."
+if [ -f "/tmp/id_ed25519" ]; then
+    echo "Installing SSH keys..."
+    mv /tmp/id_ed25519 "$APP_DIR/"
+    if [ -f "/tmp/id_ed25519.pub" ]; then
+        mv /tmp/id_ed25519.pub "$APP_DIR/"
+    fi
+    chown "$APP_USER:$APP_USER" "$APP_DIR/id_ed25519"*
+    chmod 600 "$APP_DIR/id_ed25519"
+    
+    # Update .env to use the Linux path for the key
+    if [ -f "$APP_DIR/.env" ]; then
+        sed -i 's|MARIA_ID_ED25519=.*|MARIA_ID_ED25519="/opt/airlines/id_ed25519"|g' "$APP_DIR/.env"
+        # Also ensure strict mode is off if it causes issues, or adjust other paths if needed
+        echo "Updated .env with correct SSH key path"
+    fi
+fi
+
+echo ""
 echo "Step 10: Enabling and starting services..."
 systemctl daemon-reload
 systemctl enable ${SERVICE_NAME}.timer
