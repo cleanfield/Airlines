@@ -277,7 +277,8 @@ function updateLastUpdateTime() {
     const now = new Date();
     const timeString = now.toLocaleTimeString('nl-NL', {
         hour: '2-digit',
-        minute: '2-digit'
+        minute: '2-digit',
+        hour12: false
     });
     document.getElementById('lastUpdate').textContent = timeString;
 }
