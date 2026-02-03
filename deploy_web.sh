@@ -62,7 +62,7 @@ echo "Step 4: Configuring Nginx..."
 cat > /etc/nginx/sites-available/airlines << EOF
 server {
     listen 80;
-    server_name $DOMAIN;
+    server_name alstorphius.com www.alstorphius.com;
 
     # Security headers
     add_header X-Frame-Options "SAMEORIGIN" always;

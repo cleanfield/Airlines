@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializeEventListeners() {
     document.getElementById('flightType').addEventListener('change', (e) => {
         filters.flightType = e.target.value;
-        applyFilters();
+        loadData();
     });
 
     document.getElementById('dateRange').addEventListener('change', (e) => {
@@ -43,7 +43,7 @@ function initializeEventListeners() {
 
     document.getElementById('minFlights').addEventListener('change', (e) => {
         filters.minFlights = parseInt(e.target.value);
-        applyFilters();
+        loadData();
     });
 
     document.getElementById('refreshBtn').addEventListener('click', () => {
@@ -70,8 +70,14 @@ async function loadData() {
             // Use mock data for demonstration
             data = await generateMockData();
         } else {
-            // Fetch from API
-            const response = await fetch(`${CONFIG.apiEndpoint}?days=${filters.dateRange}`);
+            // Fetch from API with filters
+            const params = new URLSearchParams({
+                days: filters.dateRange,
+                flight_type: filters.flightType,
+                min_flights: filters.minFlights
+            });
+
+            const response = await fetch(`${CONFIG.apiEndpoint}?${params.toString()}`);
             if (!response.ok) throw new Error('Failed to fetch data');
             data = await response.json();
         }
@@ -85,23 +91,13 @@ async function loadData() {
     }
 }
 
-// Apply Filters
+// Apply Filters (Client-side sorting only)
 function applyFilters() {
     if (!currentData) return;
 
     let filtered = [...currentData.airlines];
 
-    // Filter by flight type
-    if (filters.flightType !== 'all') {
-        filtered = filtered.filter(airline =>
-            airline.flightType === filters.flightType
-        );
-    }
-
-    // Filter by minimum flights
-    filtered = filtered.filter(airline =>
-        airline.totalFlights >= filters.minFlights
-    );
+    // Note: Flight type and min flights filtering is now done on the backend
 
     // Sort by selected column
     filtered.sort((a, b) => {

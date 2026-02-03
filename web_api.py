@@ -123,13 +123,12 @@ def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=
                 SUM(CASE WHEN on_time = 1 THEN 1 ELSE 0 END) as on_time_flights,
                 AVG(delay_minutes) as avg_delay,
                 MIN(delay_minutes) as min_delay,
-                MAX(delay_minutes) as max_delay,
-                flight_direction
+                MAX(delay_minutes) as max_delay
             FROM flights
             WHERE schedule_date BETWEEN %s AND %s
                 AND actual_time IS NOT NULL
                 {direction_filter}
-            GROUP BY airline_code, flight_direction
+            GROUP BY airline_code
             HAVING COUNT(*) >= %s
             ORDER BY 
                 (SUM(CASE WHEN on_time = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*)) - (AVG(delay_minutes) / 10) DESC
@@ -149,7 +148,7 @@ def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=
             avg_delay = float(row['avg_delay']) if row['avg_delay'] else 0
             min_delay = float(row['min_delay']) if row['min_delay'] else 0
             max_delay = float(row['max_delay']) if row['max_delay'] else 0
-            direction = row['flight_direction']
+            # direction = row['flight_direction'] # Removed as it's not in SELECT anymore
             
             # Calculate metrics
             on_time_percentage = (on_time_flights / total_flights * 100) if total_flights > 0 else 0
@@ -157,6 +156,11 @@ def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=
             
             # Calculate trend
             trend = calculate_trend(cursor, airline_iata, start_date, days=(end_date - start_date).days)
+            
+            # Determine flight type string
+            type_str = flight_type
+            if type_str == 'all':
+                type_str = 'mixed'
             
             airlines.append({
                 'code': airline_iata,
@@ -169,7 +173,7 @@ def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=
                 'maxDelay': round(max_delay, 1),
                 'reliabilityScore': round(reliability_score, 2),
                 'trend': round(trend, 2),
-                'flightType': 'departures' if direction == 'D' else 'arrivals'
+                'flightType': type_str
             })
         
         return airlines
