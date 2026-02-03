@@ -8,9 +8,10 @@ def fetch_destinations():
     all_destinations = {}
     
     page = 0
-    max_pages = 50
+    max_pages = 1000
     while page < max_pages:
-        print(f"Fetching page {page}...")
+        if page % 10 == 0:
+            print(f"Fetching page {page}...")
         response = client._make_request('/destinations', params={'page': page})
         
         if not response or 'destinations' not in response:
@@ -20,12 +21,19 @@ def fetch_destinations():
         if not destinations:
             break
             
-        print(f"Found {len(destinations)} destinations on page {page}")
+        # print(f"Found {len(destinations)} destinations on page {page}")
+
+
         
         for dest in destinations:
             iata = dest.get('iata')
-            # Extract English name if available, otherwise generic publicName
-            name = dest.get('publicName', {}).get('english')
+            public_name = dest.get('publicName', {})
+            name = None
+            if isinstance(public_name, dict):
+                name = public_name.get('dutch') or public_name.get('english')
+            elif isinstance(public_name, str):
+
+                name = public_name
             
             if iata and name:
                 all_destinations[iata] = name
