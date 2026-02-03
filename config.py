@@ -27,7 +27,7 @@ for directory in [DATA_DIR, RAW_DATA_DIR, PROCESSED_DATA_DIR, REPORTS_DIR]:
 
 # Flight data collection settings
 COLLECTION_SETTINGS = {
-    'max_pages': 10,  # Maximum number of pages to fetch per request
+    'max_pages': 1000,  # Maximum number of pages to fetch per request
     'page_size': 20,  # Default page size from API
     'delay_between_requests': 1,  # Seconds to wait between API requests
 }
