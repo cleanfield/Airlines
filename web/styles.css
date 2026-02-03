@@ -409,6 +409,24 @@ body {
     width: 100px;
 }
 
+/* Sortable Headers */
+.rankings-table th[data-sort] {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.rankings-table th[data-sort]:hover {
+    background: var(--neutral-700);
+}
+
+.sort-icon {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 0.8em;
+    opacity: 0.3;
+}
+
 .rankings-table tbody tr {
     border-bottom: 1px solid var(--neutral-100);
     transition: all 0.2s ease;
@@ -867,4 +885,55 @@ body {
 
 .clickable-row {
     cursor: pointer;
+}
+
+/* Explanation Section */
+.explanation-section {
+    margin-top: 40px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.explanation-section h3 {
+    color: #1e293b;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.explanation-section p {
+    color: #64748b;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.formula-box {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #0ea5e9;
+}
+
+.formula-box strong {
+    color: #0f172a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formula {
+    font-family: monospace;
+    color: #0ea5e9;
+    font-size: 1.1em;
+}
+
+.explanation-list {
+    margin-top: 15px;
+    padding-left: 20px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.explanation-list li {
+    margin-bottom: 5px;
 }

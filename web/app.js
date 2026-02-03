@@ -49,6 +49,14 @@ function initializeEventListeners() {
     document.getElementById('refreshBtn').addEventListener('click', () => {
         loadData();
     });
+
+    // Sort headers
+    document.querySelectorAll('th[data-sort]').forEach(th => {
+        th.addEventListener('click', () => {
+            toggleSort(th.dataset.sort);
+        });
+        th.style.cursor = 'pointer';
+    });
 }
 
 // Data Loading
@@ -95,11 +103,55 @@ function applyFilters() {
         airline.totalFlights >= filters.minFlights
     );
 
-    // Sort by reliability score
-    filtered.sort((a, b) => b.reliabilityScore - a.reliabilityScore);
+    // Sort by selected column
+    filtered.sort((a, b) => {
+        let valA = a[sortState.column];
+        let valB = b[sortState.column];
+
+        if (sortState.desc) {
+            return valB - valA;
+        } else {
+            return valA - valB;
+        }
+    });
 
     displayRankings(filtered);
     displayStats(filtered);
+    updateSortIcons();
+}
+
+// Sort State
+let sortState = {
+    column: 'reliabilityScore',
+    desc: true
+};
+
+function toggleSort(column) {
+    if (sortState.column === column) {
+        sortState.desc = !sortState.desc;
+    } else {
+        sortState.column = column;
+        sortState.desc = true; // Default to desc for new column
+    }
+    applyFilters();
+}
+
+function updateSortIcons() {
+    // Reset all icons
+    document.querySelectorAll('.sort-icon').forEach(icon => {
+        icon.textContent = '⇅';
+        icon.style.opacity = '0.3';
+    });
+
+    // Update active icon
+    const activeHeader = document.querySelector(`th[data-sort="${sortState.column}"]`);
+    if (activeHeader) {
+        const icon = activeHeader.querySelector('.sort-icon');
+        if (icon) {
+            icon.textContent = sortState.desc ? '↓' : '↑';
+            icon.style.opacity = '1';
+        }
+    }
 }
 
 // Display Rankings

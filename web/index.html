@@ -140,12 +140,24 @@
                         <thead>
                             <tr>
                                 <th class="rank-col">Rank</th>
-                                <th class="airline-col">Luchtvaartmaatschappij</th>
-                                <th class="score-col">Score</th>
-                                <th class="ontime-col">Op tijd %</th>
-                                <th class="delay-col">Gem. vertraging</th>
-                                <th class="flights-col">Vluchten</th>
-                                <th class="trend-col">Trend</th>
+                                <th class="airline-col" data-sort="name">
+                                    Luchtvaartmaatschappij <span class="sort-icon">⇅</span>
+                                </th>
+                                <th class="score-col" data-sort="reliabilityScore">
+                                    Score <span class="sort-icon">↓</span>
+                                </th>
+                                <th class="ontime-col" data-sort="onTimePercentage">
+                                    Op tijd % <span class="sort-icon">⇅</span>
+                                </th>
+                                <th class="delay-col" data-sort="avgDelay">
+                                    Gem. vertraging <span class="sort-icon">⇅</span>
+                                </th>
+                                <th class="flights-col" data-sort="totalFlights">
+                                    Vluchten <span class="sort-icon">⇅</span>
+                                </th>
+                                <th class="trend-col" data-sort="trend">
+                                    Trend <span class="sort-icon">⇅</span>
+                                </th>
                             </tr>
                         </thead>
                         <tbody id="rankingsTableBody">
@@ -216,6 +228,28 @@
                         <p class="stat-card-detail">In deze periode</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Explanation Section -->
+            <div class="explanation-section">
+                <h3>Hoe wordt de betrouwbaarheid bepaald?</h3>
+                <p>
+                    Onze unieke betrouwbaarheidsscore combineert punctualiteit met de ernst van vertragingen.
+                    Doel is om maatschappijen die vaak "net iets te laat" zijn eerlijk te vergelijken met maatschappijen
+                    die minder vaak, maar wel extreem lang vertraagd zijn.
+                </p>
+                <div class="formula-box">
+                    <strong>De Formule:</strong>
+                    <code class="formula">Score = Punctualiteit (%) - (Gemiddelde vertraging / 10)</code>
+                </div>
+                <ul class="explanation-list">
+                    <li><strong>Punctualiteit:</strong> Percentage vluchten dat binnen 15 minuten van schema vliegt.
+                    </li>
+                    <li><strong>Vertragingsstraf:</strong> Voor elke 10 minuten gemiddelde vertraging gaat er 1 punt van
+                        de score af.</li>
+                    <li><strong>Minimaal aantal vluchten:</strong> Alleen airlines met minimaal <span
+                            id="minFlightsDisplay">10</span> vluchten worden getoond.</li>
+                </ul>
             </div>
         </div>
     </main>
