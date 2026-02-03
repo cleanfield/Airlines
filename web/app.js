@@ -210,7 +210,7 @@ function renderFlightTable(flights) {
         const tr = document.createElement('tr');
 
         const statusClass = flight.onTime ? 'ontime' : 'delayed';
-        const delayText = flight.delay > 0 ? `+${flight.delay.toFixed(0)}m` : 'On Time';
+        const delayText = flight.delay > 0 ? `+${flight.delay.toFixed(0)}m` : 'Op tijd';
 
         tr.innerHTML = `
             <td><strong>${flight.flightNumber}</strong></td>
@@ -220,10 +220,39 @@ function renderFlightTable(flights) {
             <td><span class="status-badge ${statusClass}">${delayText}</span></td>
             <td>${flight.destination || '-'}</td>
             <td>${flight.gate || '-'}</td>
-            <td>${flight.status || '-'}</td>
+            <td>${translateStatus(flight.status) || '-'}</td>
         `;
         tbody.appendChild(tr);
     });
+}
+
+function translateStatus(status) {
+    if (!status) return '-';
+
+    // Normalize status
+    const upperStatus = status.toUpperCase();
+
+    const translations = {
+        'SCH': 'Gepland',
+        'AIR': 'Onderweg',
+        'EXP': 'Verwacht',
+        'FIR': 'Onderweg',
+        'LND': 'Geland',
+        'FIB': 'Bagage band',
+        'ARR': 'Aangekomen',
+        'DIV': 'Uitgeweken',
+        'CNX': 'Geannuleerd',
+        'TOM': 'Morgen',
+        'DEL': 'Vertraagd',
+        'WIL': 'Wacht op land',
+        'GTO': 'Gate open',
+        'BRD': 'Boarding',
+        'GCL': 'Gate dicht',
+        'GTD': 'Gate gesloten',
+        'DEP': 'Vertrokken'
+    };
+
+    return translations[upperStatus] || status;
 }
 
 // Create Airline Row
