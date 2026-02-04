@@ -59,6 +59,74 @@ def logs():
     """Serve the logs page"""
     return send_from_directory('web', 'logs.html')
 
+
+def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10):
+    """
+    Get statistics for all airlines within the date range
+    """
+    try:
+        conn = db.get_connection()
+        with conn.cursor() as cursor:
+            # 1. Get aggregated stats
+            params = [start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d')]
+            
+            query = """
+                SELECT 
+                    airline_code,
+                    COUNT(*) as total_flights,
+                    SUM(CASE WHEN on_time = 1 THEN 1 ELSE 0 END) as on_time_flights,
+                    AVG(delay_minutes) as avg_delay
+                FROM flights
+                WHERE schedule_date BETWEEN %s AND %s
+                    AND actual_time IS NOT NULL
+            """
+            
+            if flight_type == 'departures':
+                query += " AND flight_direction = 'D'"
+            elif flight_type == 'arrivals':
+                query += " AND flight_direction = 'A'"
+                
+            query += " GROUP BY airline_code HAVING total_flights >= %s"
+            params.append(min_flights)
+            
+            cursor.execute(query, params)
+            results = cursor.fetchall()
+            
+            airlines = []
+            for row in results:
+                airline_code = row['airline_code']
+                airline_name = AIRLINE_MAPPING.get(airline_code, airline_code)
+                
+                total_flights = row['total_flights']
+                on_time_flights = float(row['on_time_flights']) if row['on_time_flights'] else 0
+                avg_delay = float(row['avg_delay']) if row['avg_delay'] else 0
+                
+                on_time_percentage = (on_time_flights / total_flights * 100)
+                reliability_score = on_time_percentage - (avg_delay / 10)
+                
+                # 2. Calculate trend
+                # Use the same start date for trend calculation
+                trend = calculate_trend(cursor, airline_code, params[0])
+                
+                airlines.append({
+                    'code': airline_code,
+                    'name': airline_name,
+                    'totalFlights': total_flights,
+                    'onTimePercentage': round(on_time_percentage, 1),
+                    'avgDelay': round(avg_delay, 1),
+                    'reliabilityScore': round(reliability_score, 1),
+                    'trend': round(trend, 2)
+                })
+                
+            # Sort by reliability score desc
+            airlines.sort(key=lambda x: x['reliabilityScore'], reverse=True)
+            
+            return airlines
+    except Exception as e:
+        print(f"Error getting airline statistics: {e}")
+        traceback.print_exc()
+        return []
+
 @app.route('/api/rankings')
 def get_rankings():
     """
