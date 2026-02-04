@@ -937,3 +937,15 @@ body {
 .explanation-list li {
     margin-bottom: 5px;
 }
+
+/* Flight Link */
+.flight-link {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.flight-link:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}

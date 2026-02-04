@@ -213,7 +213,7 @@ function renderFlightTable(flights) {
         const delayText = flight.delay > 0 ? `+${flight.delay.toFixed(0)}m` : 'Op tijd';
 
         tr.innerHTML = `
-            <td><strong>${flight.flightNumber}</strong></td>
+            <td><a href="https://www.flightaware.com/live/flight/${flight.flightNumber}" target="_blank" rel="noopener noreferrer" class="flight-link"><strong>${flight.flightNumber}</strong></a></td>
             <td>${flight.date}</td>
             <td>${(flight.schedTime && flight.schedTime.length >= 5) ? flight.schedTime.substring(0, 5) : (flight.schedTime || '-')}</td>
             <td>${flight.actualTime || '-'}</td>
