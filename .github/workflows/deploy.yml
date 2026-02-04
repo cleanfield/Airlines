@@ -1,0 +1,37 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DO_HOST }}
+          username: ${{ secrets.DO_USERNAME }}
+          key: ${{ secrets.DO_SSH_KEY }}
+          script: |
+            # Navigate to app directory
+            cd /opt/airlines
+            
+            # Switch to airlines user for git operations and dependencies
+            # We assume the SSH connection is as root, so we use sudo -u airlines
+            
+            echo "Pulling latest changes..."
+            sudo -u airlines git pull origin main
+            
+            echo "Updating dependencies..."
+            sudo -u airlines ./venv/bin/pip install -r requirements.txt
+            
+            echo "Restarting application..."
+            systemctl restart airlines-collector
+            
+            # Restart Nginx if it's running (ignore error if not installed/running)
+            systemctl reload nginx || true
+            
+            echo "Deployment complete!"
