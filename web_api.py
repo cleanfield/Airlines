@@ -84,6 +84,7 @@ def get_rankings():
             'airlines': airlines,
             'totalFlights': total_flights,
             'lastUpdate': datetime.now().isoformat(),
+            'firstUpdate': get_first_update_date(),
             'dateRange': {
                 'start': start_date.isoformat(),
                 'end': end_date.isoformat(),
@@ -102,89 +103,33 @@ def get_rankings():
             'message': 'Failed to fetch airline rankings'
         }), 500
 
-def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10):
-    """
-    Query database for airline statistics
-    """
-    conn = db.get_connection()
-    with conn.cursor() as cursor:
-        
-        if flight_type == 'departures':
-            direction_filter = "AND flight_direction = 'D'"
-        elif flight_type == 'arrivals':
-            direction_filter = "AND flight_direction = 'A'"
-        else:
-            direction_filter = ""
-        
-        query = f"""
-            SELECT 
-                airline_code,
-                COUNT(*) as total_flights,
-                SUM(CASE WHEN on_time = 1 THEN 1 ELSE 0 END) as on_time_flights,
-                AVG(delay_minutes) as avg_delay,
-                MIN(delay_minutes) as min_delay,
-                MAX(delay_minutes) as max_delay
-            FROM flights
-            WHERE schedule_date BETWEEN %s AND %s
-                AND actual_time IS NOT NULL
-                {direction_filter}
-            GROUP BY airline_code
-            HAVING COUNT(*) >= %s
-            ORDER BY 
-                (SUM(CASE WHEN on_time = 1 THEN 1 ELSE 0 END) * 100.0 / COUNT(*)) - (AVG(delay_minutes) / 10) DESC
-        """
-        
-        cursor.execute(query, (start_date, end_date, min_flights))
-        results = cursor.fetchall()
-        
-        airlines = []
-        for row in results:
-            airline_iata = row['airline_code']
-            # Lookup airline name, default to code if not found
-            airline_name = AIRLINE_MAPPING.get(str(airline_iata), airline_iata)
-            
-            total_flights = row['total_flights']
-            on_time_flights = float(row['on_time_flights']) if row['on_time_flights'] else 0
-            avg_delay = float(row['avg_delay']) if row['avg_delay'] else 0
-            min_delay = float(row['min_delay']) if row['min_delay'] else 0
-            max_delay = float(row['max_delay']) if row['max_delay'] else 0
-            # direction = row['flight_direction'] # Removed as it's not in SELECT anymore
-            
-            # Calculate metrics
-            on_time_percentage = (on_time_flights / total_flights * 100) if total_flights > 0 else 0
-            reliability_score = on_time_percentage - (avg_delay / 10)
-            
-            # Calculate trend
-            trend = calculate_trend(cursor, airline_iata, start_date, days=(end_date - start_date).days)
-            
-            # Determine flight type string
-            type_str = flight_type
-            if type_str == 'all':
-                type_str = 'mixed'
-            
-            airlines.append({
-                'code': airline_iata,
-                'name': airline_name,
-                'totalFlights': total_flights,
-                'onTimeFlights': on_time_flights,
-                'onTimePercentage': round(on_time_percentage, 2),
-                'avgDelay': round(avg_delay, 1),
-                'minDelay': round(min_delay, 1),
-                'maxDelay': round(max_delay, 1),
-                'reliabilityScore': round(reliability_score, 2),
-                'trend': round(trend, 2),
-                'flightType': type_str
-            })
-        
-        return airlines
+def get_first_update_date():
+    """Get the date of the earliest flight record"""
+    try:
+        conn = db.get_connection()
+        with conn.cursor() as cursor:
+            cursor.execute("SELECT MIN(schedule_date) as first_date FROM flights")
+            result = cursor.fetchone()
+            if result and result['first_date']:
+                return result['first_date'].isoformat()
+    except Exception as e:
+        print(f"Error getting first update date: {e}")
+    return None
 
 def calculate_trend(cursor, airline_iata, current_start_date, days=30):
+    """
+    Calculate trend using linear regression slope of daily scores
+    Returns: Average daily change in score (slope)
+    """
     try:
-        prev_end_date = current_start_date
-        prev_start_date = prev_end_date - timedelta(days=days)
+        # Get daily statistics for the period
+        end_date = datetime.now()
+        # Ensure we cover the full range up to today for the trend
+        # current_start_date is passed from the main function (end_date - days)
         
         query = """
             SELECT 
+                schedule_date,
                 COUNT(*) as total_flights,
                 SUM(CASE WHEN on_time = 1 THEN 1 ELSE 0 END) as on_time_flights,
                 AVG(delay_minutes) as avg_delay
@@ -192,35 +137,58 @@ def calculate_trend(cursor, airline_iata, current_start_date, days=30):
             WHERE airline_code = %s
                 AND schedule_date BETWEEN %s AND %s
                 AND actual_time IS NOT NULL
+            GROUP BY schedule_date
+            ORDER BY schedule_date ASC
         """
         
-        cursor.execute(query, (airline_iata, prev_start_date, prev_end_date))
-        result = cursor.fetchone()
+        cursor.execute(query, (airline_iata, current_start_date, end_date))
+        results = cursor.fetchall()
         
-        if result and result['total_flights'] >= 5:
-            total_flights = result['total_flights']
-            on_time_flights = float(result['on_time_flights']) if result['on_time_flights'] else 0
-            avg_delay = float(result['avg_delay']) if result['avg_delay'] else 0
+        if not results or len(results) < 2:
+            return 0.0
             
-            prev_on_time_pct = (on_time_flights / total_flights * 100) if total_flights > 0 else 0
-            prev_score = prev_on_time_pct - (avg_delay / 10)
-            
-            cursor.execute(query, (airline_iata, current_start_date, current_start_date + timedelta(days=days)))
-            current_result = cursor.fetchone()
-            
-            if current_result and current_result['total_flights'] > 0:
-                curr_total = current_result['total_flights']
-                curr_on_time = float(current_result['on_time_flights']) if current_result['on_time_flights'] else 0
-                curr_delay = float(current_result['avg_delay']) if current_result['avg_delay'] else 0
-                
-                curr_on_time_pct = (curr_on_time / curr_total * 100) if curr_total > 0 else 0
-                curr_score = curr_on_time_pct - (curr_delay / 10)
-                
-                if prev_score > 0:
-                    trend = ((curr_score - prev_score) / prev_score) * 100
-                    return trend
+        x_values = [] # Days since start
+        y_values = [] # Scores
         
-        return 0.0
+        start_ts = results[0]['schedule_date'].toordinal()
+        
+        for row in results:
+            if row['total_flights'] < 1:
+                continue
+                
+            total_flights = row['total_flights']
+            on_time_flights = float(row['on_time_flights']) if row['on_time_flights'] else 0
+            avg_delay = float(row['avg_delay']) if row['avg_delay'] else 0
+            
+            on_time_pct = (on_time_flights / total_flights * 100)
+            score = on_time_pct - (avg_delay / 10)
+            
+            # X is days relative to start of data points
+            day_idx = row['schedule_date'].toordinal() - start_ts
+            
+            x_values.append(day_idx)
+            y_values.append(score)
+            
+        if len(x_values) < 2:
+            return 0.0
+            
+        # Calculate Linear Regression Slope (m)
+        # m = (N * sum(xy) - sum(x) * sum(y)) / (N * sum(x^2) - sum(x)^2)
+        
+        n = len(x_values)
+        sum_x = sum(x_values)
+        sum_y = sum(y_values)
+        sum_xy = sum(x * y for x, y in zip(x_values, y_values))
+        sum_x_sq = sum(x * x for x in x_values)
+        
+        denominator = (n * sum_x_sq - sum_x * sum_x)
+        
+        if denominator == 0:
+            return 0.0
+            
+        slope = (n * sum_xy - sum_x * sum_y) / denominator
+        
+        return slope
         
     except Exception as e:
         print(f"Error calculating trend: {e}")

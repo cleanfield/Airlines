@@ -83,6 +83,17 @@ async function loadData() {
         }
 
         currentData = data;
+
+        // Update First Update Metadata
+        if (data.firstUpdate) {
+            const firstDate = new Date(data.firstUpdate);
+            document.getElementById('firstUpdate').textContent = firstDate.toLocaleString('nl-NL', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            });
+        }
+
         applyFilters();
         hideLoading();
 
