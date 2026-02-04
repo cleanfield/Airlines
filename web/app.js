@@ -223,8 +223,18 @@ function renderFlightTable(flights) {
         const statusClass = flight.onTime ? 'ontime' : 'delayed';
         const delayText = flight.delay > 0 ? `+${flight.delay.toFixed(0)}m` : 'Op tijd';
 
+        // Parse flight number (e.g., "PC1254" -> "PC", "1254")
+        const match = flight.flightNumber.match(/^([A-Z0-9]+)(\d+)$/);
+        const carrier = match ? match[1] : flight.flightNumber.substring(0, 2);
+        const number = match ? match[2] : flight.flightNumber.substring(2);
+
+        // Parse date
+        const [year, month, day] = flight.date.split('-');
+
+        const trackerUrl = `https://www.flightstats.com/v2/flight-tracker/${carrier}/${number}?year=${year}&month=${month}&date=${day}`;
+
         tr.innerHTML = `
-            <td><a href="https://www.flightaware.com/live/flight/${flight.flightNumber}" target="_blank" rel="noopener noreferrer" class="flight-link"><strong>${flight.flightNumber}</strong></a></td>
+            <td><a href="${trackerUrl}" target="_blank" rel="noopener noreferrer" class="flight-link"><strong>${flight.flightNumber}</strong></a></td>
             <td>${flight.date}</td>
             <td>${(flight.schedTime && flight.schedTime.length >= 5) ? flight.schedTime.substring(0, 5) : (flight.schedTime || '-')}</td>
             <td>${flight.actualTime || '-'}</td>
