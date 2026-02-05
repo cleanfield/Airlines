@@ -249,9 +249,16 @@ async function showFlightDetails(airlineCode) {
             params.append('destination', filters.destination);
         }
         
+        console.log('Flight details request:', `flight_type=${filters.flightType}`, `destination=${filters.destination}`);
+        
         const response = await fetch(`/api/airlines/${airlineCode}/flights?${params.toString()}`);
         if (!response.ok) throw new Error('Failed to fetch details');
         const data = await response.json();
+        
+        console.log(`Received ${data.flights.length} flights for ${airlineCode}`);
+        if (data.flights.length > 0) {
+            console.log('Sample flight directions:', data.flights.slice(0, 5).map(f => f.direction));
+        }
 
         document.getElementById('modalAirlineName').textContent = data.airline.name;
         renderFlightTable(data.flights);
