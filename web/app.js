@@ -238,7 +238,18 @@ async function showFlightDetails(airlineCode) {
     document.getElementById('modalAirlineName').textContent = 'Loading...';
 
     try {
-        const response = await fetch(`/api/airlines/${airlineCode}/flights?days=${filters.dateRange}&flight_type=${filters.flightType}`);
+        // Build URL with all current filters
+        const params = new URLSearchParams({
+            days: filters.dateRange,
+            flight_type: filters.flightType
+        });
+        
+        // Add destination filter if active
+        if (filters.destination) {
+            params.append('destination', filters.destination);
+        }
+        
+        const response = await fetch(`/api/airlines/${airlineCode}/flights?${params.toString()}`);
         if (!response.ok) throw new Error('Failed to fetch details');
         const data = await response.json();
 

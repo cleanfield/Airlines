@@ -479,6 +479,7 @@ def get_airline_flights(airline_code):
         days = request.args.get('days', default=1, type=int)
         flight_type = request.args.get('flight_type', default='all', type=str)
         limit = request.args.get('limit', default=100, type=int)
+        destination = request.args.get('destination', default=None, type=str)
         
         # Calculate date range
         end_date = datetime.now()
@@ -511,6 +512,16 @@ def get_airline_flights(airline_code):
                 query += " AND flight_direction = 'D'"
             elif flight_type == 'arrivals':
                 query += " AND flight_direction = 'A'"
+                
+            if destination:
+                # Match exact airport code (handles comma-separated destinations)
+                query += " AND (destinations = %s OR destinations LIKE %s OR destinations LIKE %s OR destinations LIKE %s)"
+                params.extend([
+                    destination,                    # Exact match: "BCN"
+                    f"{destination},%",            # Start: "BCN,..."
+                    f"%,{destination}",            # End: "...,BCN"
+                    f"%,{destination},%"           # Middle: "...,BCN,..."
+                ])
                 
             query += " ORDER BY schedule_date DESC, schedule_time DESC LIMIT %s"
             params.append(limit)
