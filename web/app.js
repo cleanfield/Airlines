@@ -10,10 +10,12 @@ const CONFIG = {
 
 // State
 let currentData = null;
+let destinationsData = null;  // Add destinations data variable
 let filters = {
     flightType: 'all',
     dateRange: 30,
-    minFlights: 10
+    minFlights: 10,
+    destination: null  // Add destination to filters
 };
 
 // Initialize
@@ -33,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initializeEventListeners() {
     document.getElementById('flightType').addEventListener('change', (e) => {
         filters.flightType = e.target.value;
+        toggleDestinationFilters(e.target.value);  // Show/hide destination filters
         loadData();
     });
 
@@ -71,6 +74,9 @@ function initializeEventListeners() {
         loadData();
     });
 
+    // Load destinations on startup
+    loadDestinations();
+    
     // Check initial visibility
     toggleDestinationFilters(filters.flightType);
 }
