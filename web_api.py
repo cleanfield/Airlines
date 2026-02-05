@@ -64,8 +64,53 @@ except Exception as e:
 
 @app.route('/api/destinations')
 def get_destinations():
-    """Get all destinations with continent/country info"""
-    return jsonify(DESTINATIONS_FULL)
+    """Get destinations that actually have flights from Schiphol"""
+    try:
+        conn = db.get_connection()
+        with conn.cursor() as cursor:
+            # Get unique destination codes from actual flight data
+            query = """
+                SELECT DISTINCT destinations 
+                FROM flights 
+                WHERE destinations IS NOT NULL 
+                  AND destinations != ''
+                  AND flight_direction = 'D'
+            """
+            cursor.execute(query)
+            results = cursor.fetchall()
+            
+            # Extract all unique airport codes (handle comma-separated)
+            airport_codes = set()
+            for row in results:
+                dest_str = row['destinations']
+                if dest_str:
+                    # Split by comma and clean up
+                    codes = [code.strip() for code in str(dest_str).split(',')]
+                    airport_codes.update(codes)
+            
+            # Map codes to full destination info
+            destinations = []
+            destinations_dict = {d['code']: d for d in DESTINATIONS_FULL}
+            
+            for code in sorted(airport_codes):
+                if code in destinations_dict:
+                    destinations.append(destinations_dict[code])
+                else:
+                    # Fallback if not in mapping
+                    destinations.append({
+                        'code': code,
+                        'name': code,
+                        'country': 'Unknown',
+                        'continent': 'Unknown'
+                    })
+            
+            return jsonify(destinations)
+            
+    except Exception as e:
+        print(f"Error getting destinations: {e}")
+        traceback.print_exc()
+        # Fallback to all destinations if query fails
+        return jsonify(DESTINATIONS_FULL)
 
 
 @app.route('/')
