@@ -106,8 +106,15 @@ def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=
                 query += " AND flight_direction = 'A'"
                 
             if destination:
-                query += " AND destinations LIKE %s"
-                params.append(f"%{destination}%")
+                # Match exact airport code (handles comma-separated destinations)
+                # Matches: "BCN", "BCN,MAD", "MAD,BCN", "MAD,BCN,LIS"
+                query += " AND (destinations = %s OR destinations LIKE %s OR destinations LIKE %s OR destinations LIKE %s)"
+                params.extend([
+                    destination,                    # Exact match: "BCN"
+                    f"{destination},%",            # Start: "BCN,..."
+                    f"%,{destination}",            # End: "...,BCN"
+                    f"%,{destination},%"           # Middle: "...,BCN,..."
+                ])
 
                 
             query += " GROUP BY airline_code HAVING total_flights >= %s"
