@@ -39,6 +39,7 @@ except Exception as e:
 # Load destination mapping
 DESTINATION_MAPPING = {}
 try:
+
     dest_mapping_path = os.path.join(os.path.dirname(__file__), 'destination_mapping.json')
     if os.path.exists(dest_mapping_path):
         with open(dest_mapping_path, 'r', encoding='utf-8') as f:
@@ -46,8 +47,26 @@ try:
         print(f"Loaded {len(DESTINATION_MAPPING)} destinations from mapping file")
     else:
         print(f"Warning: Destination mapping file not found at {dest_mapping_path}")
+        
+    # Load full destination details for drilldown
+    dest_full_path = os.path.join(os.path.dirname(__file__), 'destinations_full.json')
+    if os.path.exists(dest_full_path):
+        with open(dest_full_path, 'r', encoding='utf-8') as f:
+            DESTINATIONS_FULL = json.load(f)
+        print(f"Loaded {len(DESTINATIONS_FULL)} full destinations")
+    else:
+        print(f"Warning: Full destination details not found at {dest_full_path}")
+        DESTINATIONS_FULL = []
+        
 except Exception as e:
     print(f"Error loading destination mapping: {e}")
+    DESTINATIONS_FULL = []
+
+@app.route('/api/destinations')
+def get_destinations():
+    """Get all destinations with continent/country info"""
+    return jsonify(DESTINATIONS_FULL)
+
 
 @app.route('/')
 def index():
@@ -60,7 +79,7 @@ def logs():
     return send_from_directory('web', 'logs.html')
 
 
-def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10):
+def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10, destination=None):
     """
     Get statistics for all airlines within the date range
     """
@@ -85,6 +104,11 @@ def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=
                 query += " AND flight_direction = 'D'"
             elif flight_type == 'arrivals':
                 query += " AND flight_direction = 'A'"
+                
+            if destination:
+                query += " AND destinations LIKE %s"
+                params.append(f"%{destination}%")
+
                 
             query += " GROUP BY airline_code HAVING total_flights >= %s"
             params.append(min_flights)
@@ -137,13 +161,15 @@ def get_rankings():
         days = request.args.get('days', default=30, type=int)
         flight_type = request.args.get('flight_type', default='all', type=str)
         min_flights = request.args.get('min_flights', default=10, type=int)
+        destination = request.args.get('destination', default=None, type=str)
         
         # Calculate date range
         end_date = datetime.now()
         start_date = end_date - timedelta(days=days)
         
         # Get airline statistics from database
-        airlines = get_airline_statistics(start_date, end_date, flight_type, min_flights)
+        airlines = get_airline_statistics(start_date, end_date, flight_type, min_flights, destination)
+
         
         # Calculate total flights
         total_flights = sum(airline['totalFlights'] for airline in airlines)

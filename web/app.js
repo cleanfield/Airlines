@@ -57,7 +57,38 @@ function initializeEventListeners() {
         });
         th.style.cursor = 'pointer';
     });
+    // Destination filters
+    document.getElementById('filterContinent').addEventListener('change', (e) => {
+        updateCountrySelect(e.target.value);
+    });
+
+    document.getElementById('filterCountry').addEventListener('change', (e) => {
+        updateAirportSelect(e.target.value);
+    });
+
+    document.getElementById('filterAirport').addEventListener('change', (e) => {
+        filters.destination = e.target.value;
+        loadData();
+    });
+
+    // Check initial visibility
+    toggleDestinationFilters(filters.flightType);
 }
+
+function toggleDestinationFilters(type) {
+    const group = document.getElementById('destinationFilterGroup');
+    if (type === 'departures' || type === 'all') { // Allowing for 'all' too as it might be useful
+        group.style.display = 'block';
+        if (!destinationsData) {
+            loadDestinations();
+        }
+    } else {
+        group.style.display = 'none';
+        filters.destination = null; // Clear filter
+        document.getElementById('filterAirport').value = "";
+    }
+}
+
 
 // Data Loading
 async function loadData() {
@@ -76,6 +107,11 @@ async function loadData() {
                 flight_type: filters.flightType,
                 min_flights: filters.minFlights
             });
+
+            if (filters.destination) {
+                params.append('destination', filters.destination);
+            }
+
 
             const response = await fetch(`${CONFIG.apiEndpoint}?${params.toString()}`);
             if (!response.ok) throw new Error('Failed to fetch data');
@@ -445,3 +481,93 @@ window.AirlinesApp = {
     applyFilters,
     CONFIG
 };
+
+// Destination Drilldown Logic
+async function loadDestinations() {
+    try {
+        const response = await fetch('/api/destinations');
+        if (!response.ok) throw new Error('Failed to fetch destinations');
+        destinationsData = await response.json();
+        populateContinentSelect();
+    } catch (error) {
+        console.error('Error loading destinations:', error);
+    }
+}
+
+function populateContinentSelect() {
+    if (!destinationsData) return;
+
+    // Get unique continents
+    const continents = [...new Set(destinationsData.map(d => d.continent).filter(c => c))].sort();
+
+    const select = document.getElementById('filterContinent');
+    select.innerHTML = '<option value="">Continent...</option>';
+    continents.forEach(c => {
+        const option = document.createElement('option');
+        option.value = c;
+        option.textContent = c;
+        select.appendChild(option);
+    });
+
+    select.disabled = false;
+}
+
+function updateCountrySelect(selectedContinent) {
+    const countrySelect = document.getElementById('filterCountry');
+    const airportSelect = document.getElementById('filterAirport');
+
+    countrySelect.innerHTML = '<option value="">Land...</option>';
+    airportSelect.innerHTML = '<option value="">Airport...</option>';
+    airportSelect.disabled = true;
+    filters.destination = null;
+
+    if (!selectedContinent) {
+        countrySelect.disabled = true;
+        loadData(); // clear filter
+        return;
+    }
+
+    // Filter countries by continent
+    const countries = [...new Set(
+        destinationsData
+            .filter(d => d.continent === selectedContinent)
+            .map(d => d.country)
+            .filter(c => c)
+    )].sort();
+
+    countries.forEach(c => {
+        const option = document.createElement('option');
+        option.value = c;
+        option.textContent = c;
+        countrySelect.appendChild(option);
+    });
+
+    countrySelect.disabled = false;
+}
+
+function updateAirportSelect(selectedCountry) {
+    const airportSelect = document.getElementById('filterAirport');
+    airportSelect.innerHTML = '<option value="">Airport...</option>';
+    filters.destination = null;
+
+    if (!selectedCountry) {
+        airportSelect.disabled = true;
+        loadData();
+        return;
+    }
+
+    // Filter airports by country
+    const airports = destinationsData
+        .filter(d => d.country === selectedCountry)
+        .sort((a, b) => (a.name || "").localeCompare(b.name || ""));
+
+    airports.forEach(a => {
+        const option = document.createElement('option');
+        option.value = a.code; // Use code for triggering filter
+        option.textContent = `${a.name} (${a.code})`;
+        airportSelect.appendChild(option);
+    });
+
+    airportSelect.disabled = false;
+}
+

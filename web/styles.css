@@ -949,3 +949,18 @@ body {
     color: var(--primary-dark);
     text-decoration: underline;
 }
+#destinationFilterGroup {
+    flex-grow: 2;
+    min-width: 300px;
+    display: none;
+}
+
+.destination-selects {
+    display: flex;
+    gap: 5px;
+}
+
+.destination-selects .filter-select {
+    flex: 1;
+    min-width: 0;
+}
