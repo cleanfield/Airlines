@@ -113,6 +113,45 @@ def get_destinations():
         return jsonify(DESTINATIONS_FULL)
 
 
+@app.route('/api/airports')
+def get_airports():
+    """Get all airports from the database"""
+    try:
+        conn = db.get_connection()
+        with conn.cursor() as cursor:
+            cursor.execute("""
+                SELECT id, naam, iata_code, icao_code, stad, land, 
+                       latitude, longitude, created_at
+                FROM airports 
+                ORDER BY naam
+            """)
+            results = cursor.fetchall()
+            
+            airports = []
+            for row in results:
+                airports.append({
+                    'id': row['id'],
+                    'naam': row['naam'],
+                    'iataCode': row['iata_code'],
+                    'icaoCode': row['icao_code'],
+                    'stad': row['stad'],
+                    'land': row['land'],
+                    'latitude': float(row['latitude']) if row['latitude'] else None,
+                    'longitude': float(row['longitude']) if row['longitude'] else None,
+                    'createdAt': row['created_at'].isoformat() if row['created_at'] else None
+                })
+            
+            return jsonify(airports)
+            
+    except Exception as e:
+        print(f"Error getting airports: {e}")
+        traceback.print_exc()
+        return jsonify({
+            'error': str(e),
+            'message': 'Failed to fetch airports'
+        }), 500
+
+
 @app.route('/')
 def index():
     """Serve the main web page"""

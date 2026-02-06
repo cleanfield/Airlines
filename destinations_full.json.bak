@@ -57,7 +57,7 @@
     "code": "AAJ",
     "name": "Cayana Airstrip",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "AAK",
@@ -81,7 +81,7 @@
     "code": "AAN",
     "name": "Al Ain",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AAO",
@@ -99,7 +99,7 @@
     "code": "AAQ",
     "name": "Vitiazevo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "AAR",
@@ -165,7 +165,7 @@
     "code": "ABB",
     "name": "Abingdon",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ABC",
@@ -212,7 +212,7 @@
   {
     "code": "ABJ",
     "name": "Abidjan",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -237,12 +237,12 @@
     "code": "ABN",
     "name": "Albina",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "ABO",
     "name": "Aboisso",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -309,7 +309,7 @@
     "code": "ABZ",
     "name": "Aberdeen",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ACA",
@@ -351,7 +351,7 @@
     "code": "ACI",
     "name": "Alderney",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ACK",
@@ -393,7 +393,7 @@
     "code": "ACS",
     "name": "Achinsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ACT",
@@ -422,14 +422,14 @@
   {
     "code": "ADA",
     "name": "Adana",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ADB",
     "name": "Izmir",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ADD",
@@ -446,8 +446,8 @@
   {
     "code": "ADF",
     "name": "Adiyaman",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ADG",
@@ -459,7 +459,7 @@
     "code": "ADH",
     "name": "Aldan",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ADI",
@@ -471,7 +471,7 @@
     "code": "ADJ",
     "name": "Amman",
     "country": "Jordania",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "ADK",
@@ -543,7 +543,7 @@
     "code": "ADV",
     "name": "Andover",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ADW",
@@ -555,7 +555,7 @@
     "code": "ADX",
     "name": "Leuchars",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ADY",
@@ -710,8 +710,8 @@
   {
     "code": "AFY",
     "name": "AFYON",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "AGA",
@@ -765,7 +765,7 @@
     "code": "AGI",
     "name": "Wageningen",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "AGJ",
@@ -1107,13 +1107,13 @@
     "code": "AJF",
     "name": "Jouf",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AJI",
     "name": "Agri",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "AJJ",
@@ -1137,7 +1137,7 @@
     "code": "AJO",
     "name": "Al-Jouf",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AJR",
@@ -1299,7 +1299,7 @@
     "code": "AKX",
     "name": "Aktyubinsk",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AKY",
@@ -1539,7 +1539,7 @@
     "code": "AMM",
     "name": "Amman",
     "country": "Jordania",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AMN",
@@ -1575,7 +1575,7 @@
     "code": "AMS",
     "name": "Amsterdam",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "AMT",
@@ -1593,7 +1593,7 @@
     "code": "AMV",
     "name": "Amderma",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "AMW",
@@ -1682,8 +1682,8 @@
   {
     "code": "ANK",
     "name": "Ankara",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ANL",
@@ -1802,8 +1802,8 @@
   {
     "code": "AOE",
     "name": "Eskisehir H Polatkan",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "AOG",
@@ -2037,13 +2037,13 @@
     "code": "AQI",
     "name": "Qaisumah",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AQJ",
     "name": "Aqaba",
     "country": "Jordania",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AQM",
@@ -2115,7 +2115,7 @@
     "code": "ARH",
     "name": "Talagi",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ARI",
@@ -2259,7 +2259,7 @@
     "code": "ASF",
     "name": "Narimanovo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ASG",
@@ -2277,7 +2277,7 @@
     "code": "ASI",
     "name": "Wideawake Field",
     "country": "St. Helena",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "ASJ",
@@ -2288,7 +2288,7 @@
   {
     "code": "ASK",
     "name": "Yamoussoukro",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -2330,8 +2330,8 @@
   {
     "code": "ASR",
     "name": "Kayseri",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "AST",
@@ -2511,7 +2511,7 @@
     "code": "ATX",
     "name": "Atbasar",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "ATY",
@@ -2571,7 +2571,7 @@
     "code": "AUH",
     "name": "Abu Dhabi",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AUI",
@@ -2955,7 +2955,7 @@
     "code": "AYH",
     "name": "RAF",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "AYI",
@@ -2967,7 +2967,7 @@
     "code": "AYK",
     "name": "Arkalyk",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AYL",
@@ -3014,8 +3014,8 @@
   {
     "code": "AYT",
     "name": "Antalya",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "AYU",
@@ -3057,7 +3057,7 @@
     "code": "AZI",
     "name": "Al Bateen",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "AZN",
@@ -3164,8 +3164,8 @@
   {
     "code": "BAL",
     "name": "Batman",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "BAM",
@@ -3237,7 +3237,7 @@
     "code": "BAX",
     "name": "Barnaul",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BAY",
@@ -3327,7 +3327,7 @@
     "code": "BBM",
     "name": "Battambang",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "BBN",
@@ -3345,7 +3345,7 @@
     "code": "BBP",
     "name": "Bembridge",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BBQ",
@@ -3363,7 +3363,7 @@
     "code": "BBS",
     "name": "Blackbushe",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BBT",
@@ -3380,7 +3380,7 @@
   {
     "code": "BBV",
     "name": "Bereby",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -3549,7 +3549,7 @@
     "code": "BCX",
     "name": "Beloreck",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BCY",
@@ -3626,7 +3626,7 @@
   {
     "code": "BDK",
     "name": "Soko",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -3638,8 +3638,8 @@
   {
     "code": "BDM",
     "name": "Bandirma",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "BDN",
@@ -3729,7 +3729,7 @@
     "code": "BEB",
     "name": "Benbecula",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BEC",
@@ -3759,7 +3759,7 @@
     "code": "BEG",
     "name": "Belgrado",
     "country": "Serbia ",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BEH",
@@ -3819,7 +3819,7 @@
     "code": "BEQ",
     "name": "Honington (Bury St. Edmunds)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BER",
@@ -3861,7 +3861,7 @@
     "code": "BEX",
     "name": "RAF",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BEY",
@@ -3981,7 +3981,7 @@
     "code": "BFS",
     "name": "Belfast Intl Airport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BFT",
@@ -4046,7 +4046,7 @@
   {
     "code": "BGG",
     "name": "Bongouanou",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -4185,7 +4185,7 @@
     "code": "BHD",
     "name": "Belfast City Airport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BHE",
@@ -4209,7 +4209,7 @@
     "code": "BHH",
     "name": "Bisha",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "BHI",
@@ -4305,7 +4305,7 @@
     "code": "BHX",
     "name": "Birmingham",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BHY",
@@ -4586,8 +4586,8 @@
   {
     "code": "BJV",
     "name": "Bodrum",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "BJW",
@@ -4605,7 +4605,7 @@
     "code": "BJY",
     "name": "Batajnica",
     "country": "Serbia ",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BJZ",
@@ -4617,7 +4617,7 @@
     "code": "BKA",
     "name": "Bykovo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BKB",
@@ -4821,7 +4821,7 @@
     "code": "BLK",
     "name": "Blackpool",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BLL",
@@ -5271,7 +5271,7 @@
     "code": "BOH",
     "name": "Bournemouth",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BOI",
@@ -5295,7 +5295,7 @@
     "code": "BOL",
     "name": "Ballykelly",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BOM",
@@ -5493,13 +5493,13 @@
     "code": "BQE",
     "name": "Bubaque",
     "country": "Guinea Bissau",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "BQH",
     "name": "Biggin Hill",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BQI",
@@ -5528,7 +5528,7 @@
   {
     "code": "BQO",
     "name": "Tehini",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -5541,7 +5541,7 @@
     "code": "BQS",
     "name": "Ignatyevo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BQT",
@@ -5553,7 +5553,7 @@
     "code": "BQU",
     "name": "J.F.Mitchell",
     "country": "Saint Vincent",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "BQV",
@@ -5601,7 +5601,7 @@
     "code": "BRF",
     "name": "Bradford",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BRG",
@@ -5673,13 +5673,13 @@
     "code": "BRR",
     "name": "North Bay",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BRS",
     "name": "Bristol",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BRT",
@@ -5720,7 +5720,7 @@
   {
     "code": "BRZ",
     "name": "Borotou",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -5763,13 +5763,13 @@
     "code": "BSG",
     "name": "Bata",
     "country": "Equatorial Gui",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "BSH",
     "name": "Brighton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BSI",
@@ -5943,7 +5943,7 @@
     "code": "BTK",
     "name": "Bratsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BTL",
@@ -5967,7 +5967,7 @@
     "code": "BTO",
     "name": "Botopasie",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "BTP",
@@ -6032,8 +6032,8 @@
   {
     "code": "BTZ",
     "name": "Bursa",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "BUA",
@@ -6147,12 +6147,12 @@
     "code": "BUT",
     "name": "Burtonwood",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BUU",
     "name": "Buyo",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -6345,7 +6345,7 @@
     "code": "BWF",
     "name": "Walney Island",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BWG",
@@ -6399,7 +6399,7 @@
     "code": "BWO",
     "name": "Balakovo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BWP",
@@ -6435,7 +6435,7 @@
     "code": "BWY",
     "name": "Bentwaters (USAF)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BXA",
@@ -6471,19 +6471,19 @@
     "code": "BXH",
     "name": "Balkhash",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "BXI",
     "name": "Boundiali",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
     "code": "BXJ",
     "name": "Burundai",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "BXK",
@@ -6506,8 +6506,8 @@
   {
     "code": "BXN",
     "name": "Bodrum",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "BXO",
@@ -6614,7 +6614,7 @@
   {
     "code": "BYK",
     "name": "Bouake",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -6722,14 +6722,14 @@
   {
     "code": "BZI",
     "name": "Balikesir",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "BZK",
     "name": "Bryansk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BZL",
@@ -6789,13 +6789,13 @@
     "code": "BZY",
     "name": "Beltsy",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "BZZ",
     "name": "Brize Norton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CAA",
@@ -6867,7 +6867,7 @@
     "code": "CAL",
     "name": "Campbeltown",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CAM",
@@ -6939,13 +6939,13 @@
     "code": "CAX",
     "name": "Carlisle",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CAY",
     "name": "Cayenne",
     "country": "French Guyana",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "CAZ",
@@ -6993,7 +6993,7 @@
     "code": "CBG",
     "name": "Cambridge",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CBH",
@@ -7369,7 +7369,7 @@
   },
   {
     "code": "CDT",
-    "name": "Castell�n",
+    "name": "Castell\ufffdn",
     "country": "Spain",
     "continent": "Europe"
   },
@@ -7425,7 +7425,7 @@
     "code": "CEE",
     "name": "Cherepovets",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CEF",
@@ -7437,7 +7437,7 @@
     "code": "CEG",
     "name": "Hawarden",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CEH",
@@ -7461,7 +7461,7 @@
     "code": "CEK",
     "name": "Balandino",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CEL",
@@ -7839,7 +7839,7 @@
     "code": "CHF",
     "name": "Chinhae",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "CHG",
@@ -7887,7 +7887,7 @@
     "code": "CHN",
     "name": "Chongju",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "CHO",
@@ -8073,7 +8073,7 @@
     "code": "CIT",
     "name": "Chimkent",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "CIU",
@@ -8091,7 +8091,7 @@
     "code": "CIW",
     "name": "Canouan, Canouan Island",
     "country": "Saint Vincent",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "CIX",
@@ -8145,7 +8145,7 @@
     "code": "CJJ",
     "name": "Cheong Ju City",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "CJL",
@@ -8217,7 +8217,7 @@
     "code": "CKH",
     "name": "Chokurdakh",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CKI",
@@ -8235,7 +8235,7 @@
     "code": "CKL",
     "name": "Chkalovsky",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CKM",
@@ -8300,8 +8300,8 @@
   {
     "code": "CKZ",
     "name": "Canakkale",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "CLA",
@@ -8691,7 +8691,7 @@
     "code": "CNN",
     "name": "Neriugri",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CNO",
@@ -8835,7 +8835,7 @@
     "code": "COL",
     "name": "Coll Island",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "COM",
@@ -8894,8 +8894,8 @@
   {
     "code": "COV",
     "name": "Cukurova",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "COW",
@@ -9153,7 +9153,7 @@
     "code": "CRN",
     "name": "Cromarty",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CRO",
@@ -9231,7 +9231,7 @@
     "code": "CSA",
     "name": "Colonsay Island",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CSB",
@@ -9363,7 +9363,7 @@
     "code": "CSY",
     "name": "Cheboksary",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CTA",
@@ -9765,7 +9765,7 @@
     "code": "CVT",
     "name": "Coventry",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CVU",
@@ -9807,7 +9807,7 @@
     "code": "CWL",
     "name": "Cardiff",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CWO",
@@ -10023,7 +10023,7 @@
     "code": "CYX",
     "name": "Chersky",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "CYZ",
@@ -10401,7 +10401,7 @@
     "code": "DCS",
     "name": "Doncaster",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DCT",
@@ -10665,7 +10665,7 @@
     "code": "DGX",
     "name": "Saint Athan",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DHA",
@@ -10683,7 +10683,7 @@
     "code": "DHF",
     "name": "Al Dhafra",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "DHI",
@@ -10713,7 +10713,7 @@
     "code": "DHR",
     "name": "Den Helder",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DHT",
@@ -10760,7 +10760,7 @@
   {
     "code": "DIM",
     "name": "Ville",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -10808,14 +10808,14 @@
   {
     "code": "DIV",
     "name": "Divo",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
     "code": "DIY",
     "name": "Diyarbakir",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "DJA",
@@ -10833,7 +10833,7 @@
     "code": "DJE",
     "name": "Djerba",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "DJG",
@@ -10862,7 +10862,7 @@
   {
     "code": "DJO",
     "name": "Daloa",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -10893,7 +10893,7 @@
     "code": "DKS",
     "name": "Dikson",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DKV",
@@ -10970,8 +10970,8 @@
   {
     "code": "DLM",
     "name": "Dalaman",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "DLN",
@@ -11025,7 +11025,7 @@
     "code": "DMB",
     "name": "Taraz",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "DMD",
@@ -11096,14 +11096,14 @@
   {
     "code": "DNC",
     "name": "Danane",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
     "code": "DND",
     "name": "Dundee",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DNE",
@@ -11151,7 +11151,7 @@
     "code": "DNM",
     "name": "Denham",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DNN",
@@ -11216,8 +11216,8 @@
   {
     "code": "DNZ",
     "name": "Cardak",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "DOA",
@@ -11235,7 +11235,7 @@
     "code": "DOC",
     "name": "Dornoch",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DOD",
@@ -11247,7 +11247,7 @@
     "code": "DOE",
     "name": "Djoemoe",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "DOF",
@@ -11445,7 +11445,7 @@
     "code": "DRJ",
     "name": "Drietabbetje",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "DRM",
@@ -11505,7 +11505,7 @@
     "code": "DSA",
     "name": "Doncaster Sheffield",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DSC",
@@ -11775,7 +11775,7 @@
     "code": "DWC",
     "name": "Dubai Al Maktoum Int.",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "DWF",
@@ -11811,7 +11811,7 @@
     "code": "DXB",
     "name": "Dubai International",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "DXD",
@@ -11853,7 +11853,7 @@
     "code": "DYR",
     "name": "Ugolny",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "DYS",
@@ -11889,7 +11889,7 @@
     "code": "DZN",
     "name": "Zhezkazgan",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "DZO",
@@ -11925,7 +11925,7 @@
     "code": "EAM",
     "name": "Nejran",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "EAN",
@@ -11997,7 +11997,7 @@
     "code": "EBM",
     "name": "El Bourma",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "EBN",
@@ -12123,7 +12123,7 @@
     "code": "EDI",
     "name": "Edinburgh",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EDK",
@@ -12146,8 +12146,8 @@
   {
     "code": "EDO",
     "name": "Edremit-Korfez",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "EDQ",
@@ -12273,7 +12273,7 @@
     "code": "EGO",
     "name": "Belgorod",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EGP",
@@ -12315,7 +12315,7 @@
     "code": "EHN",
     "name": "Isle of Wight",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EHT",
@@ -12339,7 +12339,7 @@
     "code": "EIE",
     "name": "Eniseysk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EIH",
@@ -12357,7 +12357,7 @@
     "code": "EIN",
     "name": "Eindhoven",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EIS",
@@ -12381,7 +12381,7 @@
     "code": "EJH",
     "name": "Wejh",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "EKA",
@@ -12393,7 +12393,7 @@
     "code": "EKB",
     "name": "Ekibastuz",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "EKD",
@@ -12603,7 +12603,7 @@
     "code": "EMA",
     "name": "East Midlands",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EMB",
@@ -12753,7 +12753,7 @@
     "code": "ENK",
     "name": "Saint Angelo",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ENL",
@@ -12783,7 +12783,7 @@
     "code": "ENS",
     "name": "Enschede",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ENT",
@@ -12825,7 +12825,7 @@
     "code": "EOI",
     "name": "Eday (Orkneys)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EOK",
@@ -12920,8 +12920,8 @@
   {
     "code": "ERC",
     "name": "Erzincan",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ERD",
@@ -13004,8 +13004,8 @@
   {
     "code": "ERZ",
     "name": "Erzurum",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ESA",
@@ -13016,8 +13016,8 @@
   {
     "code": "ESB",
     "name": "Ankara",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ESC",
@@ -13053,7 +13053,7 @@
     "code": "ESH",
     "name": "Shoreham",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ESI",
@@ -13064,14 +13064,14 @@
   {
     "code": "ESK",
     "name": "ESKISEHIR",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ESL",
     "name": "Elista",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ESM",
@@ -13161,7 +13161,7 @@
     "code": "ETR",
     "name": "Elstree",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ETS",
@@ -13207,7 +13207,7 @@
   },
   {
     "code": "EUM",
-    "name": "Neum�nster",
+    "name": "Neum\ufffdnster",
     "country": "Germany",
     "continent": "Europe"
   },
@@ -13335,7 +13335,7 @@
     "code": "EWY",
     "name": "Newbury",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EXI",
@@ -13353,7 +13353,7 @@
     "code": "EXT",
     "name": "Exeter",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "EYL",
@@ -13394,8 +13394,8 @@
   {
     "code": "EZS",
     "name": "Elazig",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "FAA",
@@ -13407,7 +13407,7 @@
     "code": "FAB",
     "name": "Farnborough",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FAC",
@@ -13671,7 +13671,7 @@
     "code": "FEA",
     "name": "Fetlar",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FEB",
@@ -13694,7 +13694,7 @@
   {
     "code": "FEK",
     "name": "Ferkessedougou",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -13749,7 +13749,7 @@
     "code": "FFD",
     "name": "Fairford",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FFL",
@@ -13833,7 +13833,7 @@
     "code": "FIE",
     "name": "Fair Isle (Orkneys)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FIG",
@@ -13881,7 +13881,7 @@
     "code": "FJR",
     "name": "Al Fujairah",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "FKB",
@@ -13893,7 +13893,7 @@
     "code": "FKH",
     "name": "RAF",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FKI",
@@ -13977,7 +13977,7 @@
     "code": "FLH",
     "name": "Flotta",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FLI",
@@ -14211,7 +14211,7 @@
     "code": "FOA",
     "name": "Foula",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FOB",
@@ -14391,7 +14391,7 @@
     "code": "FRK",
     "name": "Fairoaks",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FRL",
@@ -14517,13 +14517,13 @@
     "code": "FSP",
     "name": "Saint Pierre",
     "country": "St. Pierre & M",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "FSS",
     "name": "Kinloss",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FST",
@@ -14685,7 +14685,7 @@
     "code": "FWM",
     "name": "Heliport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "FXE",
@@ -14739,7 +14739,7 @@
     "code": "FZO",
     "name": "Filton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GAA",
@@ -14769,13 +14769,13 @@
     "code": "GAE",
     "name": "Gabes",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "GAF",
     "name": "Gafsa",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "GAG",
@@ -14901,7 +14901,7 @@
     "code": "GBA",
     "name": "Cotswold Airport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GBB",
@@ -15033,7 +15033,7 @@
     "code": "GCI",
     "name": "Guernsey",
     "country": "Guernsey",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GCJ",
@@ -15093,7 +15093,7 @@
     "code": "GDG",
     "name": "Magdagachi",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GDH",
@@ -15153,7 +15153,7 @@
     "code": "GDT",
     "name": "Grand Turk",
     "country": "Turks & Caicos",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "GDV",
@@ -15171,13 +15171,13 @@
     "code": "GDX",
     "name": "Sokol",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GDZ",
     "name": "Gelendzik",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GEA",
@@ -15392,13 +15392,13 @@
   {
     "code": "GGN",
     "name": "Gagnoa",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
     "code": "GGO",
     "name": "Guiglo",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -15651,7 +15651,7 @@
     "code": "GLA",
     "name": "Glasgow",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GLC",
@@ -15723,7 +15723,7 @@
     "code": "GLO",
     "name": "Gloucester",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GLP",
@@ -15783,7 +15783,7 @@
     "code": "GLZ",
     "name": "Gilze-Rijen",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GMA",
@@ -15962,8 +15962,8 @@
   {
     "code": "GNY",
     "name": "Sanliurfa Gap Inter.",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "GNZ",
@@ -16023,7 +16023,7 @@
     "code": "GOJ",
     "name": "Strigino",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GOK",
@@ -16173,7 +16173,7 @@
     "code": "GQJ",
     "name": "Machrihanish",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GQQ",
@@ -16281,7 +16281,7 @@
     "code": "GRQ",
     "name": "Groningen",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GRR",
@@ -16311,7 +16311,7 @@
     "code": "GRV",
     "name": "Grozny",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GRW",
@@ -16437,7 +16437,7 @@
     "code": "GSY",
     "name": "Binbrook",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GTA",
@@ -16599,7 +16599,7 @@
     "code": "GUM",
     "name": "Guam",
     "country": "Northern Mariana Islands",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "GUN",
@@ -16815,7 +16815,7 @@
     "code": "GXH",
     "name": "NAF",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "GXQ",
@@ -16922,14 +16922,14 @@
   {
     "code": "GZP",
     "name": "Gazipasa",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "GZT",
     "name": "Gaziantep",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "HAA",
@@ -16971,7 +16971,7 @@
     "code": "HAG",
     "name": "THE HAGUE",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HAH",
@@ -17067,7 +17067,7 @@
     "code": "HAW",
     "name": "Hawarden",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HAX",
@@ -17157,7 +17157,7 @@
     "code": "HBT",
     "name": "Hafr Al-Batin",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "HBX",
@@ -17317,7 +17317,7 @@
   },
   {
     "code": "HEI",
-    "name": "B�sum",
+    "name": "B\ufffdsum",
     "country": "Germany",
     "continent": "Europe"
   },
@@ -17343,7 +17343,7 @@
     "code": "HEN",
     "name": "Hendon",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HEO",
@@ -17462,7 +17462,7 @@
   {
     "code": "HGO",
     "name": "Korhogo",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -17631,7 +17631,7 @@
     "code": "HIR",
     "name": "Honiara",
     "country": "Solomon Islands",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "HIS",
@@ -17847,7 +17847,7 @@
     "code": "HLY",
     "name": "Holyhead",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HLZ",
@@ -18159,7 +18159,7 @@
     "code": "HOY",
     "name": "Hoy Island",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HPA",
@@ -18237,7 +18237,7 @@
     "code": "HRC",
     "name": "Zhairem",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "HRE",
@@ -18309,7 +18309,7 @@
     "code": "HRT",
     "name": "Linton-On-Ouse",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HRY",
@@ -18405,19 +18405,19 @@
     "code": "HTA",
     "name": "Kadala",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HTF",
     "name": "Hatfield",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HTG",
     "name": "Hatanga",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HTH",
@@ -18615,7 +18615,7 @@
     "code": "HUY",
     "name": "Humberside",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HUZ",
@@ -18735,7 +18735,7 @@
     "code": "HYC",
     "name": "High Wycombe",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "HYD",
@@ -18819,7 +18819,7 @@
     "code": "IAA",
     "name": "Igarka",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "IAB",
@@ -18867,7 +18867,7 @@
     "code": "IAR",
     "name": "Yaroslavl",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "IAS",
@@ -18933,7 +18933,7 @@
     "code": "ICK",
     "name": "Maj.Fernandez",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "ICL",
@@ -19136,8 +19136,8 @@
   {
     "code": "IGL",
     "name": "Izmir Cigli",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "IGM",
@@ -19215,7 +19215,7 @@
     "code": "IJK",
     "name": "Izhevsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "IJU",
@@ -19275,13 +19275,13 @@
     "code": "IKS",
     "name": "Tiksi",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "IKT",
     "name": "Irkutsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ILA",
@@ -19395,7 +19395,7 @@
     "code": "ILY",
     "name": "Islay",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ILZ",
@@ -19491,7 +19491,7 @@
     "code": "INA",
     "name": "Inta",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "INB",
@@ -19539,7 +19539,7 @@
     "code": "INI",
     "name": "Nis",
     "country": "Serbia ",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "INJ",
@@ -19611,7 +19611,7 @@
     "code": "INV",
     "name": "Inverness",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "INW",
@@ -19653,7 +19653,7 @@
     "code": "IOM",
     "name": "Isle Of Man",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ION",
@@ -19755,7 +19755,7 @@
     "code": "IPW",
     "name": "Ipswich",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "IPX",
@@ -19875,7 +19875,7 @@
     "code": "ISC",
     "name": "Isles of Scilly",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ISD",
@@ -19886,8 +19886,8 @@
   {
     "code": "ISE",
     "name": "Isparta",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ISG",
@@ -19922,8 +19922,8 @@
   {
     "code": "ISL",
     "name": "Istanbul Ataturk",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ISM",
@@ -19964,8 +19964,8 @@
   {
     "code": "IST",
     "name": "Istanbul Airport",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ISU",
@@ -20127,7 +20127,7 @@
     "code": "IWA",
     "name": "Ivanova",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "IWD",
@@ -20306,8 +20306,8 @@
   {
     "code": "IZM",
     "name": "CIGLI",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "IZO",
@@ -20535,7 +20535,7 @@
     "code": "JCJ",
     "name": "Chu Ja Heliport",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "JCK",
@@ -20553,7 +20553,7 @@
     "code": "JCN",
     "name": "Heliport",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "JCO",
@@ -20709,7 +20709,7 @@
     "code": "JER",
     "name": "Jersey",
     "country": "Jersey",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "JEV",
@@ -20763,7 +20763,7 @@
     "code": "JGE",
     "name": "Heliport",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "JGL",
@@ -21225,7 +21225,7 @@
     "code": "JOK",
     "name": "Joshkar-Ola",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "JOL",
@@ -21441,7 +21441,7 @@
     "code": "JSP",
     "name": "Sogwipo Heliport",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "JSR",
@@ -21693,7 +21693,7 @@
     "code": "KAG",
     "name": "Kangnung",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KAH",
@@ -21975,7 +21975,7 @@
     "code": "KCB",
     "name": "Tepoe Airstrip",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "KCC",
@@ -22040,8 +22040,8 @@
   {
     "code": "KCM",
     "name": "Kahramanmaras",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "KCN",
@@ -22052,8 +22052,8 @@
   {
     "code": "KCO",
     "name": "Kocaeli",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "KCP",
@@ -22275,7 +22275,7 @@
     "code": "KEJ",
     "name": "Kemorovo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KEK",
@@ -22304,7 +22304,7 @@
   {
     "code": "KEO",
     "name": "Odienne",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -22388,8 +22388,8 @@
   {
     "code": "KFS",
     "name": "Uzunyazi",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "KGA",
@@ -22419,7 +22419,7 @@
     "code": "KGF",
     "name": "Karaganda",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KGG",
@@ -22479,7 +22479,7 @@
     "code": "KGP",
     "name": "International",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KGR",
@@ -22941,7 +22941,7 @@
     "code": "KKZ",
     "name": "Koh Song",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KLB",
@@ -22959,7 +22959,7 @@
     "code": "KLD",
     "name": "Migalovo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KLE",
@@ -22971,7 +22971,7 @@
     "code": "KLF",
     "name": "Kaluga",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KLG",
@@ -23103,7 +23103,7 @@
     "code": "KMC",
     "name": "King Khalid",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KMD",
@@ -23205,7 +23205,7 @@
     "code": "KMT",
     "name": "Kampot",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KMU",
@@ -23223,13 +23223,13 @@
     "code": "KMW",
     "name": "Kostroma",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KMX",
     "name": "Khamis Mushait",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KMY",
@@ -23277,7 +23277,7 @@
     "code": "KNF",
     "name": "Kings Lynn (Marham)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KNG",
@@ -23451,7 +23451,7 @@
     "code": "KOI",
     "name": "Kirkwall",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KOJ",
@@ -23511,7 +23511,7 @@
     "code": "KOS",
     "name": "Sihanoukville",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KOT",
@@ -23529,7 +23529,7 @@
     "code": "KOV",
     "name": "Kokchetav",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KOW",
@@ -23625,7 +23625,7 @@
     "code": "KPO",
     "name": "Pohang",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KPP",
@@ -23727,7 +23727,7 @@
     "code": "KRH",
     "name": "Redhill",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KRI",
@@ -23769,7 +23769,7 @@
     "code": "KRO",
     "name": "Kurgan",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KRP",
@@ -23787,7 +23787,7 @@
     "code": "KRR",
     "name": "Pashkovsky",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KRS",
@@ -23919,7 +23919,7 @@
     "code": "KSN",
     "name": "Kostanay",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KSO",
@@ -23984,14 +23984,14 @@
   {
     "code": "KSY",
     "name": "Kars",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "KSZ",
     "name": "Kotlas",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KTA",
@@ -24008,7 +24008,7 @@
   {
     "code": "KTC",
     "name": "Katiola",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -24045,7 +24045,7 @@
     "code": "KTI",
     "name": "Kratie",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KTK",
@@ -24261,7 +24261,7 @@
     "code": "KUV",
     "name": "Kunsan",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KUW",
@@ -24321,7 +24321,7 @@
     "code": "KVK",
     "name": "Kirovsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KVL",
@@ -24345,7 +24345,7 @@
     "code": "KVX",
     "name": "Kirov",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KWA",
@@ -24507,7 +24507,7 @@
     "code": "KXK",
     "name": "Komsomolsk Na Amure",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KXR",
@@ -24518,8 +24518,8 @@
   {
     "code": "KYA",
     "name": "Konya",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "KYB",
@@ -24567,7 +24567,7 @@
     "code": "KYN",
     "name": "Milton Keynes",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KYO",
@@ -24609,7 +24609,7 @@
     "code": "KYZ",
     "name": "Kyzyl",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "KZB",
@@ -24621,13 +24621,13 @@
     "code": "KZC",
     "name": "Kompong Chnang",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KZD",
     "name": "Krkor",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KZF",
@@ -24657,7 +24657,7 @@
     "code": "KZK",
     "name": "Kompong Cham",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KZN",
@@ -24669,13 +24669,13 @@
     "code": "KZO",
     "name": "Kzyl Orda",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "KZR",
     "name": "Zafer",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "KZS",
@@ -24711,7 +24711,7 @@
     "code": "LAE",
     "name": "Lae",
     "country": "Papua New Guinea",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "LAF",
@@ -24843,7 +24843,7 @@
     "code": "LBA",
     "name": "Leeds Bradford",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LBB",
@@ -25107,7 +25107,7 @@
     "code": "LCY",
     "name": "Londen City",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LDA",
@@ -25173,7 +25173,7 @@
     "code": "LDO",
     "name": "Ladoeanie",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "LDR",
@@ -25203,13 +25203,13 @@
     "code": "LDX",
     "name": "Saint-Laurent du Maroni",
     "country": "French Guyana",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "LDY",
     "name": "Londonderry",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LDZ",
@@ -25311,7 +25311,7 @@
     "code": "LEQ",
     "name": "Saint Just",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LER",
@@ -25359,7 +25359,7 @@
     "code": "LEY",
     "name": "Lelystad",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LEZ",
@@ -25539,7 +25539,7 @@
     "code": "LGW",
     "name": "Londen Gatwick",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LGX",
@@ -25611,7 +25611,7 @@
     "code": "LHR",
     "name": "Londen Heathrow",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LHS",
@@ -25653,7 +25653,7 @@
     "code": "LID",
     "name": "Valkenburg",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LIE",
@@ -25904,7 +25904,7 @@
   {
     "code": "LKT",
     "name": "Lakota",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -25929,7 +25929,7 @@
     "code": "LKZ",
     "name": "Lakenheath",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LLA",
@@ -26049,7 +26049,7 @@
     "code": "LMF",
     "name": "Leeming",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LMG",
@@ -26091,7 +26091,7 @@
     "code": "LMO",
     "name": "Lossiemouth",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LMP",
@@ -26253,7 +26253,7 @@
     "code": "LNX",
     "name": "Smolensk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LNY",
@@ -26445,7 +26445,7 @@
     "code": "LPH",
     "name": "Heliport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LPI",
@@ -26463,13 +26463,13 @@
     "code": "LPK",
     "name": "Lipetsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LPL",
     "name": "Liverpool",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LPM",
@@ -26571,7 +26571,7 @@
     "code": "LRC",
     "name": "Leicester",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LRD",
@@ -26715,7 +26715,7 @@
     "code": "LSI",
     "name": "Sumburgh",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LSJ",
@@ -26889,7 +26889,7 @@
     "code": "LTN",
     "name": "Londen Luton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LTO",
@@ -27195,7 +27195,7 @@
     "code": "LWK",
     "name": "Shetland Islands",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LWL",
@@ -27225,7 +27225,7 @@
     "code": "LWR",
     "name": "Leeuwarden",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LWS",
@@ -27321,7 +27321,7 @@
     "code": "LYE",
     "name": "Lyneham",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LYG",
@@ -27369,7 +27369,7 @@
     "code": "LYR",
     "name": "Longyearbyen",
     "country": "Svalbard and Jan Mayen",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LYS",
@@ -27393,7 +27393,7 @@
     "code": "LYX",
     "name": "Lydd",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "LZA",
@@ -27507,7 +27507,7 @@
     "code": "MAJ",
     "name": "Majuro",
     "country": "Marshall Islands",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "MAK",
@@ -27531,7 +27531,7 @@
     "code": "MAN",
     "name": "Manchester",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MAO",
@@ -27903,7 +27903,7 @@
     "code": "MCX",
     "name": "Uytash",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MCY",
@@ -28029,7 +28029,7 @@
     "code": "MDS",
     "name": "Middle Caicos",
     "country": "Turks & Caicos",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "MDT",
@@ -28305,7 +28305,7 @@
     "code": "MFM",
     "name": "Macau",
     "country": "Macao",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "MFN",
@@ -28695,7 +28695,7 @@
     "code": "MHZ",
     "name": "Mildenhall",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MIA",
@@ -28803,7 +28803,7 @@
     "code": "MIR",
     "name": "Monastir",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "MIS",
@@ -28868,7 +28868,7 @@
   {
     "code": "MJC",
     "name": "Man",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -28899,7 +28899,7 @@
     "code": "MJH",
     "name": "Majma",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "MJI",
@@ -29007,7 +29007,7 @@
     "code": "MJZ",
     "name": "Mirny",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MKA",
@@ -29306,8 +29306,8 @@
   {
     "code": "MLX",
     "name": "MALATYA",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "MLY",
@@ -29349,7 +29349,7 @@
     "code": "MME",
     "name": "Teesside International",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MMF",
@@ -29691,12 +29691,12 @@
     "code": "MOJ",
     "name": "Moengo",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "MOK",
     "name": "Mankono",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -29853,7 +29853,7 @@
     "code": "MPK",
     "name": "Mokpo",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "MPL",
@@ -29937,7 +29937,7 @@
     "code": "MPY",
     "name": "Maripasoula",
     "country": "French Guyana",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "MPZ",
@@ -29961,7 +29961,7 @@
     "code": "MQC",
     "name": "Miquelon",
     "country": "St. Pierre & M",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "MQD",
@@ -29979,7 +29979,7 @@
     "code": "MQF",
     "name": "Magnitogorsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MQG",
@@ -30002,8 +30002,8 @@
   {
     "code": "MQJ",
     "name": "Merkez",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "MQK",
@@ -30039,7 +30039,7 @@
     "code": "MQS",
     "name": "Int'l",
     "country": "Saint Vincent",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "MQT",
@@ -30249,7 +30249,7 @@
     "code": "MSE",
     "name": "Manston",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MSF",
@@ -30326,8 +30326,8 @@
   {
     "code": "MSR",
     "name": "Mus",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "MSS",
@@ -30339,7 +30339,7 @@
     "code": "MST",
     "name": "Maastricht",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "MSU",
@@ -30969,7 +30969,7 @@
     "code": "MWV",
     "name": "Mundulkiri",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "MWY",
@@ -31340,8 +31340,8 @@
   {
     "code": "MZH",
     "name": "Merzifon",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "MZI",
@@ -31509,7 +31509,7 @@
     "code": "NAL",
     "name": "Nalchik",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NAM",
@@ -31521,7 +31521,7 @@
     "code": "NAN",
     "name": "Nadi",
     "country": "Fiji Islands",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "NAO",
@@ -31568,8 +31568,8 @@
   {
     "code": "NAV",
     "name": "Nevsehir",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "NAW",
@@ -31605,13 +31605,13 @@
     "code": "NBC",
     "name": "Naberevnye Chelny",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NBE",
     "name": "Enfidha",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "NBG",
@@ -31677,7 +31677,7 @@
     "code": "NCA",
     "name": "North Caicos",
     "country": "Turks & Caicos",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "NCE",
@@ -31707,7 +31707,7 @@
     "code": "NCL",
     "name": "Newcastle",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NCN",
@@ -31875,7 +31875,7 @@
     "code": "NDY",
     "name": "Sanday (Orkneys)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NDZ",
@@ -31899,7 +31899,7 @@
     "code": "NEF",
     "name": "Neftekamsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NEG",
@@ -31935,7 +31935,7 @@
     "code": "NER",
     "name": "Neryungri",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NES",
@@ -31959,7 +31959,7 @@
     "code": "NEV",
     "name": "Newcastle, Nevis Islan",
     "country": "Saint Kitts &",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "NEW",
@@ -31977,7 +31977,7 @@
     "code": "NFG",
     "name": "Nefteyugansk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NFL",
@@ -32121,7 +32121,7 @@
     "code": "NHD",
     "name": "Minhad AB",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "NHF",
@@ -32145,7 +32145,7 @@
     "code": "NHT",
     "name": "Northolt",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NHV",
@@ -32259,7 +32259,7 @@
     "code": "NJC",
     "name": "Nizhnevartovsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NJK",
@@ -32349,7 +32349,7 @@
     "code": "NKW",
     "name": "Diego Garcia",
     "country": "British Indian Ocean Territory (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "NKX",
@@ -32559,7 +32559,7 @@
     "code": "NNM",
     "name": "Naryan-Mar",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NNR",
@@ -32637,13 +32637,13 @@
     "code": "NOI",
     "name": "Novorossijsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NOJ",
     "name": "Nojabrxsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NOK",
@@ -32703,7 +32703,7 @@
     "code": "NOU",
     "name": "Noumea",
     "country": "French Polynesia",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "NOV",
@@ -32715,7 +32715,7 @@
     "code": "NOZ",
     "name": "Novokuznetsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NPA",
@@ -32811,7 +32811,7 @@
     "code": "NQY",
     "name": "Newquay Cornwall",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NQZ",
@@ -32871,7 +32871,7 @@
     "code": "NRL",
     "name": "North Ronaldsway (Orkneys)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NRM",
@@ -32961,7 +32961,7 @@
     "code": "NSK",
     "name": "Norilsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NSM",
@@ -33207,7 +33207,7 @@
     "code": "NUX",
     "name": "Novy Vasyugan",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NVA",
@@ -33249,7 +33249,7 @@
     "code": "NVR",
     "name": "Novgorod",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NVS",
@@ -33285,7 +33285,7 @@
     "code": "NWI",
     "name": "Norwich",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NWP",
@@ -33315,7 +33315,7 @@
     "code": "NWX",
     "name": "Noordwest Sector",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NXX",
@@ -33357,7 +33357,7 @@
     "code": "NYM",
     "name": "Nadym",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "NYN",
@@ -33525,7 +33525,7 @@
     "code": "OBN",
     "name": "Oban Airport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OBO",
@@ -33651,7 +33651,7 @@
     "code": "ODH",
     "name": "Odiham",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ODJ",
@@ -33717,13 +33717,13 @@
     "code": "OEL",
     "name": "Orel",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OEM",
     "name": "Vincent Fajks",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "OEO",
@@ -33746,7 +33746,7 @@
   {
     "code": "OFI",
     "name": "Ouango Fitini",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -33812,7 +33812,7 @@
   {
     "code": "OGO",
     "name": "Abengourou",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -33843,7 +33843,7 @@
     "code": "OGZ",
     "name": "Beslan",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OHA",
@@ -33873,13 +33873,13 @@
     "code": "OHO",
     "name": "Okhotsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OHP",
     "name": "Heliport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OHR",
@@ -33975,7 +33975,7 @@
     "code": "OKH",
     "name": "Cottesmore",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OKI",
@@ -34047,7 +34047,7 @@
     "code": "OKT",
     "name": "Oktyabrsky",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OKU",
@@ -34257,13 +34257,13 @@
     "code": "OMS",
     "name": "Omsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OMY",
     "name": "Oddor Meanche",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "ONA",
@@ -34346,8 +34346,8 @@
   {
     "code": "ONQ",
     "name": "Zonguldak",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "ONR",
@@ -34521,7 +34521,7 @@
     "code": "ORG",
     "name": "Zorg en Hoop",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "ORH",
@@ -34557,7 +34557,7 @@
     "code": "ORM",
     "name": "Northampton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ORN",
@@ -34707,7 +34707,7 @@
     "code": "OSN",
     "name": "Ab",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "OSP",
@@ -34725,7 +34725,7 @@
     "code": "OSS",
     "name": "Osh",
     "country": "Kyrgystan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "OST",
@@ -34899,7 +34899,7 @@
     "code": "OUK",
     "name": "Outer Skerries",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OUL",
@@ -35013,7 +35013,7 @@
     "code": "OXB",
     "name": "Bissau",
     "country": "Guinea Bissau",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "OXC",
@@ -35031,7 +35031,7 @@
     "code": "OXF",
     "name": "London Oxford",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "OXO",
@@ -35097,7 +35097,7 @@
     "code": "OYP",
     "name": "Saint-Georges-de-l'Oyapock",
     "country": "French Guyana",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "OYS",
@@ -35193,7 +35193,7 @@
     "code": "PAI",
     "name": "Pailin",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "PAJ",
@@ -35373,7 +35373,7 @@
     "code": "PBM",
     "name": "Paramaribo",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "PBN",
@@ -35517,7 +35517,7 @@
     "code": "PCP",
     "name": "Principe",
     "country": "Sao Tome and P",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "PCR",
@@ -35763,7 +35763,7 @@
     "code": "PES",
     "name": "Petrozavodsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PET",
@@ -35779,7 +35779,7 @@
   },
   {
     "code": "PEV",
-    "name": "P�cs-Pog�ny Int.Airp",
+    "name": "P\ufffdcs-Pog\ufffdny Int.Airp",
     "country": null,
     "continent": "Unknown"
   },
@@ -35793,7 +35793,7 @@
     "code": "PEX",
     "name": "Pechora",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PEY",
@@ -35805,7 +35805,7 @@
     "code": "PEZ",
     "name": "Penza",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PFA",
@@ -35943,7 +35943,7 @@
     "code": "PGP",
     "name": "Porto Alegre",
     "country": "Sao Tome and P",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "PGR",
@@ -36043,7 +36043,7 @@
   },
   {
     "code": "PHM",
-    "name": "B�blingen",
+    "name": "B\ufffdblingen",
     "country": "Germany",
     "continent": "Europe"
   },
@@ -36123,7 +36123,7 @@
     "code": "PIC",
     "name": "Pine Cay",
     "country": "Turks & Caicos",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "PID",
@@ -36165,7 +36165,7 @@
     "code": "PIK",
     "name": "Prestwick",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PIL",
@@ -36303,7 +36303,7 @@
     "code": "PKC",
     "name": "Kamchatsky/Yelizovo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PKD",
@@ -36477,13 +36477,13 @@
     "code": "PLH",
     "name": "Plymouth",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PLI",
     "name": "Palm Island",
     "country": "Saint Vincent",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "PLJ",
@@ -36543,7 +36543,7 @@
     "code": "PLS",
     "name": "Int'l",
     "country": "Turks & Caicos",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "PLT",
@@ -36573,7 +36573,7 @@
     "code": "PLX",
     "name": "Semipalatinsk",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "PLY",
@@ -36615,7 +36615,7 @@
     "code": "PME",
     "name": "Portsmouth",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PMF",
@@ -36945,7 +36945,7 @@
     "code": "POM",
     "name": "Port Moresby",
     "country": "Papua New Guinea",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "PON",
@@ -36963,7 +36963,7 @@
     "code": "POP",
     "name": "Puerto Plata",
     "country": "Dominican Republic",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "POQ",
@@ -36981,7 +36981,7 @@
     "code": "POS",
     "name": "Port O Spain",
     "country": "Trinidad and Tobago",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "POT",
@@ -37089,7 +37089,7 @@
     "code": "PPK",
     "name": "Petropavlovsk",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "PPL",
@@ -37143,7 +37143,7 @@
     "code": "PPT",
     "name": "PAPEETE",
     "country": "French Polynesia",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "PPU",
@@ -37161,7 +37161,7 @@
     "code": "PPW",
     "name": "Papa Westray (Orkneys)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PPX",
@@ -37437,7 +37437,7 @@
     "code": "PSL",
     "name": "Scone",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PSM",
@@ -37497,7 +37497,7 @@
     "code": "PSV",
     "name": "Papa Stour",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PSW",
@@ -37737,7 +37737,7 @@
     "code": "PUJ",
     "name": "Punta Cana",
     "country": "Dominican Republic",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "PUK",
@@ -37911,7 +37911,7 @@
     "code": "PVS",
     "name": "Provideniya Bay",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PVU",
@@ -37929,7 +37929,7 @@
     "code": "PVX",
     "name": "Provedenia",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PVY",
@@ -37959,7 +37959,7 @@
     "code": "PWE",
     "name": "Pevek",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PWI",
@@ -38001,7 +38001,7 @@
     "code": "PWQ",
     "name": "Pavlodar",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "PWR",
@@ -38073,7 +38073,7 @@
     "code": "PYJ",
     "name": "Polyarny",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PYL",
@@ -38133,7 +38133,7 @@
     "code": "PZE",
     "name": "Eastern Green",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "PZH",
@@ -38205,7 +38205,7 @@
     "code": "QCY",
     "name": "Coningsby Aerodrome",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "QEF",
@@ -38235,7 +38235,7 @@
     "code": "QFO",
     "name": "Duxford",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "QFU",
@@ -38289,7 +38289,7 @@
     "code": "QLA",
     "name": "Lasham",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "QLG",
@@ -38427,7 +38427,7 @@
     "code": "QUG",
     "name": "Chichester/Goodwood",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "QWG",
@@ -38481,7 +38481,7 @@
     "code": "RAE",
     "name": "Arar",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "RAG",
@@ -38493,7 +38493,7 @@
     "code": "RAH",
     "name": "Rafha",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "RAI",
@@ -38565,7 +38565,7 @@
     "code": "RAT",
     "name": "Raduzhnyi",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RAU",
@@ -38595,7 +38595,7 @@
     "code": "RAY",
     "name": "Heliport",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RAZ",
@@ -38631,7 +38631,7 @@
     "code": "RBE",
     "name": "Ratanakiri",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "RBF",
@@ -38817,7 +38817,7 @@
     "code": "RCS",
     "name": "Rochester",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RCT",
@@ -38961,7 +38961,7 @@
     "code": "REI",
     "name": "Regina",
     "country": "French Guyana",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "REK",
@@ -38979,7 +38979,7 @@
     "code": "REN",
     "name": "Tsentralny",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "REO",
@@ -38991,7 +38991,7 @@
     "code": "REP",
     "name": "Siem-Reap",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "RER",
@@ -39355,7 +39355,7 @@
   },
   {
     "code": "RJL",
-    "name": "Legro�o",
+    "name": "Legro\ufffdo",
     "country": "Spain",
     "continent": "Europe"
   },
@@ -39423,7 +39423,7 @@
     "code": "RKT",
     "name": "Ras Al Khaymah",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "RKU",
@@ -40005,7 +40005,7 @@
     "code": "RSU",
     "name": "Yeosu",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "RSW",
@@ -40077,7 +40077,7 @@
     "code": "RTM",
     "name": "Rotterdam",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RTN",
@@ -40101,7 +40101,7 @@
     "code": "RTW",
     "name": "Tsentralny",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RTY",
@@ -40227,7 +40227,7 @@
     "code": "RVH",
     "name": "Rzhevka",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RVK",
@@ -40317,7 +40317,7 @@
     "code": "RYB",
     "name": "Rybinsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RYG",
@@ -40377,7 +40377,7 @@
     "code": "RZN",
     "name": "Ryazan",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "RZR",
@@ -40526,8 +40526,8 @@
   {
     "code": "SAW",
     "name": "Istanbul Sabiha",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "SAX",
@@ -40593,7 +40593,7 @@
     "code": "SBH",
     "name": "St Barthelemy",
     "country": "Saint Barthelemy",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "SBI",
@@ -40815,7 +40815,7 @@
     "code": "SCS",
     "name": "Scatsta, Shetland Islands",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SCT",
@@ -40839,7 +40839,7 @@
     "code": "SCW",
     "name": "Syktyvkar",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SCX",
@@ -40959,7 +40959,7 @@
     "code": "SDQ",
     "name": "SantoDomingo",
     "country": "Dominican Republic",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "SDR",
@@ -41085,12 +41085,12 @@
     "code": "SEN",
     "name": "Londen Southend",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SEO",
     "name": "Seguela",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -41133,7 +41133,7 @@
     "code": "SEV",
     "name": "Severouralsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SEW",
@@ -41163,7 +41163,7 @@
     "code": "SFA",
     "name": "Sfax Elmaou",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "SFB",
@@ -41199,7 +41199,7 @@
     "code": "SFG",
     "name": "Esperance",
     "country": "Saint Martin (French part)",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "SFH",
@@ -41258,8 +41258,8 @@
   {
     "code": "SFQ",
     "name": "Sanliurfa",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "SFR",
@@ -41325,7 +41325,7 @@
     "code": "SGC",
     "name": "Surgut",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SGD",
@@ -41523,7 +41523,7 @@
     "code": "SHJ",
     "name": "Sharjah",
     "country": "United Arab Emirates (the)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SHK",
@@ -41553,7 +41553,7 @@
     "code": "SHO",
     "name": "Solak",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SHP",
@@ -41601,7 +41601,7 @@
     "code": "SHW",
     "name": "Sharurah",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SHX",
@@ -41636,8 +41636,8 @@
   {
     "code": "SIC",
     "name": "Sinop",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "SID",
@@ -41803,7 +41803,7 @@
   },
   {
     "code": "SJE",
-    "name": "San Jos� del Guaviare, VA",
+    "name": "San Jos\ufffd del Guaviare, VA",
     "country": "Colombia",
     "continent": "South America"
   },
@@ -41869,7 +41869,7 @@
   },
   {
     "code": "SJP",
-    "name": "Sao Jos� do Rio Preto, SP",
+    "name": "Sao Jos\ufffd do Rio Preto, SP",
     "country": "Brazil",
     "continent": "South America"
   },
@@ -41887,7 +41887,7 @@
   },
   {
     "code": "SJS",
-    "name": "San Jos� de Chiquitos",
+    "name": "San Jos\ufffd de Chiquitos",
     "country": "Bolivia",
     "continent": "South America"
   },
@@ -42003,7 +42003,7 @@
     "code": "SKL",
     "name": "Broadford",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SKM",
@@ -42075,7 +42075,7 @@
     "code": "SKX",
     "name": "Saransk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SKY",
@@ -42123,7 +42123,7 @@
     "code": "SLF",
     "name": "Sulayel",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SLG",
@@ -42231,13 +42231,13 @@
     "code": "SLX",
     "name": "Salt Cay",
     "country": "Turks & Caicos",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "SLY",
     "name": "Salekhard",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SLZ",
@@ -42399,7 +42399,7 @@
     "code": "SMZ",
     "name": "Stoelmans Eiland",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "SNA",
@@ -42675,7 +42675,7 @@
     "code": "SOU",
     "name": "Southampton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SOV",
@@ -42699,7 +42699,7 @@
     "code": "SOY",
     "name": "Stronsay (Orkneys)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SOZ",
@@ -42771,7 +42771,7 @@
     "code": "SPL",
     "name": "Schiphol",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SPM",
@@ -42783,7 +42783,7 @@
     "code": "SPN",
     "name": "Saipan",
     "country": "Northern Mariana Islands",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "SPO",
@@ -42848,7 +42848,7 @@
   {
     "code": "SPY",
     "name": "San Pedro",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -42999,7 +42999,7 @@
     "code": "SQZ",
     "name": "RAF",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SRA",
@@ -43239,7 +43239,7 @@
     "code": "SSN",
     "name": "Seoul AB Seongnam",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SSO",
@@ -43298,8 +43298,8 @@
   {
     "code": "SSX",
     "name": "Samsun",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "SSY",
@@ -43395,7 +43395,7 @@
     "code": "STN",
     "name": "Londen Stansted",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "STO",
@@ -43527,7 +43527,7 @@
     "code": "SUK",
     "name": "Samchok",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SUM",
@@ -43587,7 +43587,7 @@
     "code": "SUV",
     "name": "Suva",
     "country": "Fiji Islands",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "SUW",
@@ -43635,7 +43635,7 @@
     "code": "SVD",
     "name": "Argyle Int. Airport",
     "country": "Saint Vincent and the Grenadines",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "SVE",
@@ -43719,7 +43719,7 @@
     "code": "SVR",
     "name": "Svay Rieng",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SVS",
@@ -43821,7 +43821,7 @@
     "code": "SWI",
     "name": "Swindon",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SWJ",
@@ -43881,19 +43881,19 @@
     "code": "SWS",
     "name": "Swansea",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SWT",
     "name": "Strzhewol",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SWU",
     "name": "Suwon",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SWV",
@@ -43989,7 +43989,7 @@
     "code": "SXM",
     "name": "Sint Maarten",
     "country": "Sint Maarten (Dutch part)",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "SXN",
@@ -44066,8 +44066,8 @@
   {
     "code": "SXZ",
     "name": "Siirt",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "SYA",
@@ -44181,7 +44181,7 @@
     "code": "SYS",
     "name": "Yosu",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SYT",
@@ -44217,7 +44217,7 @@
     "code": "SYY",
     "name": "Stornoway",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SYZ",
@@ -44247,7 +44247,7 @@
     "code": "SZD",
     "name": "Sheffield",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "SZE",
@@ -44258,8 +44258,8 @@
   {
     "code": "SZF",
     "name": "CARSAMBA",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "SZG",
@@ -44277,7 +44277,7 @@
     "code": "SZI",
     "name": "Zaisan",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "SZJ",
@@ -44391,7 +44391,7 @@
     "code": "TAB",
     "name": "Tobago",
     "country": "Trinidad and Tobago",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "TAC",
@@ -44409,7 +44409,7 @@
     "code": "TAE",
     "name": "Taegu",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "TAF",
@@ -44589,7 +44589,7 @@
     "code": "TBJ",
     "name": "Tabarka",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "TBK",
@@ -44655,7 +44655,7 @@
     "code": "TBU",
     "name": "Tongatapu",
     "country": "Fiji Islands",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "TBV",
@@ -44667,12 +44667,12 @@
     "code": "TBW",
     "name": "Tambov",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TBX",
     "name": "Taabo",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -44859,7 +44859,7 @@
     "code": "TDK",
     "name": "Taldy-Kurgan",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "TDL",
@@ -45002,8 +45002,8 @@
   {
     "code": "TEQ",
     "name": "Tekirdag",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "TER",
@@ -45554,14 +45554,14 @@
   {
     "code": "TJK",
     "name": "Tokat",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "TJM",
     "name": "Roshchino",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TJQ",
@@ -45987,7 +45987,7 @@
     "code": "TMS",
     "name": "SAO TOME IS",
     "country": "Sao Tome & Principe",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "TMT",
@@ -46101,7 +46101,7 @@
     "code": "TNM",
     "name": "Teniente R.March",
     "country": "Antartica",
-    "continent": "Antarctica"
+    "continent": "Other"
   },
   {
     "code": "TNN",
@@ -46161,7 +46161,7 @@
     "code": "TNX",
     "name": "Stung Treng",
     "country": "Kampuchea",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "TOA",
@@ -46191,13 +46191,13 @@
     "code": "TOE",
     "name": "Tozeur",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "TOF",
     "name": "Tomsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TOG",
@@ -46281,7 +46281,7 @@
     "code": "TOT",
     "name": "Coronie",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "TOU",
@@ -46305,7 +46305,7 @@
     "code": "TOX",
     "name": "Tobolsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TOY",
@@ -46316,7 +46316,7 @@
   {
     "code": "TOZ",
     "name": "Mahana",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -46467,7 +46467,7 @@
     "code": "TRE",
     "name": "Tiree",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TRF",
@@ -46677,7 +46677,7 @@
     "code": "TSO",
     "name": "Tresco",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TSP",
@@ -46905,7 +46905,7 @@
     "code": "TUI",
     "name": "Turaif",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "TUJ",
@@ -46935,7 +46935,7 @@
     "code": "TUN",
     "name": "Tunis",
     "country": "Tunesia",
-    "continent": "Africa"
+    "continent": "Other"
   },
   {
     "code": "TUO",
@@ -47168,14 +47168,14 @@
   {
     "code": "TXU",
     "name": "Tabou",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
     "code": "TYA",
     "name": "Tula",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TYB",
@@ -47187,7 +47187,7 @@
     "code": "TYD",
     "name": "Tynda",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "TYE",
@@ -47288,14 +47288,14 @@
   {
     "code": "TZX",
     "name": "Trabzon",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "UAB",
     "name": "Adana",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "UAC",
@@ -47457,7 +47457,7 @@
     "code": "UCT",
     "name": "Ukhta",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UCY",
@@ -47481,7 +47481,7 @@
     "code": "UDE",
     "name": "Volkel",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UDI",
@@ -47547,7 +47547,7 @@
     "code": "UFA",
     "name": "Ufa",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UGA",
@@ -47607,7 +47607,7 @@
     "code": "UHF",
     "name": "Upper Heyford",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UIB",
@@ -47631,7 +47631,7 @@
     "code": "UIK",
     "name": "Ust Ilimsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UIL",
@@ -47709,7 +47709,7 @@
     "code": "UKK",
     "name": "Ust Kamenogorsk",
     "country": "Kazakstan",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "UKN",
@@ -47745,7 +47745,7 @@
     "code": "UKX",
     "name": "Ust Kut",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UKY",
@@ -47805,7 +47805,7 @@
     "code": "ULL",
     "name": "Mull",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ULM",
@@ -47859,7 +47859,7 @@
     "code": "ULY",
     "name": "Ulyanovsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "ULZ",
@@ -47961,7 +47961,7 @@
     "code": "UNI",
     "name": "Union Island",
     "country": "Saint Vincent",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "UNK",
@@ -47991,7 +47991,7 @@
     "code": "UNT",
     "name": "Baltasound, Shetland Islands",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UNU",
@@ -48075,7 +48075,7 @@
     "code": "UPV",
     "name": "Upavon",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UQE",
@@ -48129,7 +48129,7 @@
     "code": "URJ",
     "name": "Uraj",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "URM",
@@ -48159,7 +48159,7 @@
     "code": "URS",
     "name": "Kursk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "URT",
@@ -48177,7 +48177,7 @@
     "code": "URY",
     "name": "Guriat",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "URZ",
@@ -48201,7 +48201,7 @@
     "code": "USK",
     "name": "Usinsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "USL",
@@ -48219,7 +48219,7 @@
     "code": "USN",
     "name": "Ulsan",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "USO",
@@ -48230,8 +48230,8 @@
   {
     "code": "USQ",
     "name": "Usak",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "USS",
@@ -48267,7 +48267,7 @@
     "code": "UTC",
     "name": "Soesterberg",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UTD",
@@ -48357,13 +48357,13 @@
     "code": "UUA",
     "name": "Bugulma",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UUD",
     "name": "Mukhino",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UUK",
@@ -48381,7 +48381,7 @@
     "code": "UUS",
     "name": "Khomutovo",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "UUU",
@@ -48441,7 +48441,7 @@
     "code": "UZH",
     "name": "Unayzah",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "UZU",
@@ -48512,8 +48512,8 @@
   {
     "code": "VAN",
     "name": "Van",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "VAO",
@@ -48536,8 +48536,8 @@
   {
     "code": "VAS",
     "name": "Sivas",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "VAT",
@@ -48789,7 +48789,7 @@
     "code": "VGD",
     "name": "Vologda",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "VGG",
@@ -49017,7 +49017,7 @@
     "code": "VKT",
     "name": "Vorkuta",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "VKW",
@@ -49059,13 +49059,13 @@
     "code": "VLI",
     "name": "Port Vila",
     "country": "Vanuata",
-    "continent": "Oceania"
+    "continent": "Other"
   },
   {
     "code": "VLK",
     "name": "Volgodonsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "VLL",
@@ -49119,7 +49119,7 @@
     "code": "VLU",
     "name": "Velikiye Luki",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "VLV",
@@ -49251,7 +49251,7 @@
     "code": "VOZ",
     "name": "Chertovtskoye",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "VPE",
@@ -49455,7 +49455,7 @@
     "code": "VUS",
     "name": "Velikij Ustyug",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "VVB",
@@ -49491,7 +49491,7 @@
     "code": "VVO",
     "name": "Knevichi",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "VVZ",
@@ -49557,7 +49557,7 @@
     "code": "WAE",
     "name": "Wadi Al-Dawasir",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "WAF",
@@ -49863,7 +49863,7 @@
     "code": "WEM",
     "name": "West Malling",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WEP",
@@ -50019,7 +50019,7 @@
     "code": "WHS",
     "name": "Whalsay (Shetland Isles)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WHT",
@@ -50037,7 +50037,7 @@
     "code": "WIC",
     "name": "Wick",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WID",
@@ -50115,7 +50115,7 @@
     "code": "WJU",
     "name": "Wonju",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "WKA",
@@ -50415,7 +50415,7 @@
     "code": "WOB",
     "name": "Woodbridge RAF",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WOD",
@@ -50427,7 +50427,7 @@
     "code": "WOE",
     "name": "Bergen O.Z.",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WOG",
@@ -50583,7 +50583,7 @@
     "code": "WRT",
     "name": "Warton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WRW",
@@ -50595,7 +50595,7 @@
     "code": "WRY",
     "name": "Westray (Orkneys)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WSA",
@@ -50655,7 +50655,7 @@
     "code": "WSO",
     "name": "Washabo",
     "country": "Surinam",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "WSP",
@@ -50739,7 +50739,7 @@
     "code": "WTN",
     "name": "Waddington",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WTO",
@@ -50925,7 +50925,7 @@
     "code": "WXF",
     "name": "Wether Field (mil)",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "WXM",
@@ -51003,7 +51003,7 @@
     "code": "XAU",
     "name": "Saul",
     "country": "French Guyana",
-    "continent": "South America"
+    "continent": "Other"
   },
   {
     "code": "XAV",
@@ -51201,7 +51201,7 @@
     "code": "XHV",
     "name": "Peterborough",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "XIC",
@@ -51332,7 +51332,7 @@
   {
     "code": "XMB",
     "name": "M'Bahiakro",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -51501,7 +51501,7 @@
     "code": "XSC",
     "name": "South Caicos",
     "country": "Turks & Caicos",
-    "continent": "North America"
+    "continent": "Other"
   },
   {
     "code": "XSD",
@@ -51597,7 +51597,7 @@
     "code": "XXX",
     "name": "Onbekend",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "XYA",
@@ -52221,7 +52221,7 @@
     "code": "YEC",
     "name": "Yechon",
     "country": "Korea (South)",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "YED",
@@ -52237,9 +52237,9 @@
   },
   {
     "code": "YEI",
-    "name": "Yenişehir Airport",
-    "country": "Türkiye",
-    "continent": "Europe"
+    "name": "Yeni\u015fehir Airport",
+    "country": "T\u00fcrkiye",
+    "continent": "Other"
   },
   {
     "code": "YEK",
@@ -52269,7 +52269,7 @@
     "code": "YEO",
     "name": "Yeovilton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "YEP",
@@ -52815,7 +52815,7 @@
     "code": "YKS",
     "name": "Yakutsk",
     "country": "Russia (CIS)",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "YKT",
@@ -53103,7 +53103,7 @@
     "code": "YNB",
     "name": "Yenbo",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "YNC",
@@ -53283,7 +53283,7 @@
     "code": "YOU",
     "name": "Yeovilton",
     "country": "United Kingdom of Great Britain and Northern Ireland",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "YOW",
@@ -53325,7 +53325,7 @@
     "code": "YPE",
     "name": "Ypenburg",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   },
   {
     "code": "YPF",
@@ -55196,7 +55196,7 @@
   {
     "code": "ZSS",
     "name": "Sassandra",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -55268,7 +55268,7 @@
   {
     "code": "ZUE",
     "name": "Zuenoula",
-    "country": "Côte d'Ivoire",
+    "country": "C\u00f4te d'Ivoire",
     "continent": "Africa"
   },
   {
@@ -55281,7 +55281,7 @@
     "code": "ZUL",
     "name": "Zulfi",
     "country": "Saudia Arabia",
-    "continent": "Asia"
+    "continent": "Other"
   },
   {
     "code": "ZUM",
@@ -55347,6 +55347,6 @@
     "code": "ZZZ",
     "name": "Onbekend",
     "country": "The Netherlands",
-    "continent": "Europe"
+    "continent": "Other"
   }
 ]
