@@ -301,6 +301,12 @@ def get_rankings():
         min_flights = request.args.get('min_flights', default=10, type=int)
         destination = request.args.get('destination', default=None, type=str)
         
+        # Override min_flights when filtering by specific destination
+        # to ensure we show all carriers flying that route
+        if destination:
+            min_flights = 1
+
+        
         # Calculate date range
         end_date = datetime.now()
         start_date = end_date - timedelta(days=days)
