@@ -152,7 +152,7 @@
             <thead>
                 <tr>
                     <th style="width: 50px;">#</th>
-                    <th>Type Code</th>
+                    <th>Vliegtuigtype</th>
                     <th style="text-align: right;">Aantal Vluchten</th>
                 </tr>
             </thead>
@@ -227,7 +227,10 @@
                 return `
                 <tr>
                     <td style="font-weight: ${rank <= 3 ? 'bold' : 'normal'}">${medal}</td>
-                    <td class="aircraft-code">${item.code}</td>
+                    <td>
+                        <div style="font-weight: 600; color: #2d3748;">${item.name}</div>
+                        <div style="font-size: 12px; color: #718096; font-family: monospace;">${item.code}</div>
+                    </td>
                     <td style="text-align: right;"><span class="count-badge">${item.count}</span></td>
                 </tr>
             `}).join('');

@@ -840,16 +840,18 @@ def get_aircraft_stats():
             else: # week
                 start_date = end_date - timedelta(days=7)
                 
-            # Query for top aircraft types
+            # Query for top aircraft types with descriptions
             query = """
                 SELECT 
-                    aircraft_type,
+                    f.aircraft_type,
+                    a.long_description,
                     COUNT(*) as flight_count
-                FROM flights
-                WHERE schedule_date BETWEEN %s AND %s
-                  AND aircraft_type IS NOT NULL
-                  AND aircraft_type != ''
-                GROUP BY aircraft_type
+                FROM flights f
+                LEFT JOIN aircraft_types a ON f.aircraft_type = a.iata_sub
+                WHERE f.schedule_date BETWEEN %s AND %s
+                  AND f.aircraft_type IS NOT NULL
+                  AND f.aircraft_type != ''
+                GROUP BY f.aircraft_type, a.long_description
                 ORDER BY flight_count DESC
                 LIMIT %s
             """
@@ -859,8 +861,12 @@ def get_aircraft_stats():
             
             stats = []
             for row in results:
+                # Use description if available, else code
+                name = row['long_description'] if row['long_description'] else row['aircraft_type']
+                
                 stats.append({
                     'code': row['aircraft_type'],
+                    'name': name,
                     'count': row['flight_count']
                 })
                 
