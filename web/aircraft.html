@@ -331,10 +331,16 @@
         }
 
         async function showAirlineStats(code, name) {
-            const period = document.getElementById('periodSelect').value;
+            const periodSelect = document.getElementById('periodSelect');
+            const period = periodSelect.value;
             const modal = document.getElementById('statsModal');
             document.getElementById('modalTitle').textContent = `Luchtvaartmaatschappijen voor ${name}`;
             modal.style.display = 'flex';
+
+            let periodLabel = "totaal";
+            if (period === 'day') periodLabel = "per 24 uur";
+            if (period === 'week') periodLabel = "per week";
+            if (period === 'month') periodLabel = "per maand";
 
             // Destroy previous chart
             if (chartInstance) {
@@ -350,7 +356,7 @@
                 if (!response.ok) throw new Error('Failed to load breakdown');
 
                 const data = await response.json();
-                renderChart(data.stats);
+                renderChart(data.stats, periodLabel);
 
             } catch (error) {
                 console.error("Error fetching breakdown:", error);
@@ -358,7 +364,7 @@
             }
         }
 
-        function renderChart(stats) {
+        function renderChart(stats, periodLabel) {
             const ctx = document.getElementById('airlineChart').getContext('2d');
 
             if (stats.length === 0) {
@@ -404,7 +410,7 @@
                             },
                             title: {
                                 display: true,
-                                text: 'Aantal Vluchten',
+                                text: `Aantal Vluchten ${periodLabel}`,
                                 color: '#718096',
                                 font: {
                                     weight: '600'
