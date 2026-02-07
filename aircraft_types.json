@@ -1,0 +1,1931 @@
+[
+  {
+    "iataMain": "100",
+    "iataSub": "100",
+    "longDescription": "FOKKER 100",
+    "shortDescription": "FK100"
+  },
+  {
+    "iataMain": "146",
+    "iataSub": "141",
+    "longDescription": "BRITISH AEROSPACE 146-100",
+    "shortDescription": "BAE 146-100"
+  },
+  {
+    "iataMain": "146",
+    "iataSub": "142",
+    "longDescription": "BRITISH AEROSPACE 146-200 PASSENGER",
+    "shortDescription": "BAE 146-200P"
+  },
+  {
+    "iataMain": "146",
+    "iataSub": "143",
+    "longDescription": "BRITISH AEROSPACE 146-300",
+    "shortDescription": "BAE 146-300"
+  },
+  {
+    "iataMain": "14F",
+    "iataSub": "14Y",
+    "longDescription": "BRITISH AEROSPACE 146-200 FREIGHTER",
+    "shortDescription": "BAE 146-200F"
+  },
+  {
+    "iataMain": "220",
+    "iataSub": "221",
+    "longDescription": "Airbus A220-100",
+    "shortDescription": "Airbus A220-1"
+  },
+  {
+    "iataMain": "220",
+    "iataSub": "223",
+    "longDescription": "Airbus A220-300",
+    "shortDescription": "Airbus A220-3"
+  },
+  {
+    "iataMain": "310",
+    "iataSub": "313",
+    "longDescription": "AIRBUS A310-300 PASSENGER",
+    "shortDescription": "A310-300"
+  },
+  {
+    "iataMain": "31F",
+    "iataSub": "31Y",
+    "longDescription": "AIRBUS A310-300 FREIGHTER",
+    "shortDescription": "A310-300F"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "32X",
+    "longDescription": "AIRBUS A321-200P2F",
+    "shortDescription": "AIRBUS A321F"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "31N",
+    "longDescription": "AIRBUS A319 NEO",
+    "shortDescription": "AIRBUS A319 NEO"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "318",
+    "longDescription": "AIRBUS A318",
+    "shortDescription": "AIRBUS A318"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "319",
+    "longDescription": "AIRBUS A319",
+    "shortDescription": "AIRBUS A319"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "320",
+    "longDescription": "AIRBUS A320",
+    "shortDescription": "AIRBUS A320"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "32N",
+    "longDescription": "AIRBUS A320 NEO",
+    "shortDescription": "AIRBUS A320 NEO"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "32A",
+    "longDescription": "AIRBUS A320-214 SHARKLETS",
+    "shortDescription": "A320-214 SHARK"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "32Q",
+    "longDescription": "AIRBUS A321 NEO (XLR)",
+    "shortDescription": "AIRBUS A321 NEO"
+  },
+  {
+    "iataMain": "32S",
+    "iataSub": "321",
+    "longDescription": "AIRBUS A321-100/200",
+    "shortDescription": "AIRBUS A321"
+  },
+  {
+    "iataMain": "330",
+    "iataSub": "339",
+    "longDescription": "AIRBUS A330-900neo",
+    "shortDescription": "AIRBUS A330-900"
+  },
+  {
+    "iataMain": "330",
+    "iataSub": "332",
+    "longDescription": "AIRBUS A330-200",
+    "shortDescription": "AIRBUS A330-200"
+  },
+  {
+    "iataMain": "330",
+    "iataSub": "333",
+    "longDescription": "AIRBUS A330-300",
+    "shortDescription": "AIRBUS A330-300"
+  },
+  {
+    "iataMain": "330",
+    "iataSub": "338",
+    "longDescription": "Airbus A330-800NEO",
+    "shortDescription": "Airbus A330-800"
+  },
+  {
+    "iataMain": "33F",
+    "iataSub": "33Y",
+    "longDescription": "Airbus A330-300F",
+    "shortDescription": "A330-300F"
+  },
+  {
+    "iataMain": "33F",
+    "iataSub": "33B",
+    "longDescription": "Airbus A330-743L Beluga XL",
+    "shortDescription": "A330 Beluga XL"
+  },
+  {
+    "iataMain": "33F",
+    "iataSub": "33X",
+    "longDescription": "A330-200 FREIGHTER",
+    "shortDescription": "A330-200F"
+  },
+  {
+    "iataMain": "340",
+    "iataSub": "342",
+    "longDescription": "AIRBUS A340-200",
+    "shortDescription": "AIRBUS A340-200"
+  },
+  {
+    "iataMain": "340",
+    "iataSub": "346",
+    "longDescription": "AIRBUS A340-600",
+    "shortDescription": "AIRBUS A340-600"
+  },
+  {
+    "iataMain": "340",
+    "iataSub": "343",
+    "longDescription": "AIRBUS A340-311",
+    "shortDescription": "AIRBUS A340-311"
+  },
+  {
+    "iataMain": "340",
+    "iataSub": "345",
+    "longDescription": "AIRBUS A340-500",
+    "shortDescription": "AIRBUS A340-500"
+  },
+  {
+    "iataMain": "343",
+    "iataSub": "343",
+    "longDescription": "AIRBUS A340-300",
+    "shortDescription": "AIRBUS A340-300"
+  },
+  {
+    "iataMain": "350",
+    "iataSub": "359",
+    "longDescription": "AIRBUS A350-900",
+    "shortDescription": "AIRBUS A350-900"
+  },
+  {
+    "iataMain": "350",
+    "iataSub": "351",
+    "longDescription": "AIRBUS A350-1000",
+    "shortDescription": "AIRBUS 350-1000"
+  },
+  {
+    "iataMain": "380",
+    "iataSub": "388",
+    "longDescription": "Airbus A380-800",
+    "shortDescription": "AIRBUS A380"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "733",
+    "longDescription": "BOEING 737-300",
+    "shortDescription": "B737-300"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "735",
+    "longDescription": "BOEING 737-500",
+    "shortDescription": "B737-500"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "73E",
+    "longDescription": "Boeing 737-500 Winglets",
+    "shortDescription": "B737-500 WL"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "736",
+    "longDescription": "BOEING 737-600",
+    "shortDescription": "B737-600"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "73G",
+    "longDescription": "BOEING 737-700",
+    "shortDescription": "B737-700"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "73W",
+    "longDescription": "BOEING 737-700 Winglets",
+    "shortDescription": "B737-700 WING"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "73C",
+    "longDescription": "Boeing 737-300 Winglets",
+    "shortDescription": "B737-300 WL"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "7S8",
+    "longDescription": "BOEING 737-800 SCIMITAR WINGLETS",
+    "shortDescription": "B737-800 SCIWNG"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "73H",
+    "longDescription": "BOEING 737-800 WINGLETS",
+    "shortDescription": "B737-800 WING"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "738",
+    "longDescription": "BOEING 737-800 PASSENGER",
+    "shortDescription": "B737-800"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "734",
+    "longDescription": "BOEING 737-400",
+    "shortDescription": "B737-400"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "73J",
+    "longDescription": "B737-900/Winglets",
+    "shortDescription": "B737-900 WING"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "7M8",
+    "longDescription": "Boeing 737MAX-8",
+    "shortDescription": "B737MAX-8"
+  },
+  {
+    "iataMain": "737",
+    "iataSub": "7M9",
+    "longDescription": "Boeing 737MAX-9",
+    "shortDescription": "B737MAX-9"
+  },
+  {
+    "iataMain": "73F",
+    "iataSub": "73P",
+    "longDescription": "BOEING 737-400 FREIGHTER",
+    "shortDescription": "B737-400F"
+  },
+  {
+    "iataMain": "73F",
+    "iataSub": "73Y",
+    "longDescription": "BOEING 737- 300 FREIGHTER",
+    "shortDescription": "B737-300F"
+  },
+  {
+    "iataMain": "73F",
+    "iataSub": "73S",
+    "longDescription": "Boeing 737-700 Freighter (Winglets)",
+    "shortDescription": "B737-700F WING"
+  },
+  {
+    "iataMain": "73F",
+    "iataSub": "73K",
+    "longDescription": "Boeing 737-800 Freighter (Winglets)",
+    "shortDescription": "B737-800F WING"
+  },
+  {
+    "iataMain": "747",
+    "iataSub": "74H",
+    "longDescription": "Boeing 747-8",
+    "shortDescription": "B747-8"
+  },
+  {
+    "iataMain": "747",
+    "iataSub": "744",
+    "longDescription": "BOEING 747-400 PASSENGER",
+    "shortDescription": "B747-400"
+  },
+  {
+    "iataMain": "74F",
+    "iataSub": "74X",
+    "longDescription": "BOEING 747-200C/200F FREIGHTER",
+    "shortDescription": "B747-200F"
+  },
+  {
+    "iataMain": "74F",
+    "iataSub": "74N",
+    "longDescription": "Boeing 747-8 freighter",
+    "shortDescription": "B747-8F"
+  },
+  {
+    "iataMain": "74F",
+    "iataSub": "74Y",
+    "longDescription": "BOEING 747-400F FREIGHTER",
+    "shortDescription": "B747-400F"
+  },
+  {
+    "iataMain": "74M",
+    "iataSub": "74E",
+    "longDescription": "BOEING 747-400 MIXED CONFIGURATION",
+    "shortDescription": "B747-400M"
+  },
+  {
+    "iataMain": "757",
+    "iataSub": "75T",
+    "longDescription": "BOEING B757-300 WINGLETS",
+    "shortDescription": "B757-300W"
+  },
+  {
+    "iataMain": "757",
+    "iataSub": "75W",
+    "longDescription": "Boeing 757-200 Winglets",
+    "shortDescription": "B757-200 WING"
+  },
+  {
+    "iataMain": "757",
+    "iataSub": "752",
+    "longDescription": "BOEING 757-200 PASSENGER",
+    "shortDescription": "B757-200P"
+  },
+  {
+    "iataMain": "75F",
+    "iataSub": "75C",
+    "longDescription": "BOEING 757-200PF FREIGHTER",
+    "shortDescription": "B757-200F"
+  },
+  {
+    "iataMain": "75F",
+    "iataSub": "75V",
+    "longDescription": "Boeing 757-200 Freighter Winglets",
+    "shortDescription": "B757-200F WL"
+  },
+  {
+    "iataMain": "767",
+    "iataSub": "764",
+    "longDescription": "BOEING B767-400",
+    "shortDescription": "B767-400ER"
+  },
+  {
+    "iataMain": "767",
+    "iataSub": "762",
+    "longDescription": "BOEING 767-200/200ER",
+    "shortDescription": "B767-200"
+  },
+  {
+    "iataMain": "767",
+    "iataSub": "76W",
+    "longDescription": "Boeing 767-300 winglet",
+    "shortDescription": "B767-300 WING"
+  },
+  {
+    "iataMain": "767",
+    "iataSub": "763",
+    "longDescription": "BOEING 767-300/300ER",
+    "shortDescription": "B767-300ER"
+  },
+  {
+    "iataMain": "76F",
+    "iataSub": "76X",
+    "longDescription": "BOEING 767-200 FREIGHTER",
+    "shortDescription": "B767-200F"
+  },
+  {
+    "iataMain": "76F",
+    "iataSub": "76Y",
+    "longDescription": "BOEING 767-300 FREIGHTER",
+    "shortDescription": "B767-300F"
+  },
+  {
+    "iataMain": "777",
+    "iataSub": "773",
+    "longDescription": "BOEING 777-300",
+    "shortDescription": "B777-300"
+  },
+  {
+    "iataMain": "777",
+    "iataSub": "779",
+    "longDescription": "Boeing 777-9",
+    "shortDescription": "B777-9"
+  },
+  {
+    "iataMain": "777",
+    "iataSub": "778",
+    "longDescription": "Boeing 777-8",
+    "shortDescription": "B777-8"
+  },
+  {
+    "iataMain": "777",
+    "iataSub": "772",
+    "longDescription": "BOEING 777-200",
+    "shortDescription": "B777-200"
+  },
+  {
+    "iataMain": "777",
+    "iataSub": "772",
+    "longDescription": "Boeing 777-200ER",
+    "shortDescription": "B777-200ER"
+  },
+  {
+    "iataMain": "777",
+    "iataSub": "77L",
+    "longDescription": "Boeing 777-200 Long Range",
+    "shortDescription": "B777-200LR"
+  },
+  {
+    "iataMain": "777",
+    "iataSub": "77W",
+    "longDescription": "BOEING 777-300ER",
+    "shortDescription": "B777-300ER"
+  },
+  {
+    "iataMain": "77F",
+    "iataSub": "77X",
+    "longDescription": "BOEING 777-200 FREIGHTER",
+    "shortDescription": "B777-200LRF"
+  },
+  {
+    "iataMain": "787",
+    "iataSub": "781",
+    "longDescription": "Boeing 787-10 Dreamliner",
+    "shortDescription": "B787-10"
+  },
+  {
+    "iataMain": "787",
+    "iataSub": "789",
+    "longDescription": "Boeing 787-9 Dreamliner",
+    "shortDescription": "B787-9"
+  },
+  {
+    "iataMain": "787",
+    "iataSub": "788",
+    "longDescription": "Boeing 787-8 Dreamliner",
+    "shortDescription": "B787-8"
+  },
+  {
+    "iataMain": "AB3",
+    "iataSub": "AB6",
+    "longDescription": "AIRBUS A300-600/600C PASSENGER",
+    "shortDescription": "AIRBUS A300-6P"
+  },
+  {
+    "iataMain": "ABB",
+    "iataSub": "ABB",
+    "longDescription": "BGA- Airbus Transport Beluga",
+    "shortDescription": "A300-605ST"
+  },
+  {
+    "iataMain": "ABF",
+    "iataSub": "ABX",
+    "longDescription": "AIRBUS A300C4/F4 FREIGHTER",
+    "shortDescription": "AIRBUS A300F"
+  },
+  {
+    "iataMain": "ABF",
+    "iataSub": "ABY",
+    "longDescription": "AIRBUS A300-600 FREIGHTER",
+    "shortDescription": "A300-600F"
+  },
+  {
+    "iataMain": "ACP",
+    "iataSub": "ACP",
+    "longDescription": "Rockwell Commander 114B",
+    "shortDescription": "Commander 114B"
+  },
+  {
+    "iataMain": "AGH",
+    "iataSub": "AGH",
+    "longDescription": "AGUSTA A109 MKII/E",
+    "shortDescription": "AGUSTA A109"
+  },
+  {
+    "iataMain": "AN6",
+    "iataSub": "A26",
+    "longDescription": "Antonov An-26",
+    "shortDescription": "Antonov An-26"
+  },
+  {
+    "iataMain": "APH",
+    "iataSub": "APH",
+    "longDescription": "EUROCOPTER SUPER PUMA/COUGAR",
+    "shortDescription": "COUGAR-AS532"
+  },
+  {
+    "iataMain": "ARJ",
+    "iataSub": "AR8",
+    "longDescription": "AVRO RJ85 AVROLINER",
+    "shortDescription": "BAE 146-RJ85"
+  },
+  {
+    "iataMain": "ARJ",
+    "iataSub": "AR1",
+    "longDescription": "RJ-100 AVROLINER",
+    "shortDescription": "BAE146 RJ-100"
+  },
+  {
+    "iataMain": "AT4",
+    "iataSub": "AT4",
+    "longDescription": "AEROSPATIALE 42-500",
+    "shortDescription": "ATR42-500"
+  },
+  {
+    "iataMain": "AT4",
+    "iataSub": "AT3",
+    "longDescription": "AEROSPATIALE/AERITALIA ATR 42-300",
+    "shortDescription": "ATR42-300"
+  },
+  {
+    "iataMain": "AT7",
+    "iataSub": "AT7",
+    "longDescription": "AEROSPATIALE/ALENIA ATR72-500",
+    "shortDescription": "ATR72-500"
+  },
+  {
+    "iataMain": "AT7",
+    "iataSub": "AT7",
+    "longDescription": "AEROSPATIALE/AERITALIA ATR72-201",
+    "shortDescription": "ATR72-201"
+  },
+  {
+    "iataMain": "AT7",
+    "iataSub": "AT7",
+    "longDescription": "AEROSPATIALE/ALENIA ATR72-600",
+    "shortDescription": "ATR72-600"
+  },
+  {
+    "iataMain": "AT7",
+    "iataSub": "AT7",
+    "longDescription": "AEROSPATIALE/AERITALIA ATR72-211",
+    "shortDescription": "ATR72-211(F)"
+  },
+  {
+    "iataMain": "ATR",
+    "iataSub": "ATR",
+    "longDescription": "Avions de transport regional",
+    "shortDescription": "ATR72-212A"
+  },
+  {
+    "iataMain": "ATR",
+    "iataSub": "AT7",
+    "longDescription": "AEROSPATIALE/AERITALIA ATR72",
+    "shortDescription": "ATR72"
+  },
+  {
+    "iataMain": "AW6",
+    "iataSub": "AW6",
+    "longDescription": "AGUSTA WESTLAND AW169",
+    "shortDescription": "AGUSTA AW169"
+  },
+  {
+    "iataMain": "AW8",
+    "iataSub": "AW8",
+    "longDescription": "AgustaWestland AW189",
+    "shortDescription": "AGUSTA AW189"
+  },
+  {
+    "iataMain": "AWH",
+    "iataSub": "AWH",
+    "longDescription": "AgustaWestland AW139",
+    "shortDescription": "AGUSTA AW139"
+  },
+  {
+    "iataMain": "BE1",
+    "iataSub": "BEH",
+    "longDescription": "BEECHCRAFT 1900D",
+    "shortDescription": "BEECH 1900D"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BET",
+    "longDescription": "BEECH AIRCRAFT F90",
+    "shortDescription": "BEECH F90"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BE2",
+    "longDescription": "BEECH BARON 58",
+    "shortDescription": "BEECH 58"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BET",
+    "longDescription": "BEECH SUPER KING AIR 200(C12-MIL)",
+    "shortDescription": "BEECH 200"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BET",
+    "longDescription": "BEECH KING AIR 90(U21A MIL)",
+    "shortDescription": "BEECH 90M"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BEP",
+    "longDescription": "BEECH BONANZA 36",
+    "shortDescription": "BEECH 36"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BET",
+    "longDescription": "Beechcraft King Air 360",
+    "shortDescription": "BEECH 360"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BET",
+    "longDescription": "BEECH SUPER KING AIR 350",
+    "shortDescription": "BEECH 350"
+  },
+  {
+    "iataMain": "BEC",
+    "iataSub": "BET",
+    "longDescription": "Beech C90GTi King Air",
+    "shortDescription": "Beech C90GTi"
+  },
+  {
+    "iataMain": "BW6",
+    "iataSub": "BW6",
+    "longDescription": "Blackwing 600RG",
+    "shortDescription": "BW600RG"
+  },
+  {
+    "iataMain": "C17",
+    "iataSub": "C17",
+    "longDescription": "Boeing C-17 Globemaster III",
+    "shortDescription": "BOEING C-17"
+  },
+  {
+    "iataMain": "C75",
+    "iataSub": "C75",
+    "longDescription": "BOMBARDIER GLOBAL 7500",
+    "shortDescription": "GLOB.7500"
+  },
+  {
+    "iataMain": "CC6",
+    "iataSub": "CC6",
+    "longDescription": "BOMBARDIER GLOBAL 6000/6500/XRS",
+    "shortDescription": "GLOB 6000/6500"
+  },
+  {
+    "iataMain": "CC7",
+    "iataSub": "CC7",
+    "longDescription": "Bombardier Glob. 7000",
+    "shortDescription": "GLOB. 7000"
+  },
+  {
+    "iataMain": "CCJ",
+    "iataSub": "CCJ",
+    "longDescription": "BOMBARDIER CHALLENGER 601",
+    "shortDescription": "BOMBARD.CL601"
+  },
+  {
+    "iataMain": "CCX",
+    "iataSub": "CCX",
+    "longDescription": "BOMBARDIER GLOBAL 5000/5500",
+    "shortDescription": "GLOB.5000/5500"
+  },
+  {
+    "iataMain": "CL3",
+    "iataSub": "CL3",
+    "longDescription": "BOMBARDIER CHALLENGER 300",
+    "shortDescription": "BOMBARD.CL300"
+  },
+  {
+    "iataMain": "CL5",
+    "iataSub": "CL5",
+    "longDescription": "BOMBARDIER CHALLENGER 350/3500",
+    "shortDescription": "BOMBARD.CL350"
+  },
+  {
+    "iataMain": "CL6",
+    "iataSub": "CL6",
+    "longDescription": "BOMBARDIER CHALLENGER 604",
+    "shortDescription": "BOMBARD.CL604"
+  },
+  {
+    "iataMain": "CL6",
+    "iataSub": "CL6",
+    "longDescription": "BOMBARDIER CHALLENGER 605",
+    "shortDescription": "BOMBARD.CL605"
+  },
+  {
+    "iataMain": "CL6",
+    "iataSub": "CL6",
+    "longDescription": "BOMBARDIER CHALLENGER 600",
+    "shortDescription": "BOMBARD.CL600"
+  },
+  {
+    "iataMain": "CL6",
+    "iataSub": "CL6",
+    "longDescription": "BOMBARDIER CHALLENGER 650",
+    "shortDescription": "BOMBARD.CL650"
+  },
+  {
+    "iataMain": "CL8",
+    "iataSub": "CL8",
+    "longDescription": "BOMBARDIER CHALLENGER 850",
+    "shortDescription": "BOMBARD.CL850"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CNT",
+    "longDescription": "REIMS CESSNA 406 CARAVAN II",
+    "shortDescription": "CESSNA 406"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN2",
+    "longDescription": "cessna 337f super skymaster",
+    "shortDescription": "CESSNA 337F"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN2",
+    "longDescription": "CESSNA 414 CHANCELLOR",
+    "shortDescription": "CESSNA 414"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN2",
+    "longDescription": "CESSNA 310",
+    "shortDescription": "CESSNA 310"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN2",
+    "longDescription": "CESSNA 340",
+    "shortDescription": "CESSNA 340"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CNT",
+    "longDescription": "CESSNA 425 CONQUEST I",
+    "shortDescription": "CESSNA 425"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN2",
+    "longDescription": "CESSNA 421 GOLDEN EAGLE",
+    "shortDescription": "CESSNA 421"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CNT",
+    "longDescription": "CESSNA 441 CONQUEST II",
+    "shortDescription": "CESSNA 441"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN1",
+    "longDescription": "CESSNA 177 CARDINAL",
+    "shortDescription": "CESSNA 177"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN1",
+    "longDescription": "CESSNA 182 SKYLANE",
+    "shortDescription": "CESSNA 182"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN1",
+    "longDescription": "CESSNA 206 SUPER SKYWAGON",
+    "shortDescription": "CESSNA 206"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN1",
+    "longDescription": "CESSNA 172 SKYHAWK",
+    "shortDescription": "CESSNA 172S"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN1",
+    "longDescription": "CESSNA 210 CENTURION",
+    "shortDescription": "CESSNA 210"
+  },
+  {
+    "iataMain": "CNA",
+    "iataSub": "CN1",
+    "longDescription": "Cessna 175 Skylark",
+    "shortDescription": "CESSNA 175"
+  },
+  {
+    "iataMain": "CNF",
+    "iataSub": "CNF",
+    "longDescription": "CESSNA 208 CARAVAN I",
+    "shortDescription": "CESSNA 208"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ6",
+    "longDescription": "CESSNA CITATION 650 VII",
+    "shortDescription": "CESSNA 650 VII"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJL",
+    "longDescription": "CESSNA 560XL CITATION EXCEL",
+    "shortDescription": "CESSNA 560XL"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ6",
+    "longDescription": "CESSNA 650 CITATION III",
+    "shortDescription": "CESSNA 650 III"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ2",
+    "longDescription": "CESSNA 551 CITATION II/SP",
+    "shortDescription": "CESSNA 551"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ2",
+    "longDescription": "CESSNA 550 CITATION II / BRAVO",
+    "shortDescription": "CESSNA 550"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ8",
+    "longDescription": "Cessna 680 Cit.Sovereign",
+    "shortDescription": "Cessna 680 Sov."
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ4",
+    "longDescription": "CESSNA CITATION 525C/CJ4",
+    "shortDescription": "CESSNA 525C/CJ4"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ3",
+    "longDescription": "CESSNA CITATION 525B / CJ3",
+    "shortDescription": "CESSNA 525B/CJ3"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ8",
+    "longDescription": "Cessna 680A Citation Latitude",
+    "shortDescription": "Cessna 680A Lat"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ7",
+    "longDescription": "Cessna 700 Citation Longitude",
+    "shortDescription": "Cessna 700 Lon."
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ2",
+    "longDescription": "CESSNA CITATION 525A/CJ2",
+    "shortDescription": "CESSNA 525A/CJ2"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ2",
+    "longDescription": "Cessna 550 Citation Bravo",
+    "shortDescription": "Citation Bravo"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ5",
+    "longDescription": "CESSNA 560 CITATION V",
+    "shortDescription": "CESSNA 560"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ1",
+    "longDescription": "CESSNA 501 CITATION I",
+    "shortDescription": "CESSNA 501"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ1",
+    "longDescription": "CESSNA 500 CITATION",
+    "shortDescription": "CESSNA 500"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJX",
+    "longDescription": "CESSNA 750 CITATION X+",
+    "shortDescription": "CESSNA 750 CIT."
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ1",
+    "longDescription": "CESSNA CITATION 525/M2",
+    "shortDescription": "CESSNA 525/M2"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJM",
+    "longDescription": "Cessna 510 Citation Mustang",
+    "shortDescription": "CESSNA 510"
+  },
+  {
+    "iataMain": "CNJ",
+    "iataSub": "CJ1",
+    "longDescription": "CESSNA CITATION 525/CJ1",
+    "shortDescription": "CESSNA 525/CJ1"
+  },
+  {
+    "iataMain": "CRJ",
+    "iataSub": "CR2",
+    "longDescription": "CANADAIR REGIONALJET 200",
+    "shortDescription": "CANADAIR 200"
+  },
+  {
+    "iataMain": "CRJ",
+    "iataSub": "CRJ",
+    "longDescription": "CANADAIR REGIONALJET 100/200ER/LR",
+    "shortDescription": "CRJ100/200ER/LR"
+  },
+  {
+    "iataMain": "CRJ",
+    "iataSub": "CR9",
+    "longDescription": "BOMBARDIER CRJ900(CL-600-2D24)",
+    "shortDescription": "BOMBARD.CRJ900"
+  },
+  {
+    "iataMain": "CRJ",
+    "iataSub": "CR7",
+    "longDescription": "BOMBARDIER CRJ700(CL-600-2C10)",
+    "shortDescription": "CRJ-700"
+  },
+  {
+    "iataMain": "CRJ",
+    "iataSub": "CRK",
+    "longDescription": "Bombardier CRJ1000/CL-600-2E25",
+    "shortDescription": "CRJ-1000"
+  },
+  {
+    "iataMain": "CS5",
+    "iataSub": "CS5",
+    "longDescription": "CASA/IPTN  CN-235",
+    "shortDescription": "CN35 CASA"
+  },
+  {
+    "iataMain": "CS9",
+    "iataSub": "CS9",
+    "longDescription": "Airbus Military C-295",
+    "shortDescription": "Airbus C-295"
+  },
+  {
+    "iataMain": "D38",
+    "iataSub": "D38",
+    "longDescription": "DASA/DORNIER 328-100",
+    "shortDescription": "DORNIER 328-100"
+  },
+  {
+    "iataMain": "D42",
+    "iataSub": "D42",
+    "longDescription": "Diamond DA42 Twin Star",
+    "shortDescription": "DIAMOND DA42"
+  },
+  {
+    "iataMain": "D62",
+    "iataSub": "D62",
+    "longDescription": "Diamond DA62",
+    "shortDescription": "Diamond DA62"
+  },
+  {
+    "iataMain": "DC3",
+    "iataSub": "DC3",
+    "longDescription": "Douglas DC-3 Dakota",
+    "shortDescription": "Douglas DC-3"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF1",
+    "longDescription": "DASSAULT FALCON 10",
+    "shortDescription": "FALCON 10"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF2",
+    "longDescription": "DASSAULT FALCON 20",
+    "shortDescription": "FALCON 20"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF5",
+    "longDescription": "DASSAULT FALCON 50/50EX",
+    "shortDescription": "FALCON 50/50EX"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF9",
+    "longDescription": "DASSAULT FALCON 900B/C",
+    "shortDescription": "FALCON 900B/C"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "D2L",
+    "longDescription": "DASSAULT FALCON 2000LX/LXS",
+    "shortDescription": "FALCON 2000LX"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "D2L",
+    "longDescription": "FALCON 2000EX/LX",
+    "shortDescription": "FALCON 2000EX"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF7",
+    "longDescription": "DASSAULT FALCON 7X",
+    "shortDescription": "FALCON 7X"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF9",
+    "longDescription": "DASSAULT FALCON 900DX",
+    "shortDescription": "FALCON 900DX"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "D9L",
+    "longDescription": "DASSAULT FALCON 900 LX",
+    "shortDescription": "FALCON 900LX"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF9",
+    "longDescription": "DASSAULT FALCON 900EX",
+    "shortDescription": "FALCON 900EX"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF8",
+    "longDescription": "DASSAULT FALCON 8X",
+    "shortDescription": "FALCON 8X"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "DF6",
+    "longDescription": "DASSAULT FALCON 6x",
+    "shortDescription": "FALCON 6X"
+  },
+  {
+    "iataMain": "DFL",
+    "iataSub": "D20",
+    "longDescription": "DASSAULT FALCON 2000",
+    "shortDescription": "FALCON 2000"
+  },
+  {
+    "iataMain": "DH8",
+    "iataSub": "DH1",
+    "longDescription": "DASH 8 DHC-8-102",
+    "shortDescription": "DASH 8-102"
+  },
+  {
+    "iataMain": "DH8",
+    "iataSub": "DH3",
+    "longDescription": "DASH 8 DHC 8 SERIES 300",
+    "shortDescription": "DASH 8-300"
+  },
+  {
+    "iataMain": "DH8",
+    "iataSub": "DH4",
+    "longDescription": "DASH 8 DHC SERIES 400",
+    "shortDescription": "DASH 8-400"
+  },
+  {
+    "iataMain": "DHT",
+    "longDescription": "de Havilland Canada DHC-6 Twin Otter",
+    "shortDescription": "Haviland Canada"
+  },
+  {
+    "iataMain": "DO8",
+    "iataSub": "D08",
+    "longDescription": "DASA/DORNIER 228-100",
+    "shortDescription": "DORNIER 228-100"
+  },
+  {
+    "iataMain": "E55",
+    "iataSub": "EP3",
+    "longDescription": "EMBRAER 505 PHENOM 300",
+    "shortDescription": "EMB Phenom 300"
+  },
+  {
+    "iataMain": "E55",
+    "iataSub": "EM5",
+    "longDescription": "Embraer 550 Legacy 500",
+    "shortDescription": "EMB Legacy 500"
+  },
+  {
+    "iataMain": "EAC",
+    "iataSub": "EA5",
+    "longDescription": "Eclipse 500",
+    "shortDescription": "Eclipse 500"
+  },
+  {
+    "iataMain": "EC3",
+    "iataSub": "EC3",
+    "longDescription": "ec130b4",
+    "shortDescription": "EC130B4"
+  },
+  {
+    "iataMain": "EC4",
+    "iataSub": "EC4",
+    "longDescription": "Eurocopter BK-117C2 (EC-145)",
+    "shortDescription": "Eurocopt. EC145"
+  },
+  {
+    "iataMain": "EC5",
+    "iataSub": "EC5",
+    "longDescription": "EUROCOPTER EC155B DAUPHIN",
+    "shortDescription": "Eurocopt.EC155B"
+  },
+  {
+    "iataMain": "EC7",
+    "iataSub": "EC7",
+    "longDescription": "airbus eurocopter 175",
+    "shortDescription": "H175"
+  },
+  {
+    "iataMain": "EM2",
+    "iataSub": "EM2",
+    "longDescription": "EBRAER EMB-120 BRASILIA",
+    "shortDescription": "EMB 120"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "275",
+    "longDescription": "Embraer E175-E2 (EMB-190-500)",
+    "shortDescription": "EMB 175-E2"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "290",
+    "longDescription": "Embraer E190-E2 (ERJ190-300)",
+    "shortDescription": "EMB 190-E2"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "E70",
+    "longDescription": "EMBRAER170",
+    "shortDescription": "EMB 170"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "E95",
+    "longDescription": "Embraer 195 ERJ 190-200",
+    "shortDescription": "EMB 195"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "E7W",
+    "longDescription": "EMBRAER175(170-200 STD) Long WL",
+    "shortDescription": "EMB 175 WL-L"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "E75",
+    "longDescription": "EMBRAER175(170-200 STD) Short WL",
+    "shortDescription": "EMB 175 WL-S"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "295",
+    "longDescription": "EMBRAER ERJ-195-E2 (190-400STD)",
+    "shortDescription": "EMB 195-E2"
+  },
+  {
+    "iataMain": "EMJ",
+    "iataSub": "E90",
+    "longDescription": "Embraer 190 (IGW)",
+    "shortDescription": "EMB 190"
+  },
+  {
+    "iataMain": "EML",
+    "iataSub": "EM4",
+    "longDescription": "EMBRAER-545 LEGACY 450",
+    "shortDescription": "EMB Legacy 450"
+  },
+  {
+    "iataMain": "EML",
+    "longDescription": "EXTRA EA-500",
+    "shortDescription": "EXTRA EA-500"
+  },
+  {
+    "iataMain": "EML",
+    "longDescription": "Embraer 545 Praetor 500",
+    "shortDescription": "EMB Praetor 500"
+  },
+  {
+    "iataMain": "EML",
+    "iataSub": "EM5",
+    "longDescription": "Embraer 550 Praetor 600",
+    "shortDescription": "EMB Praetor 600"
+  },
+  {
+    "iataMain": "EPH",
+    "iataSub": "EP1",
+    "longDescription": "EMBRAER 500 PHENOM 300",
+    "shortDescription": "EMB Phenom 100"
+  },
+  {
+    "iataMain": "ERJ",
+    "iataSub": "ER3",
+    "longDescription": "EMB-135BJ Legacy 600",
+    "shortDescription": "EMB Legacy 600"
+  },
+  {
+    "iataMain": "ERJ",
+    "iataSub": "ER3",
+    "longDescription": "EMBRAER 135BJ-Legacy 650",
+    "shortDescription": "EMB Legacy 650"
+  },
+  {
+    "iataMain": "ERJ",
+    "iataSub": "ER4",
+    "longDescription": "EMBRAER 145",
+    "shortDescription": "EMB-145"
+  },
+  {
+    "iataMain": "ERJ",
+    "iataSub": "ER3",
+    "longDescription": "Embraer 135",
+    "shortDescription": "EMB 135"
+  },
+  {
+    "iataMain": "F50",
+    "iataSub": "F50",
+    "longDescription": "FOKKER 50",
+    "shortDescription": "FK50"
+  },
+  {
+    "iataMain": "FRJ",
+    "iataSub": "FRJ",
+    "longDescription": "FAIRCHILD DORNIER 328JET",
+    "shortDescription": "Dornier 328-310"
+  },
+  {
+    "iataMain": "GA8",
+    "iataSub": "GA8",
+    "longDescription": "GA8 Airvan",
+    "shortDescription": "GA8 AIRVAN"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GJ4",
+    "longDescription": "GULFSTREAM IV/IV SP (G1159C)",
+    "shortDescription": "GULFSTREAM IV"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GR1",
+    "longDescription": "Gulfstream G150",
+    "shortDescription": "Gulfstream G150"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GJ3",
+    "longDescription": "GULFSTREAM III (G1159A)",
+    "shortDescription": "GULFSTREAM III"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GJ5",
+    "longDescription": "GULFSTREAM V / G-1159D",
+    "shortDescription": "GULFSTREAM V"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GA5",
+    "longDescription": "Gulfstream G-VII G500",
+    "shortDescription": "Gulfstream G500"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GJ6",
+    "longDescription": "Gulfstream G650",
+    "shortDescription": "Gulfstream G650"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GA6",
+    "longDescription": "Gulfstream G600",
+    "shortDescription": "Gulfstream G600"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GR3",
+    "longDescription": "Gulfstream G280",
+    "shortDescription": "Gulfstream G280"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GJ4",
+    "longDescription": "Gulfstream G450",
+    "shortDescription": "Gulfstream G450"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GJ5",
+    "longDescription": "Gulfstream Aerospace G-V-SP G550",
+    "shortDescription": "GULFSTREAM G550"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GJ7",
+    "longDescription": "Gulfstream G700",
+    "shortDescription": "Gulfstream G700"
+  },
+  {
+    "iataMain": "GRJ",
+    "iataSub": "GR2",
+    "longDescription": "IAI GULFSTREAM 200 (GALAXY)",
+    "shortDescription": "Gulfstream G200"
+  },
+  {
+    "iataMain": "H25",
+    "longDescription": "BAE HAWKER SIDDELY 125-800",
+    "shortDescription": "BAE HS 125-800"
+  },
+  {
+    "iataMain": "H25",
+    "iataSub": "H25",
+    "longDescription": "RAYTHEON HAWKER 125-800XP",
+    "shortDescription": "HAWKER125-800XP"
+  },
+  {
+    "iataMain": "H25",
+    "iataSub": "H25",
+    "longDescription": "Raytheon Hawker 800SP",
+    "shortDescription": "Hawker 800"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "H21",
+    "longDescription": "RAYTHEON HAWKER 125-1000",
+    "shortDescription": "HAWKER 125-1000"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "BE4",
+    "longDescription": "BEECH 400 BEECHJET",
+    "shortDescription": "BEECH 400"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "H24",
+    "longDescription": "Hawker 4000",
+    "shortDescription": "Hawker 4000"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "H28",
+    "longDescription": "RAYTHEON HAWKER 125-850XP",
+    "shortDescription": "HAWKER125-850XP"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "H29",
+    "longDescription": "HAWKER 125-900XP",
+    "shortDescription": "HAWKER125-900XP"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "BE4",
+    "longDescription": "NEXTANT 400XT Beechjet",
+    "shortDescription": "NEXTANT 400XT"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "PR1",
+    "longDescription": "RAYTHEON RA390 PREMIER 1",
+    "shortDescription": "RA390 PREMIER 1"
+  },
+  {
+    "iataMain": "HBA",
+    "iataSub": "H25",
+    "longDescription": "Hawker Beechcraft 750",
+    "shortDescription": "HAWKER 750"
+  },
+  {
+    "iataMain": "HHJ",
+    "iataSub": "HHJ",
+    "longDescription": "Honda HA-420 HondaJet",
+    "shortDescription": "HA-420 HondaJet"
+  },
+  {
+    "iataMain": "IL7",
+    "iataSub": "IL7",
+    "longDescription": "Ilyushin Il-76",
+    "shortDescription": "Ilyushin 76"
+  },
+  {
+    "iataMain": "J32",
+    "iataSub": "J32",
+    "longDescription": "British Aerospace Jetstream 32",
+    "shortDescription": "Jetstream 32"
+  },
+  {
+    "iataMain": "L4T",
+    "iataSub": "L4T",
+    "longDescription": "LET L-410 Turbolet",
+    "shortDescription": "LET L-410"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ3",
+    "longDescription": "GATES LEARJET 31",
+    "shortDescription": "LEARJET 31"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ4",
+    "longDescription": "BOMBARDIER LEARJET 40",
+    "shortDescription": "LEARJET 40"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ7",
+    "longDescription": "Bombardier Learjet 75",
+    "shortDescription": "LEARJET 75"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ6",
+    "longDescription": "BOMBARDIER LEARJET 60/60XR",
+    "shortDescription": "LEARJET 60"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ3",
+    "longDescription": "GATES LEARJET 35",
+    "shortDescription": "LEARJET 35"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ3",
+    "longDescription": "GATES LEARJET 36",
+    "shortDescription": "LEARJET 36"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ6",
+    "longDescription": "BOMBARDIER LEARJET 55",
+    "shortDescription": "LEARJET 55"
+  },
+  {
+    "iataMain": "LRJ",
+    "iataSub": "LJ4",
+    "longDescription": "BOMBARDIER LEARJET 45",
+    "shortDescription": "LEARJET 45"
+  },
+  {
+    "iataMain": "M1F",
+    "iataSub": "M1F",
+    "longDescription": "MC DONNELL DOUGLAS MD-11 FREIGHTER",
+    "shortDescription": "MD-11 FREIGHTER"
+  },
+  {
+    "iataMain": "M80",
+    "iataSub": "M87",
+    "longDescription": "MCDONNEL DOUGLAS MD-87",
+    "shortDescription": "MD87"
+  },
+  {
+    "iataMain": "M80",
+    "iataSub": "M83",
+    "longDescription": "MCDONNEL DOUGLAS MD-83",
+    "shortDescription": "MD83"
+  },
+  {
+    "iataMain": "M80",
+    "iataSub": "M82",
+    "longDescription": "MCDONNEL DOUGLAS MD-82",
+    "shortDescription": "MD82"
+  },
+  {
+    "iataMain": "MU2",
+    "iataSub": "MU2",
+    "longDescription": "Mitsubishi MU-2B-60 Marquise",
+    "shortDescription": "MU-2B-60"
+  },
+  {
+    "iataMain": "NDE",
+    "iataSub": "NDE",
+    "longDescription": "AEROSPATIALE ECUREUIL AS 355",
+    "shortDescription": "AS355"
+  },
+  {
+    "iataMain": "P18",
+    "iataSub": "P18",
+    "longDescription": "PIAGGIO P180 Avanti EVO",
+    "shortDescription": "Piaggio P180"
+  },
+  {
+    "iataMain": "PA4",
+    "iataSub": "PA4",
+    "longDescription": "PIPER PA-46 MALIBU MERIDIAN",
+    "shortDescription": "PIPER 46 ME"
+  },
+  {
+    "iataMain": "PA4",
+    "iataSub": "PA4",
+    "longDescription": "PIPER PA-46-600TP",
+    "shortDescription": "PIPER 46 M 600"
+  },
+  {
+    "iataMain": "PAF",
+    "iataSub": "PA1",
+    "longDescription": "PIPER Cheyenne 2XL",
+    "shortDescription": "PA-31T2 CH IIX"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA1",
+    "longDescription": "PIPER PA-31 CHEYENNE",
+    "shortDescription": "PIPER 31 CH"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA1",
+    "longDescription": "PIPER PA46 MALIBU",
+    "shortDescription": "PIPER 46 MA"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA2",
+    "longDescription": "PIPER PA-31 CHIEFTAIN/MOJAVE/NAVAJO",
+    "shortDescription": "PIPER 31 NA"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA1",
+    "longDescription": "PIPER PA-28",
+    "shortDescription": "PIPER 28"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA2",
+    "longDescription": "PIPER PA-34 SENECA",
+    "shortDescription": "PIPER 34 SE"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PAC",
+    "longDescription": "PIPER PA-28-180 CHEROKEE CHALLENGER",
+    "shortDescription": "PIPER 28-180"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA1",
+    "longDescription": "PIPER PA-28 ARROW IV",
+    "shortDescription": "PIPER 28 AR"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA1",
+    "longDescription": "PIPER PA-32 LANCE/SARATOGA",
+    "shortDescription": "PIPER 32"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA1",
+    "longDescription": "piper arrow 28RT-201T",
+    "shortDescription": "PIPER 28RT"
+  },
+  {
+    "iataMain": "PAG",
+    "longDescription": "PIPER 30 TWIN COMMANCHE",
+    "shortDescription": "PIPER 30"
+  },
+  {
+    "iataMain": "PAG",
+    "iataSub": "PA1",
+    "longDescription": "PIPER PA-24 COMMANCE",
+    "shortDescription": "PIPER 24"
+  },
+  {
+    "iataMain": "PAT",
+    "iataSub": "PAT",
+    "longDescription": "PIPER PA-42 CHEYENNE III/IV",
+    "shortDescription": "PIPER 42 CH3"
+  },
+  {
+    "iataMain": "PL2",
+    "iataSub": "PL2",
+    "longDescription": "Pilatus PC-12",
+    "shortDescription": "PILATUS PC-12"
+  },
+  {
+    "iataMain": "PL4",
+    "iataSub": "PL4",
+    "longDescription": "Pilatus PC-24",
+    "shortDescription": "PILATUS PC-24"
+  },
+  {
+    "iataMain": "PN6",
+    "iataSub": "PN6",
+    "longDescription": "PARTENAVIA P68C/TC/OBSERVER",
+    "shortDescription": "PARTENAVIA P.68"
+  },
+  {
+    "iataMain": "S20",
+    "iataSub": "S20",
+    "longDescription": "SAAB 2000",
+    "shortDescription": "SAAB 2000"
+  },
+  {
+    "iataMain": "SF3",
+    "iataSub": "SFA",
+    "longDescription": "SAAB SF340",
+    "shortDescription": "SAAB SF340"
+  },
+  {
+    "iataMain": "SU1",
+    "iataSub": "SU9",
+    "longDescription": "Sukhoi Superjet 100-95",
+    "shortDescription": "SSJ100-95"
+  },
+  {
+    "iataMain": "SWM",
+    "longDescription": "FAIRCHILD MERLIN IV/A/B/C",
+    "shortDescription": "MERLIN IV"
+  },
+  {
+    "iataMain": "SWM",
+    "iataSub": "SWM",
+    "longDescription": "FAIRCHILD MERLIN IIIA/B/C",
+    "shortDescription": "MERLIN III"
+  },
+  {
+    "iataMain": "SWM",
+    "iataSub": "SWM",
+    "longDescription": "FAIRCHILD METRO III/IIIA",
+    "shortDescription": "METRO III"
+  },
+  {
+    "iataMain": "TB8",
+    "iataSub": "TB8",
+    "longDescription": "Socata TBM700N",
+    "shortDescription": "TBM700N"
+  },
+  {
+    "iataMain": "TBM",
+    "iataSub": "TBM",
+    "longDescription": "AEROSPATIALE-SOCATA TBM-700",
+    "shortDescription": "TBM700"
+  },
+  {
+    "iataMain": "TBM",
+    "iataSub": "TBM",
+    "longDescription": "Daher-Socata TMB 859",
+    "shortDescription": "TMB-850"
+  },
+  {
+    "iataMain": "TU5",
+    "iataSub": "TU5",
+    "longDescription": "TUPOLEV TU-154/154A/B/B2/C/M",
+    "shortDescription": "TUPOLEV 154"
+  },
+  {
+    "longDescription": "BEECH SUPER KING AIR 300",
+    "shortDescription": "BEECH 300"
+  },
+  {
+    "longDescription": "SOCATA /MOONEY TBM700",
+    "shortDescription": "SOCATA TB70"
+  },
+  {
+    "longDescription": "ROBINSON R44 ASTRO",
+    "shortDescription": "R44 ROBINSON"
+  },
+  {
+    "longDescription": "Guimbal Cabri G2",
+    "shortDescription": "Cabri G2"
+  },
+  {
+    "longDescription": "SOCATA-DAHER TBM850",
+    "shortDescription": "SOCATA TBM 850"
+  },
+  {
+    "longDescription": "CURTISS PITTS S2A SPECIAL",
+    "shortDescription": "PITTS S2A"
+  },
+  {
+    "longDescription": "Noorduyn Harvard Mk.II T6",
+    "shortDescription": "Noorduyn T6"
+  },
+  {
+    "longDescription": "DIAMOND DA40-180",
+    "shortDescription": "DIAMOND DA40"
+  },
+  {
+    "longDescription": "Agusta AW159 Wildcat/Lynx",
+    "shortDescription": "Agusta Wildcat"
+  },
+  {
+    "longDescription": "EUROCOPTER EC-120 COLIBRI",
+    "shortDescription": "EC-120B COLIBRI"
+  },
+  {
+    "longDescription": "EUROCOPTER AS-365N2 DAUPHIN 2",
+    "shortDescription": "EUROCOPTER 65"
+  },
+  {
+    "longDescription": "Mcdonnell Douglas Apache",
+    "shortDescription": "APACHE"
+  },
+  {
+    "iataSub": "R66",
+    "longDescription": "Robinson R66 Turbine",
+    "shortDescription": "R66 Robinson"
+  },
+  {
+    "longDescription": "Gulfstream Commander 690C",
+    "shortDescription": "Rockwell 690C"
+  },
+  {
+    "longDescription": "GENERAL DYNAMICS F16",
+    "shortDescription": "F16"
+  },
+  {
+    "iataSub": "ASJ",
+    "longDescription": "IAI ASTRA 1125 SPX",
+    "shortDescription": "IAI 1125 ASTRA"
+  },
+  {
+    "longDescription": "EH Industries EH 101 Merlin",
+    "shortDescription": "MERLIN"
+  },
+  {
+    "longDescription": "Alenia C-27J",
+    "shortDescription": "C27J"
+  },
+  {
+    "iataSub": "LOH",
+    "longDescription": "Lockheed C-130J-30 Hercules C4",
+    "shortDescription": "C-130J HERCULES"
+  },
+  {
+    "longDescription": "DeHavilland Canada 1 Chipmunk",
+    "shortDescription": "DHC-1 Chipmunk"
+  },
+  {
+    "iataSub": "PS2",
+    "longDescription": "Czech sport PS-28 Cruiser",
+    "shortDescription": "PS-28 Cruiser"
+  },
+  {
+    "iataSub": "L2T",
+    "longDescription": "PZL-MIELEC M-28 Skytruck",
+    "shortDescription": "PZL M28"
+  },
+  {
+    "iataSub": "CN1",
+    "longDescription": "REIMS CESSNA 172 ROCKET",
+    "shortDescription": "CESSNA 172R"
+  },
+  {
+    "longDescription": "Fuji FA-200-180 Aero Subaru",
+    "shortDescription": "Fuji FA-200-180"
+  },
+  {
+    "longDescription": "AEROSTAR 200",
+    "shortDescription": "AEROSTAR 200"
+  },
+  {
+    "longDescription": "SOCATA TRINIDAD TB-21",
+    "shortDescription": "SOCATA TB21"
+  },
+  {
+    "longDescription": "Airbus Helicopters H160",
+    "shortDescription": "AH160"
+  },
+  {
+    "longDescription": "SOCATA-SNIAS HORIZON",
+    "shortDescription": "GY80"
+  },
+  {
+    "longDescription": "ROBIN AVIONS DR400",
+    "shortDescription": "ROBIN DR-400"
+  },
+  {
+    "longDescription": "GULFSTREAM AEROSPACE Gulfstream G100",
+    "shortDescription": "Gulfstream G100"
+  },
+  {
+    "longDescription": "SOCATA TAMPICO TB-09",
+    "shortDescription": "SOCATA TB9"
+  },
+  {
+    "longDescription": "AMERICAN GENERAL AG-5B",
+    "shortDescription": "AG5B"
+  },
+  {
+    "longDescription": "MOONEY TURBO 231",
+    "shortDescription": "MOONEY 231"
+  },
+  {
+    "longDescription": "PIPER PA-28 ARROW III",
+    "shortDescription": "PIPER 28 AR"
+  },
+  {
+    "longDescription": "CIRRUS SR-20",
+    "shortDescription": "CIRRUS SR-20"
+  },
+  {
+    "longDescription": "BOMBARDIER GLOBAL 8000",
+    "shortDescription": "GLOB.8000"
+  },
+  {
+    "longDescription": "American Champion Decathlon",
+    "shortDescription": "Decahtlon"
+  },
+  {
+    "longDescription": "CIRRUS SR-22",
+    "shortDescription": "CIRRUS SR-22"
+  },
+  {
+    "longDescription": "TECNAM P-2002",
+    "shortDescription": "TECNAM P-2002"
+  },
+  {
+    "longDescription": "EPIC E1000",
+    "shortDescription": "EPIC E1000"
+  },
+  {
+    "longDescription": "Pipistrel Virus SW 128 Piston",
+    "shortDescription": "Virus SW 128"
+  },
+  {
+    "longDescription": "DIAMOND DA50 RG",
+    "shortDescription": "DIAMOND DA50"
+  },
+  {
+    "longDescription": "Pipistrel Velis SW128 Electro",
+    "shortDescription": "Velis Electro"
+  },
+  {
+    "longDescription": "BRM Aero, s.r.o. Bristell B23",
+    "shortDescription": "Bristell B23"
+  },
+  {
+    "longDescription": "Cirrus SR22T",
+    "shortDescription": "Cirrus SR22T"
+  },
+  {
+    "longDescription": "AQUILA A210",
+    "shortDescription": "Aquila A210"
+  },
+  {
+    "longDescription": "Cirrus Vision SF50",
+    "shortDescription": "Cirrus SF50"
+  },
+  {
+    "longDescription": "Socata Daher TBM900/910/930/960",
+    "shortDescription": "Socata TBM 900"
+  },
+  {
+    "longDescription": "Boeing Stearman Model B75N1",
+    "shortDescription": "Boeing Stearman"
+  },
+  {
+    "longDescription": "NH-90 Helicopter NHIndustries",
+    "shortDescription": "NH90"
+  },
+  {
+    "longDescription": "BOEING CH-47D CHINOOK",
+    "shortDescription": "CHINOOK"
+  },
+  {
+    "iataSub": "AI4",
+    "longDescription": "Airbus A400M",
+    "shortDescription": "Airbus A400M"
+  },
+  {
+    "longDescription": "Sikorsky S-61 VH-3D Sea King",
+    "shortDescription": "VH-3D"
+  },
+  {
+    "longDescription": "EMBRAER XINGU EMB-121/A/A1",
+    "shortDescription": "EMB 121"
+  },
+  {
+    "longDescription": "EUROCOPTER EC135",
+    "shortDescription": "EC135"
+  },
+  {
+    "longDescription": "F-35 Lightning II",
+    "shortDescription": "F-35"
+  }
+]
