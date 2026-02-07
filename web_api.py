@@ -886,6 +886,70 @@ def get_aircraft_stats():
             'message': 'Failed to fetch aircraft statistics'
         }), 500
 
+@app.route('/api/stats/aircraft/<aircraft_code>/airlines')
+def get_aircraft_airlines(aircraft_code):
+    """Get airline distribution for a specific aircraft type"""
+    try:
+        # Get period to match the main stats
+        period = request.args.get('period', default='week', type=str)
+        
+        end_date = datetime.now()
+        if period == 'day':
+            start_date = end_date - timedelta(days=1)
+        elif period == 'month':
+            start_date = end_date - timedelta(days=30)
+        else: # week
+            start_date = end_date - timedelta(days=7)
+
+        conn = db.get_connection()
+        with conn.cursor() as cursor:
+            # Query grouped by airline
+            # Match TRIM(aircraft_type) to handle whitespace inconsistencies
+            query = """
+                SELECT 
+                    airline_code,
+                    COUNT(*) as flight_count
+                FROM flights
+                WHERE TRIM(aircraft_type) = %s
+                  AND schedule_date BETWEEN %s AND %s
+                  AND airline_code IS NOT NULL
+                GROUP BY airline_code
+                ORDER BY flight_count DESC
+                LIMIT 20
+            """
+            
+            # Since aircraft_code comes from URL, we verify/trim it too? 
+            # The query uses TRIM(db_column) = param. So if param="EMJ", it matches "EMJ ".
+            cursor.execute(query, (aircraft_code, start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d')))
+            results = cursor.fetchall()
+            
+            stats = []
+            for row in results:
+                code = row['airline_code']
+                name = AIRLINE_MAPPING.get(code, code)
+                stats.append({
+                    'code': code,
+                    'name': name,
+                    'count': row['flight_count']
+                })
+                
+            return jsonify({
+                'aircraft': aircraft_code,
+                'stats': stats,
+                'period': period,
+                'dateRange': {
+                    'start': start_date.isoformat(),
+                    'end': end_date.isoformat()
+                }
+            })
+            
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'error': str(e),
+            'message': 'Failed to fetch airline breakdown'
+        }), 500
+
 if __name__ == '__main__':
     port = int(os.getenv('WEB_PORT', 5000))
     debug = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'

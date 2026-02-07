@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .stats-table {
             width: 100%;
@@ -101,6 +102,72 @@
             color: white;
             font-weight: 700;
         }
+
+        .clickable-row {
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .clickable-row:hover {
+            background-color: #edf2f7 !important;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-content {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 700px;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #718096;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+
+        .close-btn:hover {
+            color: #2d3748;
+        }
+
+        .chart-container {
+            margin-top: 20px;
+            position: relative;
+            height: 400px;
+            width: 100%;
+        }
+
+        .modal-header h3 {
+            margin: 0;
+            color: #2d3748;
+            font-size: 1.25rem;
+            padding-right: 30px;
+        }
     </style>
 </head>
 
@@ -133,7 +200,8 @@
     <main class="container">
         <div class="section-header" style="margin-top: 30px; margin-bottom: 20px;">
             <h2>Vliegtuigtypes Statistieken</h2>
-            <p>Overzicht van de meest gebruikte vliegtuigtypes (IATA/ICAO codes)</p>
+            <p>Overzicht van de meest gebruikte vliegtuigtypes. Klik op een rij voor details per luchtvaartmaatschappij.
+            </p>
         </div>
 
         <div class="filter-section">
@@ -174,11 +242,34 @@
         </div>
     </footer>
 
+    <!-- Modal for Airline Airline Stats -->
+    <div id="statsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h3 id="modalTitle">Luchtvaartmaatschappijen</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="airlineChart"></canvas>
+            </div>
+        </div>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             loadStats();
             document.getElementById('periodSelect').addEventListener('change', loadStats);
         });
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('statsModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        let chartInstance = null;
 
         async function loadStats() {
             const period = document.getElementById('periodSelect').value;
@@ -223,9 +314,12 @@
             tbody.innerHTML = stats.map((item, index) => {
                 const rank = index + 1;
                 const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : rank;
+                // Escape simple quotes just in case
+                const safeCode = item.code.replace(/'/g, "\\'");
+                const safeName = item.name.replace(/'/g, "\\'");
 
                 return `
-                <tr>
+                <tr class="clickable-row" onclick="showAirlineStats('${safeCode}', '${safeName}')">
                     <td style="font-weight: ${rank <= 3 ? 'bold' : 'normal'}">${medal}</td>
                     <td>
                         <div style="font-weight: 600; color: #2d3748;">${item.name}</div>
@@ -234,6 +328,93 @@
                     <td style="text-align: right;"><span class="count-badge">${item.count}</span></td>
                 </tr>
             `}).join('');
+        }
+
+        async function showAirlineStats(code, name) {
+            const period = document.getElementById('periodSelect').value;
+            const modal = document.getElementById('statsModal');
+            document.getElementById('modalTitle').textContent = `Luchtvaartmaatschappijen voor ${name}`;
+            modal.style.display = 'flex';
+
+            // Destroy previous chart
+            if (chartInstance) {
+                chartInstance.destroy();
+                chartInstance = null;
+            }
+
+            // Show loading state in chart area?
+            // For now just wait for fetch
+
+            try {
+                const response = await fetch(`/api/stats/aircraft/${encodeURIComponent(code)}/airlines?period=${period}`);
+                if (!response.ok) throw new Error('Failed to load breakdown');
+
+                const data = await response.json();
+                renderChart(data.stats);
+
+            } catch (error) {
+                console.error("Error fetching breakdown:", error);
+                document.getElementById('modalTitle').textContent += " (Fout bij laden)";
+            }
+        }
+
+        function renderChart(stats) {
+            const ctx = document.getElementById('airlineChart').getContext('2d');
+
+            if (stats.length === 0) {
+                // Handle empty
+                return;
+            }
+
+            const labels = stats.map(s => s.name);
+            const data = stats.map(s => s.count);
+
+            chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Aantal Vluchten',
+                        data: data,
+                        backgroundColor: '#48bb78',
+                        borderRadius: 4,
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', // Horizontal bar chart
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return ` ${context.raw} vluchten`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            grid: {
+                                color: '#f0f0f0'
+                            }
+                        },
+                        y: {
+                            grid: {
+                                display: false
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function closeModal() {
+            document.getElementById('statsModal').style.display = 'none';
         }
     </script>
 </body>
