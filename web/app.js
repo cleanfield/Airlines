@@ -307,7 +307,9 @@ function renderFlightTable(flights) {
         if (flight.direction === 'A') {
             trackerUrl = `https://www.schiphol.nl/nl/aankomst/${flight.flightNumber}/`;
         } else {
-            trackerUrl = `https://www.schiphol.nl/nl/vertrek/${flight.flightNumber}/`;
+            // Parse date for departures url
+            const [year, month, day] = flight.date.split('-'); // flight.date is YYYY-MM-DD
+            trackerUrl = `https://www.schiphol.nl/nl/vertrek/vlucht/D${year}${month}${day}${flight.flightNumber}/`;
         }
 
         tr.innerHTML = `
