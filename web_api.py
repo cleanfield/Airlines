@@ -209,6 +209,11 @@ def airports():
     """Serve the airports page"""
     return send_from_directory('web', 'airports.html')
 
+@app.route('/destinations')
+def destinations():
+    """Serve the destinations statistics page"""
+    return send_from_directory('web', 'destinations.html')
+
 
 def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10, destination=None, country=None, continent=None):
     """
@@ -734,6 +739,82 @@ def get_airline_flights(airline_code):
         return jsonify({
             'error': str(e),
             'message': 'Failed to fetch flight details'
+        }), 500
+
+@app.route('/api/stats/destinations')
+def get_destination_stats():
+    """Get top destinations statistics"""
+    try:
+        conn = db.get_connection()
+        with conn.cursor() as cursor:
+            # Get period from query params (default: week)
+            period = request.args.get('period', default='week', type=str)
+            limit = request.args.get('limit', default=10, type=int)
+            
+            end_date = datetime.now()
+            if period == 'day':
+                start_date = end_date - timedelta(days=1)
+            elif period == 'month':
+                start_date = end_date - timedelta(days=30)
+            else: # week
+                start_date = end_date - timedelta(days=7)
+                
+            # Query for top destinations
+            # Note: We are filtering for Departures ('D') as destination stats usually imply where people are going
+            query = """
+                SELECT 
+                    destinations,
+                    COUNT(*) as flight_count
+                FROM flights
+                WHERE schedule_date BETWEEN %s AND %s
+                  AND flight_direction = 'D'
+                  AND destinations IS NOT NULL
+                  AND destinations != ''
+                GROUP BY destinations
+                ORDER BY flight_count DESC
+                LIMIT %s
+            """
+            
+            cursor.execute(query, (start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d'), limit))
+            results = cursor.fetchall()
+            
+            stats = []
+            for row in results:
+                # Handle comma-separated destinations
+                dest_code_raw = row['destinations']
+                codes = [c.strip() for c in str(dest_code_raw).split(',')]
+                
+                # Get names
+                names = []
+                for code in codes:
+                    # Try destination mapping first
+                    if code in DESTINATION_MAPPING:
+                        names.append(DESTINATION_MAPPING[code])
+                    else:
+                        names.append(code)
+                
+                name_display = " / ".join(names)
+                
+                stats.append({
+                    'code': dest_code_raw,
+                    'name': name_display,
+                    'count': row['flight_count']
+                })
+                
+            return jsonify({
+                'period': period,
+                'stats': stats,
+                'dateRange': {
+                    'start': start_date.isoformat(),
+                    'end': end_date.isoformat()
+                }
+            })
+            
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'error': str(e),
+            'message': 'Failed to fetch destination statistics'
         }), 500
 
 if __name__ == '__main__':

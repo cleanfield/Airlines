@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Populaire Bestemmingen | Airlines Betrouwbaarheid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .stats-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .stats-table thead {
+            background: linear-gradient(135deg, #FF6B6B 0%, #EE5D5D 100%);
+            /* Different color for variety */
+            color: white;
+        }
+
+        .stats-table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stats-table td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .stats-table tbody tr:hover {
+            background-color: #f9fafb;
+        }
+
+        .dest-code {
+            font-weight: 700;
+            color: #EE5D5D;
+            font-size: 16px;
+        }
+
+        .count-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #ffecec;
+            color: #d63030;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .filter-select {
+            padding: 10px 16px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            font-size: 14px;
+            min-width: 200px;
+            background-color: #f8fafc;
+        }
+
+        /* Reusing nav styles */
+        .nav-links {
+            margin: 20px 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: white;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21 16V14L13 9V3.5C13 2.67 12.33 2 11.5 2C10.67 2 10 2.67 10 3.5V9L2 14V16L10 13.5V19L8 20.5V22L11.5 21L15 22V20.5L13 19V13.5L21 16Z"
+                            fill="currentColor" />
+                    </svg>
+                    <h1>Airlines Betrouwbaarheid</h1>
+                </div>
+                <div style="flex: 1; margin-left: 40px;">
+                    <nav class="nav-links" style="margin: 0;">
+                        <a href="/">Dashboard</a>
+                        <a href="/airports">Luchthavens</a>
+                        <a href="/destinations" class="active">Bestemmingen</a>
+                        <a href="/logs">Logs</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="section-header" style="margin-top: 30px; margin-bottom: 20px;">
+            <h2>Populaire Bestemmingen</h2>
+            <p>Overzicht van de meest aangevlogen bestemmingen vanuit Schiphol</p>
+        </div>
+
+        <div class="filter-section">
+            <div>
+                <label for="periodSelect" style="font-weight: 600; margin-right: 10px;">Periode:</label>
+                <select id="periodSelect" class="filter-select">
+                    <option value="day">Afgelopen 24 uur</option>
+                    <option value="week" selected>Afgelopen week</option>
+                    <option value="month">Afgelopen maand</option>
+                </select>
+            </div>
+            <div id="dateRangeDisplay" style="color: #666; font-size: 14px;"></div>
+        </div>
+
+        <table class="stats-table">
+            <thead>
+                <tr>
+                    <th style="width: 50px;">#</th>
+                    <th>Code</th>
+                    <th>Bestemming</th>
+                    <th style="text-align: right;">Aantal Vluchten</th>
+                </tr>
+            </thead>
+            <tbody id="destinationsList">
+                <tr>
+                    <td colspan="4" style="text-align: center; color: #666; padding: 30px;">Laden...</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 20px; font-size: 13px; color: #888;">
+            * Statistieken zijn gebaseerd op vertrekkende vluchten uit onze database.
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Airlines Betrouwbaarheid Tracker. Data van Schiphol Airport API.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadStats();
+            document.getElementById('periodSelect').addEventListener('change', loadStats);
+        });
+
+        async function loadStats() {
+            const period = document.getElementById('periodSelect').value;
+            const tbody = document.getElementById('destinationsList');
+            const dateDisplay = document.getElementById('dateRangeDisplay');
+
+            tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 30px;"><div class="spinner"></div> Laden...</td></tr>';
+
+            try {
+                // Fetch top 50 by default
+                const response = await fetch(`/api/stats/destinations?period=${period}&limit=50`);
+                if (!response.ok) throw new Error('Failed to load data');
+
+                const data = await response.json();
+                renderStats(data.stats);
+
+                // Update date display
+                if (data.dateRange) {
+                    const formatDate = (iso) => {
+                        const d = new Date(iso);
+                        return d.toLocaleDateString('nl-NL', { day: '2-digit', month: 'short', year: 'numeric' });
+                    };
+                    dateDisplay.textContent = `${formatDate(data.dateRange.start)} - ${formatDate(data.dateRange.end)}`;
+                }
+
+            } catch (error) {
+                console.error('Error loading stats:', error);
+                tbody.innerHTML = `
+                    <tr><td colspan="4" style="color: red; text-align: center; padding: 20px;">Fout bij laden van statistieken: ${error.message}</td></tr>
+                `;
+            }
+        }
+
+        function renderStats(stats) {
+            const tbody = document.getElementById('destinationsList');
+
+            if (!stats || stats.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; padding: 30px;">Geen data gevonden voor deze periode</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = stats.map((item, index) => {
+                const rank = index + 1;
+                const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : rank;
+
+                return `
+                <tr>
+                    <td style="font-weight: ${rank <= 3 ? 'bold' : 'normal'}">${medal}</td>
+                    <td class="dest-code">${item.code}</td>
+                    <td>${item.name || item.code}</td>
+                    <td style="text-align: right;"><span class="count-badge">${item.count}</span></td>
+                </tr>
+            `}).join('');
+        }
+    </script>
+</body>
+
+</html>
