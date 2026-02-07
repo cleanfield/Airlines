@@ -68,7 +68,7 @@ def get_destinations():
     try:
         conn = db.get_connection()
         with conn.cursor() as cursor:
-            # Get unique destination codes from actual flight data
+            # 1. Get unique destination codes from actual flight data
             query = """
                 SELECT DISTINCT destinations 
                 FROM flights 
@@ -88,29 +88,63 @@ def get_destinations():
                     codes = [code.strip() for code in str(dest_str).split(',')]
                     airport_codes.update(codes)
             
-            # Map codes to full destination info
-            destinations = []
-            destinations_dict = {d['code']: d for d in DESTINATIONS_FULL}
+            if not airport_codes:
+                return jsonify([])
+
+            # 2. Get details for these airports from relational tables
+            # Prepare placeholders for IN clause
+            placeholders = ', '.join(['%s'] * len(airport_codes))
+            # Convert set to list for params
+            params = list(airport_codes)
             
-            for code in sorted(airport_codes):
-                if code in destinations_dict:
-                    destinations.append(destinations_dict[code])
-                else:
-                    # Fallback if not in mapping
-                    destinations.append({
-                        'code': code,
-                        'name': code,
-                        'country': 'Unknown',
-                        'continent': 'Unknown'
-                    })
+            query = f"""
+                SELECT 
+                    a.iata_code as code, 
+                    a.name, 
+                    c.name as country, 
+                    co.name as continent
+                FROM airports a
+                LEFT JOIN countries c ON a.country_id = c.id
+                LEFT JOIN continents co ON c.continent_id = co.id
+                WHERE a.iata_code IN ({placeholders})
+                ORDER BY a.name
+            """
+            
+            cursor.execute(query, params)
+            dest_rows = cursor.fetchall()
+            
+            destinations = []
+            found_codes = set()
+            
+            for row in dest_rows:
+                code = row['code']
+                found_codes.add(code)
+                destinations.append({
+                    'code': code,
+                    'name': row['name'] or code,
+                    'country': row['country'] or 'Unknown',
+                    'continent': row['continent'] or 'Unknown'
+                })
+            
+            # Add any codes that weren't found in our DB tables (fallback)
+            for code in airport_codes:
+                if code not in found_codes:
+                    # Try to look it up in the old JSON fallback if loaded, or just basic entry
+                    fallback = {'code': code, 'name': code, 'country': 'Unknown', 'continent': 'Unknown'}
+                    # If we still have DESTINATIONS_FULL loaded, maybe check there? 
+                    # But ideally the DB should be the source.
+                    destinations.append(fallback)
+            
+            # Sort by name
+            destinations.sort(key=lambda x: x['name'])
             
             return jsonify(destinations)
             
     except Exception as e:
         print(f"Error getting destinations: {e}")
         traceback.print_exc()
-        # Fallback to all destinations if query fails
-        return jsonify(DESTINATIONS_FULL)
+        # Fallback to empty list or old method if catastrophe
+        return jsonify([])
 
 
 @app.route('/api/airports')
@@ -120,10 +154,19 @@ def get_airports():
         conn = db.get_connection()
         with conn.cursor() as cursor:
             cursor.execute("""
-                SELECT id, naam, iata_code, icao_code, stad, land, 
-                       latitude, longitude, created_at
-                FROM airports 
-                ORDER BY naam
+                SELECT 
+                    a.id, 
+                    a.iata_code, 
+                    a.name as airport_name,
+                    c.name as country_name,
+                    co.name as continent_name,
+                    a.latitude, 
+                    a.longitude, 
+                    a.created_at
+                FROM airports a
+                LEFT JOIN countries c ON a.country_id = c.id
+                LEFT JOIN continents co ON c.continent_id = co.id
+                ORDER BY a.name
             """)
             results = cursor.fetchall()
             
@@ -131,11 +174,10 @@ def get_airports():
             for row in results:
                 airports.append({
                     'id': row['id'],
-                    'naam': row['naam'],
+                    'name': row['airport_name'],
                     'iataCode': row['iata_code'],
-                    'icaoCode': row['icao_code'],
-                    'stad': row['stad'],
-                    'land': row['land'],
+                    'country': row['country_name'],
+                    'continent': row['continent_name'],
                     'latitude': float(row['latitude']) if row['latitude'] else None,
                     'longitude': float(row['longitude']) if row['longitude'] else None,
                     'createdAt': row['created_at'].isoformat() if row['created_at'] else None
@@ -161,6 +203,11 @@ def index():
 def logs():
     """Serve the logs page"""
     return send_from_directory('web', 'logs.html')
+
+@app.route('/airports')
+def airports():
+    """Serve the airports page"""
+    return send_from_directory('web', 'airports.html')
 
 
 def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10, destination=None):
