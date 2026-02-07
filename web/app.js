@@ -307,11 +307,7 @@ function renderFlightTable(flights) {
         if (flight.direction === 'A') {
             trackerUrl = `https://www.schiphol.nl/nl/aankomst/${flight.flightNumber}/`;
         } else {
-            // Parse for FlightStats (existing logic)
-            const match = flight.flightNumber.match(/^([A-Z0-9]+)(\d+)$/);
-            const carrier = match ? match[1] : flight.flightNumber.substring(0, 2);
-            const number = match ? match[2] : flight.flightNumber.substring(2);
-            trackerUrl = `https://www.flightstats.com/v2/flight-tracker/${carrier}/${number}?year=${year}&month=${month}&date=${day}`;
+            trackerUrl = `https://www.schiphol.nl/nl/vertrek/${flight.flightNumber}/`;
         }
 
         tr.innerHTML = `
