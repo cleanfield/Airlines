@@ -210,7 +210,7 @@ def airports():
     return send_from_directory('web', 'airports.html')
 
 
-def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10, destination=None):
+def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10, destination=None, country=None, continent=None):
     """
     Get statistics for all airlines within the date range
     """
@@ -238,14 +238,30 @@ def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=
                 
             if destination:
                 # Match exact airport code (handles comma-separated destinations)
-                # Matches: "BCN", "BCN,MAD", "MAD,BCN", "MAD,BCN,LIS"
                 query += " AND (destinations = %s OR destinations LIKE %s OR destinations LIKE %s OR destinations LIKE %s)"
                 params.extend([
-                    destination,                    # Exact match: "BCN"
-                    f"{destination},%",            # Start: "BCN,..."
-                    f"%,{destination}",            # End: "...,BCN"
-                    f"%,{destination},%"           # Middle: "...,BCN,..."
+                    destination,                    # Exact match
+                    f"{destination},%",            # Start
+                    f"%,{destination}",            # End
+                    f"%,{destination},%"           # Middle
                 ])
+            elif country:
+                # Filter by country name
+                query += """ AND destinations IN (
+                    SELECT a.iata_code FROM airports a 
+                    JOIN countries c ON a.country_id = c.id 
+                    WHERE c.name = %s
+                )"""
+                params.append(country)
+            elif continent:
+                # Filter by continent name
+                query += """ AND destinations IN (
+                    SELECT a.iata_code FROM airports a 
+                    JOIN countries c ON a.country_id = c.id 
+                    JOIN continents co ON c.continent_id = co.id
+                    WHERE co.name = %s
+                )"""
+                params.append(continent)
 
                 
             query += " GROUP BY airline_code HAVING total_flights >= %s"
@@ -300,10 +316,12 @@ def get_rankings():
         flight_type = request.args.get('flight_type', default='all', type=str)
         min_flights = request.args.get('min_flights', default=10, type=int)
         destination = request.args.get('destination', default=None, type=str)
+        country = request.args.get('country', default=None, type=str)
+        continent = request.args.get('continent', default=None, type=str)
         
-        # Override min_flights when filtering by specific destination
-        # to ensure we show all carriers flying that route
-        if destination:
+        # Override min_flights when filtering by specific destination/country/continent
+        # to ensure we show all carriers flying that route/region
+        if destination or country or continent:
             min_flights = 1
 
         
@@ -312,7 +330,7 @@ def get_rankings():
         start_date = end_date - timedelta(days=days)
         
         # Get airline statistics from database
-        airlines = get_airline_statistics(start_date, end_date, flight_type, min_flights, destination)
+        airlines = get_airline_statistics(start_date, end_date, flight_type, min_flights, destination, country, continent)
 
         
         # Calculate total flights
@@ -572,6 +590,8 @@ def get_airline_flights(airline_code):
         flight_type = request.args.get('flight_type', default='all', type=str)
         limit = request.args.get('limit', default=100, type=int)
         destination = request.args.get('destination', default=None, type=str)
+        country = request.args.get('country', default=None, type=str)
+        continent = request.args.get('continent', default=None, type=str)
         
         # Calculate date range
         end_date = datetime.now()
@@ -609,11 +629,28 @@ def get_airline_flights(airline_code):
                 # Match exact airport code (handles comma-separated destinations)
                 query += " AND (destinations = %s OR destinations LIKE %s OR destinations LIKE %s OR destinations LIKE %s)"
                 params.extend([
-                    destination,                    # Exact match: "BCN"
-                    f"{destination},%",            # Start: "BCN,..."
-                    f"%,{destination}",            # End: "...,BCN"
-                    f"%,{destination},%"           # Middle: "...,BCN,..."
+                    destination,                    # Exact match
+                    f"{destination},%",            # Start
+                    f"%,{destination}",            # End
+                    f"%,{destination},%"           # Middle
                 ])
+            elif country:
+                # Filter by country name
+                query += """ AND destinations IN (
+                    SELECT a.iata_code FROM airports a 
+                    JOIN countries c ON a.country_id = c.id 
+                    WHERE c.name = %s
+                )"""
+                params.append(country)
+            elif continent:
+                # Filter by continent name
+                query += """ AND destinations IN (
+                    SELECT a.iata_code FROM airports a 
+                    JOIN countries c ON a.country_id = c.id 
+                    JOIN continents co ON c.continent_id = co.id
+                    WHERE co.name = %s
+                )"""
+                params.append(continent)
                 
             query += " ORDER BY schedule_date DESC, schedule_time DESC LIMIT %s"
             params.append(limit)

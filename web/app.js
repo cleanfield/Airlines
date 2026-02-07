@@ -15,7 +15,10 @@ let filters = {
     flightType: 'all',
     dateRange: 30,
     minFlights: 10,
-    destination: null  // Add destination to filters
+    minFlights: 10,
+    continent: null,
+    country: null,
+    airport: null
 };
 
 // Initialize
@@ -62,15 +65,20 @@ function initializeEventListeners() {
     });
     // Destination filters
     document.getElementById('filterContinent').addEventListener('change', (e) => {
+        filters.continent = e.target.value || null;
+        filters.country = null;
+        filters.airport = null;
         updateCountrySelect(e.target.value);
     });
 
     document.getElementById('filterCountry').addEventListener('change', (e) => {
+        filters.country = e.target.value || null;
+        filters.airport = null;
         updateAirportSelect(e.target.value);
     });
 
     document.getElementById('filterAirport').addEventListener('change', (e) => {
-        filters.destination = e.target.value;
+        filters.airport = e.target.value || null;
         loadData();
     });
 
@@ -90,7 +98,11 @@ function toggleDestinationFilters(type) {
         }
     } else {
         group.style.display = 'none';
-        filters.destination = null; // Clear filter
+        filters.continent = null;
+        filters.country = null;
+        filters.airport = null;
+        document.getElementById('filterContinent').value = "";
+        document.getElementById('filterCountry').value = "";
         document.getElementById('filterAirport').value = "";
     }
 }
@@ -114,8 +126,12 @@ async function loadData() {
                 min_flights: filters.minFlights
             });
 
-            if (filters.destination) {
-                params.append('destination', filters.destination);
+            if (filters.airport) {
+                params.append('destination', filters.airport);
+            } else if (filters.country) {
+                params.append('country', filters.country);
+            } else if (filters.continent) {
+                params.append('continent', filters.continent);
             }
 
 
@@ -245,8 +261,12 @@ async function showFlightDetails(airlineCode) {
         });
 
         // Add destination filter if active
-        if (filters.destination) {
-            params.append('destination', filters.destination);
+        if (filters.airport) {
+            params.append('destination', filters.airport);
+        } else if (filters.country) {
+            params.append('country', filters.country);
+        } else if (filters.continent) {
+            params.append('continent', filters.continent);
         }
 
         console.log('Flight details request:', `flight_type=${filters.flightType}`, `destination=${filters.destination}`);
@@ -543,7 +563,10 @@ function updateCountrySelect(selectedContinent) {
     countrySelect.innerHTML = '<option value="">Land...</option>';
     airportSelect.innerHTML = '<option value="">Airport...</option>';
     airportSelect.disabled = true;
-    filters.destination = null;
+    airportSelect.innerHTML = '<option value="">Airport...</option>';
+    airportSelect.disabled = true;
+    filters.country = null; // Reset country/airport if continent changed (handled in listener, but good safety)
+    filters.airport = null;
 
     if (!selectedContinent) {
         countrySelect.disabled = true;
@@ -572,7 +595,7 @@ function updateCountrySelect(selectedContinent) {
 function updateAirportSelect(selectedCountry) {
     const airportSelect = document.getElementById('filterAirport');
     airportSelect.innerHTML = '<option value="">Airport...</option>';
-    filters.destination = null;
+    filters.airport = null;
 
     if (!selectedCountry) {
         airportSelect.disabled = true;
@@ -597,7 +620,7 @@ function updateAirportSelect(selectedCountry) {
     // Auto-select if only one airport
     if (airports.length === 1) {
         airportSelect.value = airports[0].code;
-        filters.destination = airports[0].code;
+        filters.airport = airports[0].code;
         loadData();
     }
 }
