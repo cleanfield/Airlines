@@ -214,6 +214,11 @@ def destinations():
     """Serve the destinations statistics page"""
     return send_from_directory('web', 'destinations.html')
 
+@app.route('/aircraft')
+def aircraft():
+    """Serve the aircraft statistics page"""
+    return send_from_directory('web', 'aircraft.html')
+
 
 def get_airline_statistics(start_date, end_date, flight_type='all', min_flights=10, destination=None, country=None, continent=None):
     """
@@ -815,6 +820,64 @@ def get_destination_stats():
         return jsonify({
             'error': str(e),
             'message': 'Failed to fetch destination statistics'
+        }), 500
+
+@app.route('/api/stats/aircraft')
+def get_aircraft_stats():
+    """Get top aircraft types statistics"""
+    try:
+        conn = db.get_connection()
+        with conn.cursor() as cursor:
+            # Get period from query params (default: week)
+            period = request.args.get('period', default='week', type=str)
+            limit = request.args.get('limit', default=10, type=int)
+            
+            end_date = datetime.now()
+            if period == 'day':
+                start_date = end_date - timedelta(days=1)
+            elif period == 'month':
+                start_date = end_date - timedelta(days=30)
+            else: # week
+                start_date = end_date - timedelta(days=7)
+                
+            # Query for top aircraft types
+            query = """
+                SELECT 
+                    aircraft_type,
+                    COUNT(*) as flight_count
+                FROM flights
+                WHERE schedule_date BETWEEN %s AND %s
+                  AND aircraft_type IS NOT NULL
+                  AND aircraft_type != ''
+                GROUP BY aircraft_type
+                ORDER BY flight_count DESC
+                LIMIT %s
+            """
+            
+            cursor.execute(query, (start_date.strftime('%Y-%m-%d'), end_date.strftime('%Y-%m-%d'), limit))
+            results = cursor.fetchall()
+            
+            stats = []
+            for row in results:
+                stats.append({
+                    'code': row['aircraft_type'],
+                    'count': row['flight_count']
+                })
+                
+            return jsonify({
+                'period': period,
+                'stats': stats,
+                'dateRange': {
+                    'start': start_date.isoformat(),
+                    'end': end_date.isoformat()
+                }
+            })
+            
+    except Exception as e:
+        traceback.print_exc()
+        return jsonify({
+            'error': str(e),
+            'message': 'Failed to fetch aircraft statistics'
         }), 500
 
 if __name__ == '__main__':
