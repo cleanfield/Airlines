@@ -76,7 +76,7 @@ function initializeEventListeners() {
 
     // Load destinations on startup
     loadDestinations();
-    
+
     // Check initial visibility
     toggleDestinationFilters(filters.flightType);
 }
@@ -243,18 +243,18 @@ async function showFlightDetails(airlineCode) {
             days: filters.dateRange,
             flight_type: filters.flightType
         });
-        
+
         // Add destination filter if active
         if (filters.destination) {
             params.append('destination', filters.destination);
         }
-        
+
         console.log('Flight details request:', `flight_type=${filters.flightType}`, `destination=${filters.destination}`);
-        
+
         const response = await fetch(`/api/airlines/${airlineCode}/flights?${params.toString()}`);
         if (!response.ok) throw new Error('Failed to fetch details');
         const data = await response.json();
-        
+
         console.log(`Received ${data.flights.length} flights for ${airlineCode}`);
         if (data.flights.length > 0) {
             console.log('Sample flight directions:', data.flights.slice(0, 5).map(f => f.direction));
@@ -593,5 +593,12 @@ function updateAirportSelect(selectedCountry) {
     });
 
     airportSelect.disabled = false;
+
+    // Auto-select if only one airport
+    if (airports.length === 1) {
+        airportSelect.value = airports[0].code;
+        filters.destination = airports[0].code;
+        loadData();
+    }
 }
 
