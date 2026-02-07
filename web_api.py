@@ -847,7 +847,7 @@ def get_aircraft_stats():
                     a.long_description,
                     COUNT(*) as flight_count
                 FROM flights f
-                LEFT JOIN aircraft_types a ON f.aircraft_type COLLATE utf8mb4_unicode_ci = a.iata_sub
+                LEFT JOIN aircraft_types a ON TRIM(f.aircraft_type) COLLATE utf8mb4_unicode_ci = a.iata_sub
                 WHERE f.schedule_date BETWEEN %s AND %s
                   AND f.aircraft_type IS NOT NULL
                   AND f.aircraft_type != ''
